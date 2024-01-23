@@ -1,0 +1,139 @@
+$orange-bg-color: rgb(255, 115, 35);
+$white-bg-color: rgb(255, 255, 255);
+$op-blue: #16375c;
+$soft-black-bg-color: #2e2e2e;
+
+body {
+  margin: 0;
+  padding: 0;
+
+  /* Ajuste do tamanho dos elementos não ultrapassar a borda */
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+h1 {
+  color: #ff7323;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-family: "apotek", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+  text-align: start;
+  margin-left: 80px;
+}
+.nao-visivel {
+  display: none;
+}
+
+.se-inscreva img {
+  width: 100%;
+}
+
+.se-inscreva {
+  background-color: #2e2e2e;
+  text-align: center;
+  position: relative;
+}
+
+div.setaBaixo {
+  width: 75px;
+  height: 60px;
+  background-image: url("../img/setaDown.png");
+  background-size: contain;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 290px;
+  animation-name: setaBaixo;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes setaBaixo {
+  0% {
+    top: 40px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.catalogo {
+  background-color: #2e2e2e;
+}
+
+.catalogo img {
+  max-width: 100%;
+  transition: transform 0.2s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.botoes-catalogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botoes-catalogo a {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Adiciona a transformação de escala no hover */
+.botoes-catalogo a:hover img {
+  transform: scale(1.05); /* Aumenta a imagem em 5% */
+}
+
+.amai img {
+  max-width: 100%;
+  margin: 0;
+}
+
+.amai {
+  margin: 0;
+  background-color: #ededed;
+}
+
+@media (min-width: 800px) {
+  .botoes-catalogo-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 801px) {
+  h1 {
+    font-size: 30px;
+  }
+  .botoes-catalogo {
+    display: none;
+  }
+
+  .botoes-catalogo-mobile a {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}

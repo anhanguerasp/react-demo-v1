@@ -1,0 +1,26 @@
+.catalogContainer:hover {
+  transform: scale(1.05);
+}
+
+.catalogContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 462px;
+  width: 489px;
+
+  img {
+    height: 462px;
+    width: 489px;
+
+    max-width: 100%;
+    transition: transform 0.2s ease-in-out;
+
+    //height: auto;
+    display: block;
+
+    //overflow-clip-margin: content-box;
+    //overflow: clip;
+  }
+}

@@ -1,0 +1,9 @@
+.logo {
+  width: 323px;
+  height: 60px;
+  display: block;
+  img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+  }
+}

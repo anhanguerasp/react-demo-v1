@@ -1,0 +1,92 @@
+.aport {
+  background-image: url(/img/bg-aport.png);
+  background-position: center center;
+  display: flex; /* Torna a seção um contêiner flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh; /* Garante que a seção tenha pelo menos a altura da tela */
+}
+
+.aportContainer img {
+  max-width: 100%;
+  margin-left: 40px;
+}
+
+.aportContainer {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 13px;
+  /* Adicione margens superior e inferior para ajustar o espaçamento vertical */
+  margin: 30px auto; /* Define margens laterais automáticas para centralizar horizontalmente */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.aportContainer p {
+  font-size: 24px;
+  text-align: justify;
+  margin: 30px 80px;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  color: #000;
+  font-style: normal;
+}
+
+.aportContainer h2 {
+  font-family: "apotek", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 34px;
+  color: #ff7323;
+  margin-left: 50px;
+}
+
+.columAport img {
+  max-width: 100%;
+  margin-left: 40px;
+}
+
+.columAport h2 {
+  font-family: "apotek", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 34px;
+  color: #ff7323;
+  margin-left: 50px;
+}
+
+.columAport {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .aportContainer .introG img {
+    margin-left: 0;
+  }
+  .aportContainer h1 {
+    margin-bottom: 10px;
+  }
+  .aportContainer img {
+    margin-left: 0;
+  }
+  .aportContainer h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .aportContainer p {
+    font-size: 18px;
+    color: #000;
+    margin: 10px 10px;
+  }
+  .columAport {
+    flex-wrap: wrap;
+  }
+  .columAport h2 {
+    margin: 20px auto;
+  }
+  .columAport img {
+    width: 203px;
+    height: 74px;
+  }
+}
