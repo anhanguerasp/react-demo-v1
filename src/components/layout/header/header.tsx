@@ -15,8 +15,8 @@ export const Header = () => {
         <div></div>
         <div></div>
         <div></div>
-        <Sidebar show={showSide} />
       </div>
+      <Sidebar show={showSide} />
       <AnhangueraLogo />
 
       <div className={styles.headerLinks}>
