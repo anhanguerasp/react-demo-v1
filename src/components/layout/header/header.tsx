@@ -1,10 +1,22 @@
 import { Link } from "react-router-dom";
 import { AnhangueraLogo } from "../../reuseable/logos/anhanguera/anhangueraLogo";
 import styles from "./header.module.scss";
+import Sidebar from "../sidebar/sidebar";
+import { useState } from "react";
 
 export const Header = () => {
+  const [showSide, setShowSide] = useState(false);
   return (
     <div className={styles.header}>
+      <div
+        className={styles.sideBarWrapper}
+        onClick={() => setShowSide(!showSide)}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+        <Sidebar show={showSide} />
+      </div>
       <AnhangueraLogo />
 
       <div className={styles.headerLinks}>

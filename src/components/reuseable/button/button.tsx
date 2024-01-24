@@ -9,12 +9,6 @@ interface props {
   dropDown?: boolean;
 }
 export const Button = ({ bgColor, content, dropDown }: props) => {
-  const [showDropDown, setShowDropDown] = useState(false);
-
-  const handleDD = () => {
-    setShowDropDown(!showDropDown);
-  };
-
   return (
     <>
       {dropDown ? (
@@ -39,9 +33,11 @@ export const Button = ({ bgColor, content, dropDown }: props) => {
             <Link
               to={"../parcerias/amigovalepix"}
               style={{ textDecoration: "none" }}
+              className="drop-hover"
             >
               <Dropdown.Item
                 href="#/action-1"
+                className="drop-hover"
                 style={{
                   backgroundColor: bgColor,
                   color: "white",

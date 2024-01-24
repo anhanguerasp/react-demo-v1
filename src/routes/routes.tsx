@@ -7,6 +7,7 @@ import {
   DominosPage,
   GraduacaoPage,
   HomePage,
+  InfraPage,
   PoliticaPage,
   PosGraduacaoPage,
   ProfValePixPage,
@@ -76,5 +77,9 @@ export const routes = createBrowserRouter([
   {
     path: "/institucional/politica",
     element: <PoliticaPage />,
+  },
+  {
+    path: "/institucional/infraestrutura",
+    element: <InfraPage />,
   },
 ]);

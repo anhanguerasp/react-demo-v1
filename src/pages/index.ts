@@ -16,3 +16,4 @@ export { default as PosGraduacaoPage } from "./institucional/pos-graduacao/page"
 export { default as UnidadesPage } from "./institucional/unidades/page";
 export { default as TermosPage } from "./institucional/termos/page";
 export { default as PoliticaPage } from "./institucional/politica/page";
+export { default as InfraPage } from "./institucional/infra/page";
