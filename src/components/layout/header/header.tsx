@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { AnhangueraLogo } from "../../reuseable/logos/anhanguera/anhangueraLogo";
 import styles from "./header.module.scss";
 
@@ -7,7 +8,7 @@ export const Header = () => {
       <AnhangueraLogo />
 
       <div className={styles.headerLinks}>
-        <a href="./index.html">
+        <Link to="../">
           <img
             className="excluir-alerta"
             src="/img/icone casa.png"
@@ -15,19 +16,19 @@ export const Header = () => {
             width="20"
             height="16"
           />
-        </a>
-        <a href="./graduacao.html" className={styles.links}>
+        </Link>
+        <Link to="../institucional/graduacao" className={styles.links}>
           Graduação
-        </a>
-        <a href="./posgraduacao.html" className={styles.links}>
+        </Link>
+        <Link to="../institucional/posgraduacao" className={styles.links}>
           Pós-Graduação
-        </a>
-        <a href="./unidades.html" className={styles.links}>
+        </Link>
+        <Link to="../institucional/unidades" className={styles.links}>
           Unidades
-        </a>
-        <a href="./Infraestrutura.html" className={styles.links}>
+        </Link>
+        <Link to="../institucional/infraestrutura" className={styles.links}>
           Infraestrutura
-        </a>
+        </Link>
       </div>
     </div>
   );

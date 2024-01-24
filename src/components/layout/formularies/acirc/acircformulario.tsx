@@ -1,11 +1,11 @@
 import "./formularie.scss";
 import "../../../../../public/scss/forms-g.scss";
 import "../../../../../public/scss/forms.scss";
-import "./f.scss";
 import { useRef, useState } from "react";
-import { SwitchFormulary } from "./swirchFormularie";
+
 import { IMatricula } from "../../../../models/afiliados/IMatricula";
 import axios from "axios";
+import { SwitchFormulary } from "../basic/swirchFormularie";
 import { handlePhone } from "../../../../../public/TS/script";
 
 /*const handlePhone = (event: any) => {
@@ -24,7 +24,7 @@ const phoneMask = (value: any) => {
 type props = {
   partner: string;
 };
-export const Formulary = ({ partner }: props) => {
+export const AcircFormulary = ({ partner }: props) => {
   const [couseType, setTypeCourse] = useState("");
   const [name, setName] = useState("");
   const [phone, sePhone] = useState("");
@@ -149,8 +149,8 @@ export const Formulary = ({ partner }: props) => {
                 name="telefone"
                 placeholder="(11)99999-9999"
                 /*onKeyUp="handlePhone(event)"*/ maxLength={15}
-                onKeyUp={(e) => handlePhone(e)}
                 onChange={(e) => sePhone(e.target.value)}
+                onKeyUp={(e) => handlePhone(e)}
                 required
               />
             </div>
@@ -222,26 +222,9 @@ export const Formulary = ({ partner }: props) => {
                 onChange={(e) => setPolo(e.target.value)}
                 required
               >
-                <option value="" disabled selected>
-                  Escolha o Polo
+                <option value="Rio Claro" disabled selected>
+                  Rio Claro
                 </option>
-                <option value="Araraquara">Araraquara</option>
-                <option value="Barueri">Barueri</option>
-                <option value="Bauru">Bauru</option>
-                <option value="Cidade Tiradentes">Cidade Tiradentes</option>
-                <option value="Jabaquara">Jabaquara</option>
-                <option value="Limeira">Limeira</option>
-                <option value="Paulista">Paulista</option>
-                <option value="Pirapora do Bom Jesus">
-                  Pirapora do Bom Jesus
-                </option>
-                <option value="Republica">República</option>
-                <option value="Rio Claro">Rio Claro</option>
-                <option value="Santa Gertrudes">Santa Gertrudes</option>
-                <option value="Santana de Parnaiba">Santana de Parnaiba</option>
-                <option value="sao miguel">São Miguel</option>
-                <option value="Tatuape">Tatuapé</option>
-                <option value="Vila Matilde">Vila Matilde</option>
               </select>
             </div>
             <button className="botao-form" type="submit">

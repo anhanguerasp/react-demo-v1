@@ -2,16 +2,19 @@ import { AnhangueraLogo } from "../../reuseable/logos/anhanguera/anhangueraLogo"
 import { DominosLogo } from "../../reuseable/logos/dominos/dominosLogo";
 import { BasicTitle } from "../../reuseable/title/BasicTitle";
 import styles from "./colaborators.module.scss";
-
+import "./colab.scss";
 export const Colaborators = () => {
   return (
-    <section className={styles.colaborators}>
-      <div className={styles.colaboratorsContainer}>
-        <div className={styles.gridLogos}>
-          <AnhangueraLogo />
-          <DominosLogo />
+    <section className="colaboradores">
+      <div className="colaboradores-container">
+        <div className="grid-logos">
+          <img src="/img/logo.svg" alt="logo" />
+          <img src=".img/logo-dominos.svg" alt="" />
         </div>
-        <BasicTitle content="PARA OS COLABORADORES E FAMILIARES DA EQUIPE DOMINO’S: CONFIRA OS BENEFÍCIOS!" />
+        <h2>
+          Para os colaboradores e familiares da equipe domino’s: confira os
+          benefícios!
+        </h2>
         <p>
           A parceria com a Pizzaria Domino’s trouxe benefícios para seus
           colaboradores e familiares! Matricule-se informando ser um colaborador
@@ -22,7 +25,7 @@ export const Colaborators = () => {
           <strong>mais 10% de desconto!</strong>{" "}
         </p>
         <p>Veja a lista de cursos disponibilizados nos catálogos abaixo: </p>
-        <p className={styles.condicoes}>*confira condições</p>
+        <p className="condicoes-d">*confira condições</p>
       </div>
     </section>
   );

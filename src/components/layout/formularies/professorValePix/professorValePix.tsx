@@ -5,6 +5,7 @@ import "../../../../../public/scss/forms.scss";
 import axios from "axios";
 import { SwitchFormulary } from "../basic/swirchFormularie";
 import { IProfessor } from "../../../../models/afiliados/IProfessor";
+import { handlePhone } from "../../../../../public/TS/script";
 
 type props = {
   partner: string;
@@ -142,6 +143,7 @@ export const ProfessorValePixFormulary = ({ partner }: props) => {
                 placeholder="(11)99999-9999"
                 onChange={(e: any) => setTelefoneAluno(e.target.value)}
                 /*onKeyUp="handlePhone(event)" */ maxLength={15}
+                onKeyUp={(e) => handlePhone(e)}
                 required
               />
             </div>

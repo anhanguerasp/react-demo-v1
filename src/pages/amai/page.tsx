@@ -14,7 +14,7 @@ const Page = () => {
       <CarouselList />
       <AmaiSection />
       <Catalog />
-      <Formulary />
+      <Formulary partner="Amai" />
       <Footer />
     </div>
   );

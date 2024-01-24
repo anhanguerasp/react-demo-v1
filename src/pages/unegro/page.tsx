@@ -13,7 +13,7 @@ const Page = () => {
       <CarouselList />
       <UnegroSection />
       <Catalog />
-      <Formulary />
+      <Formulary partner="Unegro" />
       <Footer />
     </div>
   );
