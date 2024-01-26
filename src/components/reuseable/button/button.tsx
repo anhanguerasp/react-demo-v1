@@ -1,6 +1,5 @@
-import { useState } from "react";
 import "./button.module.scss";
-import { Dropdown, DropdownButton } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 interface props {

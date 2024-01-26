@@ -2,11 +2,12 @@ import "./formularie.scss";
 import "../../../../../public/scss/forms-g.scss";
 import "../../../../../public/scss/forms.scss";
 import "./f.scss";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { SwitchFormulary } from "./swirchFormularie";
 import { IMatricula } from "../../../../models/afiliados/IMatricula";
 import axios from "axios";
 import { handlePhone } from "../../../../../public/TS/script";
+import { Success } from "../../../reuseable/submit/success/Succes";
 
 /*const handlePhone = (event: any) => {
   let input = event.target;
@@ -25,6 +26,7 @@ type props = {
   partner: string;
 };
 export const Formulary = ({ partner }: props) => {
+  const [showSuccess, setShowSuccess] = useState(false);
   const [couseType, setTypeCourse] = useState("");
   const [name, setName] = useState("");
   const [phone, sePhone] = useState("");
@@ -67,6 +69,12 @@ export const Formulary = ({ partner }: props) => {
         "Content-Type": "application/json",
       },
     });
+
+    setShowSuccess(true);
+
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 3300);
   };
 
   console.log(body);
@@ -77,7 +85,11 @@ export const Formulary = ({ partner }: props) => {
         <div className="matricule-se-container">
           <h1>Matricule-se já</h1>
         </div>
-        <section className="contato-dados" aria-label="Endereço">
+        <section
+          className="contato-dados"
+          aria-label="Endereço"
+          style={{ backgroundColor: "black" }}
+        >
           <h2>Dê o primeiro passo para sua mudança de vida!</h2>
           <p>Entre em contato:</p>
           <address className="contato-meios">
@@ -248,6 +260,7 @@ export const Formulary = ({ partner }: props) => {
               Inscreva-se
             </button>
             <div id="mensagem" style={{ display: "none" }}></div>
+            {showSuccess ? <Success /> : ""}
           </form>
         </section>
       </div>

@@ -186,15 +186,17 @@
   margin-left: 80px;
   margin-right: auto; */
 }
-
+.bg {
+  background-image: url("/img/fundo-cursos.png");
+}
 .cursosLista {
   background-image: url("/img/fundo-cursos.png");
-  background-size: cover;
+  /*background-size: cover;
   background-position: center;
   margin-top: 0px;
   margin-bottom: 0px;
   border: 2px solid red;
-  width: 100vw;
+  width: 100vw;*/
 }
 
 .cursosLista h2 {

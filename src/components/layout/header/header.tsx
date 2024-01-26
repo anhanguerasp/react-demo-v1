@@ -3,20 +3,25 @@ import { AnhangueraLogo } from "../../reuseable/logos/anhanguera/anhangueraLogo"
 import styles from "./header.module.scss";
 import Sidebar from "../sidebar/sidebar";
 import { useState } from "react";
-
+import "./wrapper.scss";
 export const Header = () => {
   const [showSide, setShowSide] = useState(false);
+
+  const handleClose = () => {
+    setShowSide(!showSide);
+  };
+
   return (
     <div className={styles.header}>
       <div
-        className={styles.sideBarWrapper}
+        className={`${styles.sideBarWrapper}`}
         onClick={() => setShowSide(!showSide)}
       >
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className={"hideWrapper"}></div>
+        <div className={"hideWrapper"}></div>
+        <div className={"hideWrapper"}></div>
       </div>
-      <Sidebar show={showSide} />
+      <Sidebar show={showSide} handleClose={handleClose} />
       <AnhangueraLogo />
 
       <div className={styles.headerLinks}>

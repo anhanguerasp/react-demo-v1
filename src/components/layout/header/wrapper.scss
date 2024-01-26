@@ -1,0 +1,7 @@
+.hideWrapper {
+  display: none;
+
+  @media (max-width: 1300px) {
+    display: flex;
+  }
+}

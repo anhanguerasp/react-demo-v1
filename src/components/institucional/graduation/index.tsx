@@ -1,3 +1,5 @@
+import { minicarouselhomelist } from "../../../utils/listas/mini-carousel";
+import { MiniCarouselList } from "../../layout/miniCarousel/MiniCarousel.module";
 import "./index-style.scss";
 
 const Index = () => {
@@ -29,54 +31,10 @@ const Index = () => {
         </div>
       </section>
 
-      <article className="cursos-alta-g">
-        <div className="carousel2">
-          <div className="carousel-inner2">
-            <a
-              href="#formulario"
-              className="carousel-slide2"
-              style={{ display: "none" }}
-            >
-              <img src="/img/BANNER LP ADM.png" alt="ADM" />
-            </a>
-            <a
-              href="#formulario"
-              className="carousel-slide2"
-              style={{ display: "none" }}
-            >
-              <img src="/img/BANNER LP ENFERMAGEM.png" alt="ENFERMAGEM" />
-            </a>
-            <a
-              href="#formulario"
-              className="carousel-slide2"
-              style={{ display: "none" }}
-            >
-              <img src="/img/BANNER LP ENGENHARIAS.png" alt="ENGENHARIAS" />
-            </a>
-            <a
-              href="#formulario"
-              className="carousel-slide2"
-              style={{ display: "none" }}
-            >
-              <img src="/img/BANNER LP MARKETING.png" alt="MARKETING" />
-            </a>
-            <a
-              href="#formulario"
-              className="carousel-slide2"
-              style={{ display: "none" }}
-            >
-              <img src="/img/BANNER LP PEDAGOGIA.png" alt="PEDAGOGIA" />
-            </a>
-          </div>
-          <button id="prevButton2" className="carousel-button2">
-            <i className="fas fa-chevron-left"></i>
-          </button>
-          <button id="nextButton2" className="carousel-button2">
-            <i className="fas fa-chevron-right"></i>
-          </button>
-        </div>
-        <p className="condicoes">*consulte condições</p>
-      </article>
+      <div className="" style={{ backgroundColor: "#fdb913" }}>
+        <MiniCarouselList imageList={minicarouselhomelist} />
+        <p className={"condicoes"}>*consulte condições</p>
+      </div>
 
       <section className="section-g">
         <div className="intro-G">

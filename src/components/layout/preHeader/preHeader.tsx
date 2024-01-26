@@ -8,7 +8,7 @@ export const PreHaeder = () => {
         <a>
           <Button bgColor="#16375c" content="nossas parcerias" dropDown />
         </a>
-        <a>
+        <a href="../institucional/inscrevase">
           <Button bgColor="#fdb913" content="inscreva-se" />
         </a>
       </div>

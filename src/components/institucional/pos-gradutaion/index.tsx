@@ -1,3 +1,5 @@
+import { posminilist } from "../../../utils/listas/mini-carousel";
+import { MiniCarouselList } from "../../layout/miniCarousel/MiniCarousel.module";
 import "./index-style.scss";
 
 const Index = () => {
@@ -28,52 +30,8 @@ const Index = () => {
         </div>
       </section>
 
-      <article className="cursos-alta-p">
-        <div className="carousel2">
-          <div className="carousel-inner2">
-            <a
-              href="#formulario"
-              className="carousel-slide2"
-              style={{ display: "none" }}
-            >
-              <img src="/img/Prancheta 1.png" alt="ADM" />
-            </a>
-            <a
-              href="#formulario"
-              className="carousel-slide2"
-              style={{ display: "none" }}
-            >
-              <img src="/img/Prancheta 2.png" alt="ENFERMAGEM" />
-            </a>
-            <a
-              href="#formulario"
-              className="carousel-slide2"
-              style={{ display: "none" }}
-            >
-              <img src="/img/Prancheta 3.png" alt="ENGENHARIAS" />
-            </a>
-            <a
-              href="#formulario"
-              className="carousel-slide2"
-              style={{ display: "none" }}
-            >
-              <img src="/img/Prancheta 4.png" alt="MARKETING" />
-            </a>
-            <a
-              href="#formulario"
-              className="carousel-slide2"
-              style={{ display: "none" }}
-            >
-              <img src="/img/Prancheta 4 copiar.png" alt="PEDAGOGIA" />
-            </a>
-          </div>
-          <button id="prevButton2" className="carousel-button2">
-            <i className="fas fa-chevron-left"></i>
-          </button>
-          <button id="nextButton2" className="carousel-button2">
-            <i className="fas fa-chevron-right"></i>
-          </button>
-        </div>
+      <article className="bg">
+        <MiniCarouselList imageList={posminilist} />
         <p className="condicoes">*consulte condições</p>
       </article>
 

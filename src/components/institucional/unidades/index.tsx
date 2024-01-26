@@ -1,5 +1,4 @@
 import "./index-style.scss";
-import { scrollDown } from "../../../../public/TS/script";
 import { unidadesLista } from "../../../utils/listas/unidades";
 import { ButtonUnidade } from "../../reuseable/buttonUnidade/buttonUnidade";
 import { useState } from "react";

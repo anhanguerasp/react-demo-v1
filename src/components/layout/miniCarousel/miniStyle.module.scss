@@ -1,0 +1,25 @@
+/*.carousel {
+  position: absolute;
+  //background-color: aquamarine;
+  min-height: 140px;
+  max-height: 220px;
+  width: 420px;
+  //min-height: 442px;
+  //overflow: hidden;
+  margin: 0;
+  position: relative;
+  border: 2px solid red;
+  margin-left: 95px;
+}
+*/
+
+.carousel {
+  @media (min-width: 665px) {
+    margin-left: 75px;
+  }
+  max-width: 700px;
+
+  img {
+    z-index: 3;
+  }
+}

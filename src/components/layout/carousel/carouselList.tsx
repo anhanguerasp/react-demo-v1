@@ -2,10 +2,8 @@ import { CarouselContainer } from "../../reuseable/carousel/carouselContainer";
 import styles from "./carousel.module.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { LeftArrow } from "../../reuseable/arrows/leftArrow";
-import { RightArrow } from "../../reuseable/arrows/rightArrow";
 
-const imagesList = [
+export const imagesList = [
   "/img/dominosdescount.png",
   "/img/DOMINO`S 1.png",
   "/img/COMEÇE SUA FACUL POR APENAS 59.png",
@@ -18,7 +16,11 @@ const imagesList = [
   "/img/BANNER LP PSICOLOGIA 2.png",
 ];
 
-export const CarouselList = () => {
+type props = {
+  imageList: Array<string>;
+};
+
+export const CarouselList = ({ imageList }: props) => {
   return (
     <div className={styles.carousel}>
       <Carousel
@@ -28,7 +30,7 @@ export const CarouselList = () => {
         axis="horizontal"
         showThumbs={false}
       >
-        {imagesList.map((img) => (
+        {imageList.map((img) => (
           <CarouselContainer img={img} />
         ))}
       </Carousel>

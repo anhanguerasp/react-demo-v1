@@ -1,3 +1,5 @@
+import { minicarouselhomelist } from "../../../utils/listas/mini-carousel";
+import { MiniCarouselList } from "../miniCarousel/MiniCarousel.module";
 import styles from "./homeContent.module.scss";
 
 export const HomeContent = () => {
@@ -98,55 +100,11 @@ export const HomeContent = () => {
         </div>
       </section>
 
-      <article className={styles.cursosLista}>
+      <article className={styles.bg}>
         <h1 className={styles.containerCursos}>
           Conheça alguns dos nossos cursos
         </h1>
-        <div className={styles.carousel2}>
-          <div className={styles.carouselInner2}>
-            <a
-              href="#formulario"
-              className={styles.carouselSlide2}
-              style={{ display: "block" }}
-            >
-              <img src="/img/BANNER LP ADM.png" alt="ADM" />
-            </a>
-            <a
-              href="#formulario"
-              className={styles.carouselSSlide2}
-              style={{ display: "block" }}
-            >
-              <img src="/img/BANNER LP ENFERMAGEM.png" alt="ENFERMAGEM" />
-            </a>
-            <a
-              href="#formulario"
-              className={styles.carouselSlide2}
-              style={{ display: "none" }}
-            >
-              <img src="/img/BANNER LP ENGENHARIAS.png" alt="ENGENHARIAS" />
-            </a>
-            <a
-              href="#formulario"
-              className={styles.carouselSlide2}
-              style={{ display: "none" }}
-            >
-              <img src="/img/BANNER LP MARKETING.png" alt="MARKETING" />
-            </a>
-            <a
-              href="#formulario"
-              className={styles.carouselSlide2}
-              style={{ display: "none" }}
-            >
-              <img src="/img/BANNER LP PEDAGOGIA.png" alt="PEDAGOGIA" />
-            </a>
-          </div>
-          <button id={styles.prevButton2} className={styles.carouselButton2}>
-            <i className={`${styles.fas} ${styles.faChevronLeft}`}></i>
-          </button>
-          <button id={styles.nextButton2} className={styles.carouselButton2}>
-            <i className={`${styles.fas} ${styles.faChevronRight}`}></i>
-          </button>
-        </div>
+        <MiniCarouselList imageList={minicarouselhomelist} />
         <p className={styles.condicoes}>*consulte condições</p>
       </article>
 

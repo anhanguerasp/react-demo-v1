@@ -1,5 +1,3 @@
-import { BasicTitle } from "../../reuseable/title/BasicTitle";
-import styles from "./dominos.module.scss";
 import "./dom.scss";
 
 export const DominoSection = () => {

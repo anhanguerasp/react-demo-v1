@@ -1,7 +1,3 @@
-import { AnhangueraLogo } from "../../reuseable/logos/anhanguera/anhangueraLogo";
-import { DominosLogo } from "../../reuseable/logos/dominos/dominosLogo";
-import { BasicTitle } from "../../reuseable/title/BasicTitle";
-import styles from "./colaborators.module.scss";
 import "./colab.scss";
 export const Colaborators = () => {
   return (

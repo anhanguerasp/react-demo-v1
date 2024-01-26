@@ -1,9 +1,7 @@
-import React, { useState } from "react";
 import "./style.scss";
 import {
   CDBSidebar,
   CDBSidebarContent,
-  CDBSidebarFooter,
   CDBSidebarHeader,
   CDBSidebarMenu,
   CDBSidebarMenuItem,
@@ -12,76 +10,83 @@ import { NavLink } from "react-router-dom";
 
 type props = {
   show: boolean;
+  handleClose: () => void;
 };
-const Sidebar = ({ show }: props) => {
+const Sidebar = ({ show, handleClose }: props) => {
   return (
     <div
       style={{
-        height: "100vh",
-        overflow: "scroll initial",
+        height: "80vh",
+        overflow: "none",
         position: "absolute",
         top: 0,
         left: 0,
-        width: "200px",
+        width: "320px",
       }}
-      className={show ? "show" : "hide"}
+      className={show ? "" : "hide"}
     >
       <CDBSidebar
         textColor="#fff"
-        backgroundColor="orange"
+        backgroundColor="rgb(255, 115, 35)"
         className={""}
         breakpoint={0}
         toggled={false}
         minWidth={""}
         maxWidth={""}
       >
-        <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
+        <CDBSidebarHeader
+          //"fa fa-bars fa-large"
+          prefix={<i className="fa fa-bars" onClick={handleClose}></i>}
+        >
           <a
             href="/"
             className="text-decoration-none"
             style={{ color: "inherit" }}
           >
-            Sidebar
+            Home
           </a>
         </CDBSidebarHeader>
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            <NavLink to="/" className="activeClicked">
-              <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
+            <NavLink to="/institucional/graduacao" className="activeClicked">
+              <CDBSidebarMenuItem icon="book">Graduação</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink to="/tables" className="activeClicked">
-              <CDBSidebarMenuItem icon="table">Tables</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/profile" className="activeClicked">
-              <CDBSidebarMenuItem icon="user">Profile page</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink to="/analytics" className="activeClicked">
-              <CDBSidebarMenuItem icon="chart-line">
-                Analytics
+            <NavLink to="/institucional/posgraduacao" className="activeClicked">
+              <CDBSidebarMenuItem icon="table">
+                Pos-graduação
               </CDBSidebarMenuItem>
             </NavLink>
-
-            <NavLink to="/hero404" target="_blank" className="activeClicked">
-              <CDBSidebarMenuItem icon="exclamation-circle">
-                404 page
+            <NavLink to="/institucional/unidades" className="activeClicked">
+              <CDBSidebarMenuItem icon="building">Unidades</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink
+              to="/institucional/infraestrutura"
+              className="activeClicked"
+            >
+              <CDBSidebarMenuItem icon="chart-line">
+                Infraestrutura
               </CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent>
-
-        <CDBSidebarFooter /*style={{ textAlign: 'center' }}*/>
-          <div
-            style={{
-              padding: "20px 5px",
-            }}
-          >
-            Sidebar Footer
-          </div>
-        </CDBSidebarFooter>
       </CDBSidebar>
     </div>
   );
 };
 
 export default Sidebar;
+
+{
+  /*<div
+      style={{
+        height: "80vh",
+        overflow: "none",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "285px",
+      }}
+      className={show ? "" : "hide"}
+    >*/
+}

@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import { ValePixSection } from "../components/layout/parcerias/amigoValePix/valepixSection";
 import {
   AmaiPage,
   AportPage,
@@ -8,6 +7,7 @@ import {
   GraduacaoPage,
   HomePage,
   InfraPage,
+  InscrevasePage,
   PoliticaPage,
   PosGraduacaoPage,
   ProfValePixPage,
@@ -81,5 +81,9 @@ export const routes = createBrowserRouter([
   {
     path: "/institucional/infraestrutura",
     element: <InfraPage />,
+  },
+  {
+    path: "/institucional/inscrevase",
+    element: <InscrevasePage />,
   },
 ]);

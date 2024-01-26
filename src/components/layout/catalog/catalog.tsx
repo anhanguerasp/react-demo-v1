@@ -1,12 +1,5 @@
-import { CatalogContainer } from "../../reuseable/catalogContainer/catalogContainer";
-import styles from "./catalog.module.scss";
 import "./catalog-sec.scss";
 
-const catalogs = [
-  "/img/catalogos 1.png",
-  "/img/catalogos 2.png",
-  "/img/catalogos 3.png",
-];
 export const Catalog = () => {
   return (
     <section className="catalogo">
