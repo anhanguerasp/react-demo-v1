@@ -111,8 +111,10 @@ export const HomeContent = () => {
       <article className={styles.tecnologiaBg}>
         <div className={`${styles.tecnologia} ${styles.containerDiferenciais}`}>
           <div className={styles.tecnologiaConteudo}>
-            <span>Diferenciais Anhanguera</span>
-            <h2>Por que você deveria estudar na anhanguera?</h2>
+            <span className={styles.dif}>Diferenciais Anhanguera</span>
+            <h2 style={{ textAlign: "justify" }}>
+              Por que você deveria estudar na anhanguera?
+            </h2>
             <div className={styles.tecnologiaVantagens}>
               <div>
                 <img

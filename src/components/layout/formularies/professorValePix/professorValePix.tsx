@@ -134,7 +134,9 @@ export const ProfessorValePixFormulary = ({ partner }: props) => {
               />
             </div>
 
-            <h2 className="col-1">Quem te indicou?</h2>
+            <h2 className="col-1" style={{ textAlign: "left", width: "90%" }}>
+              Quem te indicou?
+            </h2>
             <div>
               <label htmlFor="nome">Nome</label>
               <input
@@ -172,7 +174,12 @@ export const ProfessorValePixFormulary = ({ partner }: props) => {
               />
             </div>
 
-            <h2 className="col-1">Agora preencha seus dados</h2>
+            <h2
+              className="col-1"
+              style={{ textAlign: "left", width: "90%", marginTop: "35px" }}
+            >
+              Agora preencha seus dados
+            </h2>
             <div className="col-2 nao-visivel">
               <label htmlFor="data">Data de Inscrição</label>
               <input type="text" id="data" name="data" readOnly />

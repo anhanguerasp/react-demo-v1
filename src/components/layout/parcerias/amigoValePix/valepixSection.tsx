@@ -9,12 +9,12 @@ export const ValePixSection = () => {
       </div>
       <p>Veja como funciona:</p>
       <img
-        className="diagrama"
+        className={styles.diagrama}
         src="/img/diagrama-amigopix.png"
         alt="como funciona"
       />
       <img
-        className="diagrama-mobile"
+        className={styles.diagramaMobile}
         src="/img/diagrama-amigopix-mobile.png"
         alt="como funciona"
       />

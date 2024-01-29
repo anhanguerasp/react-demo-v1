@@ -90,7 +90,7 @@
 }
 
 .container-forms-g {
-  background-image: url("./img/fundo-g.png");
+  background-image: url(/img/fundo-g.png);
   background-color: #ffffff;
   box-sizing: border-box;
   max-width: 100%;
@@ -115,11 +115,11 @@
 }
 
 .contato-meios-g a:first-child {
-  background: url("./img/email-g.svg") no-repeat 0px -1px;
+  background: url(/img/email-g.svg) no-repeat 0px -1px;
 }
 
 .contato-meios-g a:nth-child(2) {
-  background: url("./img/telefone-g.svg") no-repeat 0px -1px;
+  background: url(/img/telefone-g.svg) no-repeat 0px -1px;
   margin-bottom: 60px;
 }
 
@@ -241,7 +241,7 @@
 }
 
 .section-g {
-  background-image: url("../../img/fundo-g.png");
+  background-image: url(/img/fundo-g.png);
   background-color: #ffffff;
   background-size: cover;
   background-position: center;

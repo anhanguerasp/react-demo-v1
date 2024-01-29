@@ -1,7 +1,5 @@
 @import "../../../../public/scss/global.module.scss";
-
 @import "../../../../public/scss/global.scss";
-
 .footerContainer {
   background-color: $white-bg-color;
   display: grid;
@@ -55,11 +53,11 @@
     }
 
     li:first-child {
-      background: url(../img/telefone-footer.svg) no-repeat;
+      background: url(/img/telefone-footer.svg) no-repeat;
     }
 
     li:last-child {
-      background: url(../img/email-footer.svg) no-repeat;
+      background: url(/img/email-footer.svg) no-repeat;
     }
     li {
       display: list-item;

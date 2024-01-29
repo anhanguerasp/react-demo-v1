@@ -78,3 +78,34 @@ export const Catalog = () => {
       ))}
       </div>*/
 }
+
+export const PosCatalog = () => {
+  return (
+    <section className="catalogo">
+      <div className="botoes-catalogo">
+        <a
+          onClick={() =>
+            window.open(
+              "https://drive.google.com/file/d/1U7ldMWffZDWO8ObObQNzhkGG5eOHVL99/view?usp=sharing",
+              "_blank"
+            )
+          }
+        >
+          <img src="/img/catalogo-p.png" alt="catalogo" />
+        </a>
+      </div>
+      <div className="botoes-catalogo-mobile">
+        <a
+          onClick={() =>
+            window.open(
+              "https://drive.google.com/file/d/1U7ldMWffZDWO8ObObQNzhkGG5eOHVL99/view?usp=sharing",
+              "_blank"
+            )
+          }
+        >
+          <img src="/img/catalogo-p-mobile.png" alt="catalogo" />
+        </a>
+      </div>
+    </section>
+  );
+};
