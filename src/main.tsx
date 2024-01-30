@@ -6,6 +6,8 @@ import "../public/scss/forms-g.scss";
 import "../public/scss/forms.scss";
 import "../public/scss/global.module.scss";
 import "../public/scss/global.scss";
+import "flowbite";
+import "flowbite-react";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

@@ -1,11 +1,15 @@
+import { NewNavbar } from "../../../NOVO/layout/newNav/navbar";
+import { PreNavbar } from "../../../NOVO/layout/newPreNav/preNav";
 import { PoliticaSection } from "../../../components/institucional";
 import { Footer } from "../../../components/layout/footer/footer";
-import { Navbar } from "../../../components/layout/navbar/Navbar";
 
 const Page = () => {
   return (
     <div>
-      <Navbar />
+      <div className="flex flex-col transition duration-200 dark:bg-gray-900 p-10">
+        <PreNavbar />
+        <NewNavbar />
+      </div>
       <PoliticaSection />
       <Footer />
     </div>

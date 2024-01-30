@@ -26,6 +26,8 @@ export const AmigoValePixFormulary = ({ partner }: props) => {
   const [telefoneAluno, setTelefoneAluno] = useState("");
   const [emailAluno, setEmailAluno] = useState("");
   const [pixAluno, setPixAluno] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [cpfpessoaindicou, setCpfPessoaIndicou] = useState("");
 
   const handleCurso = (e: any) => {
     setCurso(e);
@@ -49,11 +51,13 @@ export const AmigoValePixFormulary = ({ partner }: props) => {
     tipo: couseType,
     curso: curso,
     polo: polo,
+    CPF: cpf,
     nomealuno: nomeAluno,
     ra: ra,
     telefonealuno: telefoneAluno,
     emailaluno: emailAluno,
     pixaluno: pixAluno,
+    CPFQuemIndicou: cpfpessoaindicou,
   };
 
   console.log(formatedDate);
@@ -197,6 +201,19 @@ export const AmigoValePixFormulary = ({ partner }: props) => {
               />
             </div>
 
+            <div>
+              <label htmlFor="CPF">CPF</label>
+              <input
+                type="text"
+                id="CPF"
+                name="CPF"
+                placeholder="insira um número de CPF válido..."
+                /*onKeyUp="handlePhone(event)"*/ maxLength={11}
+                onChange={(e) => setCpfPessoaIndicou(e.target.value)}
+                required
+              />
+            </div>
+
             <h2
               className="col-1"
               style={{ textAlign: "left", width: "90%", marginTop: "35px" }}
@@ -228,6 +245,18 @@ export const AmigoValePixFormulary = ({ partner }: props) => {
                 /*onKeyUp="handlePhone(event)"*/ maxLength={15}
                 onKeyUp={(e) => handlePhone(e)}
                 onChange={(e) => sePhone(e.target.value)}
+                required
+              />
+            </div>
+            <div className="col-2">
+              <label htmlFor="CPF">CPF</label>
+              <input
+                type="text"
+                id="CPF"
+                name="CPF"
+                placeholder="insira um número de CPF válido..."
+                /*onKeyUp="handlePhone(event)"*/ maxLength={11}
+                onChange={(e) => setCpf(e.target.value)}
                 required
               />
             </div>

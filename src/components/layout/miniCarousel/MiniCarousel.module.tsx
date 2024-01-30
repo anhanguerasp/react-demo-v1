@@ -24,7 +24,7 @@ export const MiniCarouselList = ({ imageList }: props) => {
         showThumbs={false}
       >
         {imageList.map((img) => (
-          <CarouselContainer img={img} />
+          <CarouselContainer img={img} key={img} />
         ))}
       </Carousel>
     </div>

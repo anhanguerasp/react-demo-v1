@@ -34,6 +34,7 @@ export const AcircFormulary = ({ partner }: props) => {
   const [modalidade, setModalidade] = useState("");
   const [curso, setCurso] = useState("");
   const [polo, setPolo] = useState("");
+  const [cpf, setCpf] = useState("");
 
   const handleCurso = (e: any) => {
     setCurso(e);
@@ -57,6 +58,7 @@ export const AcircFormulary = ({ partner }: props) => {
     tipo: couseType,
     curso: curso,
     polo: polo,
+    CPF: cpf,
   };
 
   console.log(formatedDate);
@@ -163,6 +165,18 @@ export const AcircFormulary = ({ partner }: props) => {
                 /*onKeyUp="handlePhone(event)"*/ maxLength={15}
                 onChange={(e) => sePhone(e.target.value)}
                 onKeyUp={(e) => handlePhone(e)}
+                required
+              />
+            </div>
+            <div className="col-2">
+              <label htmlFor="CPF">CPF</label>
+              <input
+                type="text"
+                id="CPF"
+                name="CPF"
+                placeholder="insira um número de CPF válido..."
+                /*onKeyUp="handlePhone(event)"*/ maxLength={11}
+                onChange={(e) => setCpf(e.target.value)}
                 required
               />
             </div>

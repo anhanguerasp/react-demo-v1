@@ -6,4 +6,5 @@ export interface IAmigoValePix extends IMatricula {
   telefonealuno: string;
   emailaluno: string;
   pixaluno: string;
+  CPFQuemIndicou?: string;
 }

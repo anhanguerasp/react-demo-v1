@@ -28,6 +28,7 @@ type props = {
 export const Formulary = ({ partner }: props) => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [couseType, setTypeCourse] = useState("");
+  const [cpf, setCpf] = useState("");
   const [name, setName] = useState("");
   const [phone, sePhone] = useState("");
   const [email, setEmail] = useState("");
@@ -57,9 +58,8 @@ export const Formulary = ({ partner }: props) => {
     tipo: couseType,
     curso: curso,
     polo: polo,
+    CPF: cpf,
   };
-
-  console.log(formatedDate);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -163,6 +163,19 @@ export const Formulary = ({ partner }: props) => {
                 /*onKeyUp="handlePhone(event)"*/ maxLength={15}
                 onKeyUp={(e) => handlePhone(e)}
                 onChange={(e) => sePhone(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="col-2">
+              <label htmlFor="CPF">CPF</label>
+              <input
+                type="text"
+                id="CPF"
+                name="CPF"
+                placeholder="insira um número de CPF válido..."
+                /*onKeyUp="handlePhone(event)"*/ maxLength={11}
+                onChange={(e) => setCpf(e.target.value)}
                 required
               />
             </div>

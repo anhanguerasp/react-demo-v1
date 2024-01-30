@@ -90,6 +90,11 @@ export const Footer = () => {
               </Link>
             </li>
             <li>
+              <Link to="../institucional/politica" className="excluir-alerta">
+                Infraestrutura
+              </Link>
+            </li>
+            <li>
               <Link
                 to="../institucional/termosdeuso"
                 className="excluir-alerta"

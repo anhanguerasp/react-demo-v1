@@ -11,8 +11,6 @@ export const Index = () => {
     (item) => item.unidade === unidade
   );
 
-  console.log(unidadesFiltro[0]);
-  console.log(unidade);
   const handleSetUnidade = (unidade: string) => {
     setUnidade(unidade);
   };
@@ -26,7 +24,7 @@ export const Index = () => {
         </div>
       </div>
       <div className="container-opcoes">
-        <ul className="tabs">
+        <ul className="tabs" style={{ display: "flex" }}>
           {unidadesLista.map((unidade) => (
             <ButtonUnidade
               unidade={unidade.unidade}

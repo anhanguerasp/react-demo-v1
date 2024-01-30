@@ -27,6 +27,9 @@ export const ProfessorValePixFormulary = ({ partner }: props) => {
   const [emailAluno, setEmailAluno] = useState("");
   //const [pixAluno, setPixAluno] = useState("");
 
+  const [cpf, setCpf] = useState("");
+  const [cpfpessoaindicou, setCpfPessoaIndicou] = useState("");
+
   const handleCurso = (e: any) => {
     setCurso(e);
   };
@@ -52,6 +55,8 @@ export const ProfessorValePixFormulary = ({ partner }: props) => {
     nomeprof: nomeAluno,
     telefoneprof: telefoneAluno,
     emailprof: emailAluno,
+    CPF: cpf,
+    CPFQuemIndicou: cpfpessoaindicou,
   };
 
   console.log(formatedDate);
@@ -174,6 +179,19 @@ export const ProfessorValePixFormulary = ({ partner }: props) => {
               />
             </div>
 
+            <div>
+              <label htmlFor="CPF">CPF</label>
+              <input
+                type="text"
+                id="CPF"
+                name="CPF"
+                placeholder="insira um número de CPF válido..."
+                /*onKeyUp="handlePhone(event)"*/ maxLength={11}
+                onChange={(e) => setCpfPessoaIndicou(e.target.value)}
+                required
+              />
+            </div>
+
             <h2
               className="col-1"
               style={{ textAlign: "left", width: "90%", marginTop: "35px" }}
@@ -207,6 +225,20 @@ export const ProfessorValePixFormulary = ({ partner }: props) => {
                 required
               />
             </div>
+
+            <div className="col-2">
+              <label htmlFor="CPF">CPF</label>
+              <input
+                type="text"
+                id="CPF"
+                name="CPF"
+                placeholder="insira um número de CPF válido..."
+                /*onKeyUp="handlePhone(event)"*/ maxLength={11}
+                onChange={(e) => setCpf(e.target.value)}
+                required
+              />
+            </div>
+
             <div className="col-2">
               <label htmlFor="email">Email</label>
               <input

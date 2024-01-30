@@ -8,4 +8,5 @@ export interface IMatricula {
   tipo: string;
   curso: string;
   polo: string;
+  CPF?: string;
 }

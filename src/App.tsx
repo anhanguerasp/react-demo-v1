@@ -1,8 +1,7 @@
 import "./App.css";
 import { RouterProvider } from "react-router-dom";
 import { routes } from "./routes/routes";
-import "bootstrap/dist/css/bootstrap.min.css";
-
+import "flowbite";
 function App() {
   return (
     <>
