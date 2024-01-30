@@ -1,8 +1,8 @@
+import { NewFooter } from "../../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../../NOVO/layout/newPreNav/preNav";
 import { InscrevaseSection } from "../../../components/institucional";
 import { Catalog } from "../../../components/layout/catalog/catalog";
-import { Footer } from "../../../components/layout/footer/footer";
 import { Formulary } from "../../../components/layout/formularies/basic/formularie";
 
 const Page = () => {
@@ -15,7 +15,7 @@ const Page = () => {
       <InscrevaseSection />
       <Catalog />
       <Formulary partner="" />
-      <Footer />
+      <NewFooter />
     </div>
   );
 };

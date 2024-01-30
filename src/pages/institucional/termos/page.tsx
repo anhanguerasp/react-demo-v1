@@ -1,7 +1,7 @@
+import { NewFooter } from "../../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../../NOVO/layout/newPreNav/preNav";
 import { TermosSection } from "../../../components/institucional";
-import { Footer } from "../../../components/layout/footer/footer";
 
 const Page = () => {
   return (
@@ -11,7 +11,7 @@ const Page = () => {
         <NewNavbar />
       </div>
       <TermosSection />
-      <Footer />
+      <NewFooter />
     </div>
   );
 };

@@ -1,9 +1,9 @@
+import { NewFooter } from "../../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../../NOVO/layout/newPreNav/preNav";
 import { UnidadesSection } from "../../../components/institucional";
 import { CarouselList } from "../../../components/layout/carousel/carouselList";
 import { Catalog } from "../../../components/layout/catalog/catalog";
-import { Footer } from "../../../components/layout/footer/footer";
 import { Formulary } from "../../../components/layout/formularies/basic/formularie";
 import { unidadesCarouselList } from "../../../utils/listas/carrouselLits";
 
@@ -18,7 +18,7 @@ const Page = () => {
       <UnidadesSection />
       <Catalog />
       <Formulary partner="" />
-      <Footer />
+      <NewFooter />
     </div>
   );
 };

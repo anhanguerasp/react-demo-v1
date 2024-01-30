@@ -1,8 +1,8 @@
+import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
 import { CarouselList } from "../../components/layout/carousel/carouselList";
 import { Catalog } from "../../components/layout/catalog/catalog";
-import { Footer } from "../../components/layout/footer/footer";
 import { ProfessorValePixFormulary } from "../../components/layout/formularies/professorValePix/professorValePix";
 import { ProfessorValePixSection } from "../../components/layout/parcerias/professorValePix/professorValePixSection";
 import { profValePixCarouselList } from "../../utils/listas/carrouselLits";
@@ -18,7 +18,7 @@ const Page = () => {
       <ProfessorValePixSection />
       <Catalog />
       <ProfessorValePixFormulary partner="Professor Vale Pix" />
-      <Footer />
+      <NewFooter />
     </div>
   );
 };

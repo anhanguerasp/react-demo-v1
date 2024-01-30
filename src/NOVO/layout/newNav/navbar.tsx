@@ -130,7 +130,7 @@ export const NewNavbar = () => {
               >
                 <NavLink to={"../parcerias/amigovalepix"}>
                   <div className="font-semibold hover:text-orange-500">
-                    Amigo Vale pix
+                    Amigo Vale Pix
                   </div>
                 </NavLink>
                 <span className="text-sm text-gray-500 dark:text-gray-400">

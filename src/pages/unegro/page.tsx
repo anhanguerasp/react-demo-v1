@@ -1,8 +1,8 @@
+import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
 import { CarouselList } from "../../components/layout/carousel/carouselList";
 import { Catalog } from "../../components/layout/catalog/catalog";
-import { Footer } from "../../components/layout/footer/footer";
 import { Formulary } from "../../components/layout/formularies/basic/formularie";
 import { UnegroSection } from "../../components/layout/parcerias/unegro/unegroSection";
 import { unegroCarouselList } from "../../utils/listas/carrouselLits";
@@ -18,7 +18,7 @@ const Page = () => {
       <UnegroSection />
       <Catalog />
       <Formulary partner="Unegro" />
-      <Footer />
+      <NewFooter />
     </div>
   );
 };
