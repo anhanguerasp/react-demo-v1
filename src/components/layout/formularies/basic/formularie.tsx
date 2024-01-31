@@ -269,7 +269,7 @@ export const Formulary = ({ partner }: props) => {
                 <option value="Vila Matilde">Vila Matilde</option>
               </select>
             </div>
-            <button className="botao-form" type="submit">
+            <button className="botao-form bg-blue-500" type="submit">
               Inscreva-se
             </button>
             <div id="mensagem" style={{ display: "none" }}></div>

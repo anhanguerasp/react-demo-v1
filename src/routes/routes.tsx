@@ -16,6 +16,7 @@ import {
   UnidadesPage,
   ValepixPage,
 } from "../pages";
+import { UnegroAfiliados } from "../components/afiliados/unegro";
 
 export const routes = createBrowserRouter([
   {
@@ -85,5 +86,12 @@ export const routes = createBrowserRouter([
   {
     path: "/institucional/inscrevase",
     element: <InscrevasePage />,
+  },
+
+  /// AFILIADOS
+
+  {
+    path: "UNEGROafiliado",
+    element: <UnegroAfiliados />,
   },
 ]);

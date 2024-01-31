@@ -253,7 +253,7 @@ export const AcircFormulary = ({ partner }: props) => {
                 </option>
               </select>
             </div>
-            <button className="botao-form" type="submit">
+            <button className="botao-form bg-blue-500" type="submit">
               Inscreva-se
             </button>
             <div id="mensagem" style={{ display: "none" }}></div>

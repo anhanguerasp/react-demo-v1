@@ -1,0 +1,44 @@
+.tabela {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 40px;
+}
+
+.conteudopos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 calc(25% - 30px); /* Defina a largura desejada para cada coluna */
+  margin-bottom: 20px; /* Adicione margem inferior para espaçamento entre as colunas */
+  box-sizing: border-box;
+}
+
+.conteudopos h3 {
+  color: #ff7323;
+  font-size: 24px;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+}
+
+.conteudopos img {
+  width: 100px;
+  height: 100px;
+}
+
+.tabela .conteudopos:nth-child(2) h3,
+.tabela .conteudopos:nth-child(4) h3,
+.conteudopos:nth-child(2) img,
+.conteudopos:nth-child(4) img {
+  margin-bottom: 29px;
+}
+
+.conteudopos p {
+  text-align: center;
+  font-size: 24px;
+  font-family: "eigerdals", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
