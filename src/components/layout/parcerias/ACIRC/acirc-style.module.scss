@@ -5,7 +5,8 @@
   flex-wrap: wrap;
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
-  min-height: 100vh; /* Garante que a seção tenha pelo menos a altura da tela */
+  min-height: auto; /* Garante que a seção tenha pelo menos a altura da tela */
+  //min-width: 100vh;
 }
 
 .acircContainer img {

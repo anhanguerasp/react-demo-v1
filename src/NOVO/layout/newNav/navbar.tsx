@@ -15,6 +15,7 @@ export const NewNavbar = () => {
             src="https://anhanguerasp.com.br/img/logo.svg"
             className="h-8"
             alt="Anhanguera Logo"
+            style={{ width: "220px" }}
           />
         </a>
 
@@ -50,7 +51,7 @@ export const NewNavbar = () => {
             <li>
               <NavLink
                 to={"../"}
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700 font-semibold"
                 aria-current="page"
               >
                 Home
@@ -61,7 +62,7 @@ export const NewNavbar = () => {
                 id="mega-menu-full-dropdown-button"
                 //id="dropdownHoverButton"
                 data-collapse-toggle="mega-menu-full-dropdown"
-                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                className="flex items-center justify-between w-full py-2 px-3 text-gray-600 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700 font-semibold"
                 onClick={() => setShowMenu(!showMenu)}
               >
                 Parcerias{" "}
@@ -85,7 +86,7 @@ export const NewNavbar = () => {
             <li>
               <NavLink
                 to={"../institucional/graduacao"}
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700 font-semibold"
               >
                 Graduação
               </NavLink>
@@ -93,7 +94,7 @@ export const NewNavbar = () => {
             <li>
               <NavLink
                 to={"../institucional/posgraduacao"}
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700 font-semibold"
               >
                 Pos-graduação
               </NavLink>
@@ -101,7 +102,7 @@ export const NewNavbar = () => {
             <li>
               <NavLink
                 to={"../institucional/unidades"}
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700 font-semibold"
               >
                 Unidades
               </NavLink>
@@ -110,7 +111,7 @@ export const NewNavbar = () => {
             <li>
               <NavLink
                 to={"../institucional/inscrevase"}
-                className="block py-2 px-3 text-orange-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                className="block py-2 px-3 text-orange-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700 font-black"
                 style={{ fontWeight: "bolder" }}
               >
                 Inscreva-se
@@ -143,7 +144,7 @@ export const NewNavbar = () => {
                   <span style={{ color: "#fd7e14", fontWeight: "800" }}>
                     pix
                   </span>{" "}
-                  de R$ 100,00 diretamente na sua conta!!
+                  de R$ 50,00 diretamente na sua conta!!
                 </span>
               </a>
             </li>
@@ -162,7 +163,7 @@ export const NewNavbar = () => {
                   <span style={{ color: "#fd7e14", fontWeight: "800" }}>
                     pix
                   </span>{" "}
-                  de R$ 100,00 diretamente na sua conta!!
+                  de R$ 70,00 diretamente na sua conta!!
                 </span>
               </a>
             </li>

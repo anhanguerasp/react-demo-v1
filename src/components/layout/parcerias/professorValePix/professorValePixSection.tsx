@@ -2,12 +2,20 @@ import styles from "./professorvalepix-style.module.scss";
 
 export const ProfessorValePixSection = () => {
   return (
-    <section className={styles.amigopix}>
-      <div className={styles.introPix}>
-        <img src="/img/chapeu-stick.svg" alt="logo stick" />
-        <h1>Indique um amigo e ganhe uma renda extra </h1>
+    <section className={styles.amigopix} style={{ height: "auto" }}>
+      <div className={`${styles.introPix}`}>
+        <img
+          src="/img/chapeu-stick.svg"
+          alt="logo stick"
+          style={{ height: "120px" }}
+        />
+        <h1 className="flex justify-center" style={{ marginLeft: "0" }}>
+          Indique um amigo e ganhe uma renda extra{" "}
+        </h1>
       </div>
-      <p>Veja como funciona:</p>
+      <p className="" style={{}}>
+        Veja como funciona:
+      </p>
       <img
         className={styles.diagrama}
         src="/img/diagrama-profpix.png"

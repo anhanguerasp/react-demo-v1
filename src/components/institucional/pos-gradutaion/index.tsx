@@ -7,8 +7,12 @@ const Index = () => {
     <div>
       <section className="section-g">
         <div className="intro-G">
-          <img src="/img/anhanguera-stick-pos2.svg" alt="logo stick" />
-          <h1 className="titulo-pos">
+          <img
+            src="/img/anhanguera-stick-pos2.svg"
+            alt="logo stick"
+            className="mt-14"
+          />
+          <h1 className="titulo-pos mt-16">
             venha fazer pós-graduação e MBA na Anhanguera!
           </h1>
         </div>

@@ -3,7 +3,7 @@ import "./dom.scss";
 export const DominoSection = () => {
   return (
     <section className="dominos">
-      <div className="estudante-container">
+      <div className="estudante-container mt-50">
         <h2>Conheça os benefícios para estudante e colaborador anhanguera</h2>
         <p>
           Você estudante ou colaborador agora tem direito ao beneficio de{" "}

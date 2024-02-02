@@ -5,12 +5,15 @@ export const NewFooter = () => {
     <footer className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
       <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">
-          <span style={{ fontWeight: "700", fontSize: "19px" }}>
+          <span
+            style={{ fontWeight: "700", fontSize: "19px" }}
+            className="text-gray-800 md:justify-center"
+          >
             Entre em contato conosco através das nossas redes sociais :
           </span>
         </div>
 
-        <div className="flex justify-center ">
+        <div className="sm:justify-center flex justify-center md:justify-center md:align-center">
           <a
             href="https://www.facebook.com/ComunidadeAnhangueraSP"
             className="mr-6 text-neutral-600 dark:text-neutral-200 hover:text-orange-500"
@@ -18,7 +21,9 @@ export const NewFooter = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              //className="h-4 w-4"
+              height={29}
+              width={29}
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -33,7 +38,9 @@ export const NewFooter = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              //className="h-4 w-4"
+              height={29}
+              width={29}
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -42,12 +49,14 @@ export const NewFooter = () => {
           </a>
           <a
             href="https://www.linkedin.com/school/anhanguera-sp-oficial"
-            className="mr-6 text-neutral-600 dark:text-neutral-200 hover:text-orange-500"
+            className="mr-6 text-neutral-600 dark:text-neutral-200 hover:text-orange-500 sm:justify-center"
             target="_blank"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              //className="h-4 w-4"
+              height={29}
+              width={29}
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -60,8 +69,8 @@ export const NewFooter = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              height={29}
+              width={29}
               fill="currentColor"
               className="bi bi-youtube"
               viewBox="0 0 16 16"
@@ -81,7 +90,7 @@ export const NewFooter = () => {
           </div>
 
           <div className="">
-            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-orange-500">
+            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-orange-500 font-sans">
               Informações
             </h6>
             <p className="mb-4">
@@ -123,7 +132,7 @@ export const NewFooter = () => {
           </div>
 
           <div className="">
-            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-orange-500">
+            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-orange-500 font-sans">
               Links Úteis
             </h6>
             <p className="mb-4">
@@ -147,7 +156,7 @@ export const NewFooter = () => {
           </div>
 
           <div>
-            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-orange-500">
+            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start text-orange-500 font-sans">
               Contato
             </h6>
 

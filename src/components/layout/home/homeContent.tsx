@@ -5,8 +5,8 @@ import styles from "./homeContent.module.scss";
 export const HomeContent = () => {
   return (
     <div>
-      <section className={styles.section}>
-        <h1>Especialidades!</h1>
+      <section className={`${styles.section}`}>
+        <h1 className="mt-20">Especialidades!</h1>
         <div className={styles.containerEspecialidade}>
           <div className={styles.item}>
             <img

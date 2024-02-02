@@ -7,7 +7,6 @@ import { SwitchFormulary } from "./swirchFormularie";
 import { IMatricula } from "../../../../models/afiliados/IMatricula";
 import axios from "axios";
 import { handlePhone } from "../../../../../public/TS/script";
-import { Success } from "../../../reuseable/submit/success/Succes";
 
 /*const handlePhone = (event: any) => {
   let input = event.target;
@@ -272,9 +271,32 @@ export const Formulary = ({ partner }: props) => {
             <button className="botao-form bg-blue-500" type="submit">
               Inscreva-se
             </button>
-            <div id="mensagem" style={{ display: "none" }}></div>
-            {showSuccess ? <Success /> : ""}
           </form>
+          <div
+            className={`bg-green-100 rounded-md p-3 flex mt-5 ${
+              showSuccess ? "" : "hidden"
+            }`}
+          >
+            <svg
+              className="stroke-2 stroke-current text-green-600 h-8 w-8 mr-2 flex-shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M0 0h24v24H0z" stroke="none" />
+              <circle cx="12" cy="12" r="9" />
+              <path d="M9 12l2 2 4-4" />
+            </svg>
+
+            <div className="text-green-700">
+              <div className="font-bold text-xl">
+                Seu formulário foi enviado!
+              </div>
+
+              <div>Seu formulário foi enviado com sucesso! Muito obrigado.</div>
+            </div>
+          </div>
         </section>
       </div>
     </div>

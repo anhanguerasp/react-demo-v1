@@ -3,7 +3,7 @@ const Index = () => {
   return (
     <>
       <section className="section-i">
-        <div className="intro-i">
+        <div className="intro-i" style={{ marginTop: "49px" }}>
           <img src="/img/wifi-stick.svg" alt="wifi stick" />
           <h1>
             o grupo anhanguera Sp conta com 16 unidades com infraestruturas

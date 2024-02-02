@@ -18,7 +18,7 @@ export const Index = () => {
   return (
     <main>
       <div className="titulo-unidades">
-        <div className="titulo-unidades container-unidades">
+        <div className="titulo-unidades container-unidades mt-16">
           <p>São 16 unidades dentro do grupo anhanguera Sp! </p>
           <h1>Conheça nossas unidades!</h1>
         </div>

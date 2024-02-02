@@ -1,7 +1,8 @@
+import { NewGenericForm } from "../../../NOVO/components/forms/generic/generic-form";
+import { FormularyContainer } from "../../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../../NOVO/layout/newPreNav/preNav";
-import { PoliticaSection } from "../../../components/institucional";
 
 const Page = () => {
   return (
@@ -10,7 +11,7 @@ const Page = () => {
         <PreNavbar />
         <NewNavbar />
       </div>
-      <PoliticaSection />
+      <FormularyContainer children={<NewGenericForm partner="" />} />
       <NewFooter />
     </div>
   );

@@ -1,10 +1,11 @@
+import { NewGenericForm } from "../../../NOVO/components/forms/generic/generic-form";
+import { FormularyContainer } from "../../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../../NOVO/layout/newPreNav/preNav";
 import { PosGraduationSection } from "../../../components/institucional";
 import { CarouselList } from "../../../components/layout/carousel/carouselList";
 import { PosCatalog } from "../../../components/layout/catalog/catalog";
-import { Formulary } from "../../../components/layout/formularies/basic/formularie";
 import { posgraduacaoCarouselList } from "../../../utils/listas/carrouselLits";
 
 const Page = () => {
@@ -17,7 +18,7 @@ const Page = () => {
       <CarouselList imageList={posgraduacaoCarouselList} />
       <PosGraduationSection />
       <PosCatalog />
-      <Formulary partner="" />
+      <FormularyContainer children={<NewGenericForm partner="" />} />
       <NewFooter />
     </div>
   );

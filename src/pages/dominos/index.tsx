@@ -1,3 +1,5 @@
+import { NewGenericForm } from "../../NOVO/components/forms/generic/generic-form";
+import { FormularyContainer } from "../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
@@ -5,7 +7,6 @@ import { CarouselList } from "../../components/layout/carousel/carouselList";
 import { Catalog } from "../../components/layout/catalog/catalog";
 import { Colaborators } from "../../components/layout/colaborators/colaborators";
 import { DominoSection } from "../../components/layout/dominosSection/dominos";
-import { Formulary } from "../../components/layout/formularies/basic/formularie";
 import { dominosCarouselList } from "../../utils/listas/carrouselLits";
 import styles from "./index.module.scss";
 
@@ -20,7 +21,7 @@ const IndexPage = () => {
       <DominoSection />
       <Colaborators />
       <Catalog />
-      <Formulary partner={"Domino's"} />
+      <FormularyContainer children={<NewGenericForm partner="Domino's" />} />
       <NewFooter />
     </div>
   );

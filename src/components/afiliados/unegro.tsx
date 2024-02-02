@@ -1,8 +1,86 @@
 import { handlePhone } from "../../../public/TS/script";
 import "./unegro.css";
 import "../../../public/css/style.css";
+import { useState } from "react";
+import axios from "axios";
 
 export const UnegroAfiliados = () => {
+  const [u, setU] = useState("");
+  const [CEP, setCEP] = useState("");
+  const [endereco, setEndereco] = useState("");
+  const [numero, setNumero] = useState("");
+  const [complemento, setComplemento] = useState("");
+  const [bairro, setBairro] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [comercial, setComercial] = useState("");
+  const [residencial, setResidencial] = useState("");
+  const [celular, setCelular] = useState("");
+  const [nascimento, setNascimento] = useState("");
+  const [rg, setRg] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [sexo, setSexo] = useState("");
+  const [emailAfiliado, setEmailAfiliado] = useState("");
+  const [municipio, setMunicipio] = useState("");
+  const [ufm, setUfm] = useState("");
+  const [escolaridade, setEscolaridade] = useState("");
+  const [ocupacao, setOcupacao] = useState("");
+  const [movimento, setMovimento] = useState("");
+  const [uf, setUf] = useState("");
+
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const date = new Date();
+
+  const formatedDate = `${date.getUTCDate().toString().padStart(2, "0")}/${(
+    date.getUTCMonth() + 1
+  )
+    .toString()
+    .padStart(2, "0")}/${date.getFullYear()}`;
+
+  const body = {
+    CEP,
+    NomeAfiliado: u,
+    endereco,
+    numero,
+    complemento,
+    bairro,
+    cidade,
+    uf,
+    residencial,
+    comercial,
+    celular,
+    nascimento,
+    rg,
+    cpf,
+    sexo,
+    emailafiliado: emailAfiliado,
+    municipio,
+    ufm,
+    escolaridade,
+    ocupacao,
+    movimento,
+    valor: NaN,
+    data: formatedDate,
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    axios.post("https://api.sheetmonkey.io/form/uyvgqX1ZoBoyAcF56h2ygN", body, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+
+    setShowSuccess(true);
+
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 3300);
+  };
+
+  console.log(body);
+
   return (
     <>
       <header className="header-bg-unegro">
@@ -162,7 +240,7 @@ export const UnegroAfiliados = () => {
                   </li>
                   <li>
                     Defender de uma sociedade justa, fraterna, sem exploração de
-                    classNamee, de raça ou baseada na exploração entre os sexos.{" "}
+                    classe, de raça ou baseada na exploração entre os sexos.{" "}
                   </li>
                 </ul>
               </div>
@@ -199,8 +277,7 @@ export const UnegroAfiliados = () => {
                 </h6>
                 <ul>
                   <li>
-                    Lutar contra o racismo em todas as suas htmlFormas de
-                    expressão;
+                    Lutar contra o racismo em todas as suas formas de expressão;
                   </li>
                 </ul>
               </div>
@@ -215,7 +292,7 @@ export const UnegroAfiliados = () => {
       <main
         id="afiliados"
         style={{
-          border: "2px solid red",
+          //border: "2px solid red",
           justifyContent: "center",
           alignItems: "center",
         }}
@@ -265,7 +342,11 @@ export const UnegroAfiliados = () => {
           </section>
 
           <section className="contato-formulario" aria-label="formulario">
-            <form className="form" action="afiliados">
+            <form
+              className="form"
+              action="afiliados"
+              onSubmit={(e) => handleSubmit(e)}
+            >
               <div className="col-2 nao-visivel">
                 <label htmlFor="data">Data de Inscrição</label>
                 <input type="text" id="data" name="data" readOnly />
@@ -279,6 +360,7 @@ export const UnegroAfiliados = () => {
                   name="NomeAfiliado"
                   placeholder="Seu nome"
                   required
+                  onChange={(e: any) => setU(e.target.value)}
                 />
               </div>
 
@@ -290,6 +372,7 @@ export const UnegroAfiliados = () => {
                   name="CEP"
                   placeholder="CEP"
                   required
+                  onChange={(e: any) => setCEP(e.target.value)}
                 />
               </div>
 
@@ -301,6 +384,7 @@ export const UnegroAfiliados = () => {
                   name="endereco"
                   placeholder="Seu Endereço"
                   required
+                  onChange={(e: any) => setEndereco(e.target.value)}
                 />
               </div>
 
@@ -312,6 +396,7 @@ export const UnegroAfiliados = () => {
                   name="numero"
                   placeholder="N°"
                   required
+                  onChange={(e: any) => setNumero(e.target.value)}
                 />
               </div>
 
@@ -323,6 +408,7 @@ export const UnegroAfiliados = () => {
                   name="complemento"
                   placeholder="Apto/Casa"
                   required
+                  onChange={(e: any) => setComplemento(e.target.value)}
                 />
               </div>
 
@@ -334,6 +420,7 @@ export const UnegroAfiliados = () => {
                   name="bairro"
                   placeholder="Seu Bairro"
                   required
+                  onChange={(e: any) => setBairro(e.target.value)}
                 />
               </div>
 
@@ -345,6 +432,7 @@ export const UnegroAfiliados = () => {
                   name="cidade"
                   placeholder="Cidade"
                   required
+                  onChange={(e: any) => setCidade(e.target.value)}
                 />
               </div>
 
@@ -356,6 +444,7 @@ export const UnegroAfiliados = () => {
                   name="uf"
                   placeholder="UF"
                   required
+                  onChange={(e: any) => setUf(e.target.value)}
                 />
               </div>
 
@@ -370,6 +459,7 @@ export const UnegroAfiliados = () => {
                   placeholder="(DDD)0000-0000"
                   onKeyUp={(e) => handlePhone(e)}
                   maxLength={15}
+                  onChange={(e: any) => setResidencial(e.target.value)}
                 />
               </div>
 
@@ -382,6 +472,7 @@ export const UnegroAfiliados = () => {
                   placeholder="(DDD)0000-0000"
                   onKeyUp={(e) => handlePhone(e)}
                   maxLength={15}
+                  onChange={(e: any) => setComercial(e.target.value)}
                 />
               </div>
 
@@ -394,6 +485,7 @@ export const UnegroAfiliados = () => {
                   placeholder="(DDD)99999-9999"
                   onKeyUp={(e) => handlePhone(e)}
                   maxLength={15}
+                  onChange={(e: any) => setCelular(e.target.value)}
                 />
               </div>
 
@@ -405,6 +497,7 @@ export const UnegroAfiliados = () => {
                   name="nascimento"
                   placeholder="xx/xx/xxxx"
                   required
+                  onChange={(e: any) => setNascimento(e.target.value)}
                 />
               </div>
 
@@ -416,6 +509,7 @@ export const UnegroAfiliados = () => {
                   name="rg"
                   placeholder="xx.xxx.xxx-x"
                   required
+                  onChange={(e: any) => setRg(e.target.value)}
                 />
               </div>
 
@@ -427,12 +521,19 @@ export const UnegroAfiliados = () => {
                   name="cpf"
                   placeholder="xxx.xxx.xxx-xx"
                   required
+                  onChange={(e: any) => setCpf(e.target.value)}
                 />
               </div>
 
               <div className="col-2">
                 <label htmlFor="sexo">Sexo</label>
-                <select className="form-select" name="sexo" id="sexo" required>
+                <select
+                  className="form-select"
+                  name="sexo"
+                  id="sexo"
+                  required
+                  onChange={(e: any) => setSexo(e.target.value)}
+                >
                   <option value="" disabled selected>
                     Escolha o seu sexo
                   </option>
@@ -453,6 +554,7 @@ export const UnegroAfiliados = () => {
                   placeholder="contato@email.com.br"
                   autoComplete="on"
                   required
+                  onChange={(e: any) => setEmailAfiliado(e.target.value)}
                 />
               </div>
 
@@ -464,6 +566,7 @@ export const UnegroAfiliados = () => {
                   name="municipio"
                   placeholder="Município"
                   autoComplete="on"
+                  onChange={(e: any) => setMunicipio(e.target.value)}
                 />
               </div>
 
@@ -475,6 +578,7 @@ export const UnegroAfiliados = () => {
                   name="ufm"
                   placeholder="UF"
                   autoComplete="on"
+                  onChange={(e: any) => setUfm(e.target.value)}
                 />
               </div>
 
@@ -485,6 +589,7 @@ export const UnegroAfiliados = () => {
                   name="escolaridade"
                   id="escolaridade"
                   required
+                  onChange={(e: any) => setEscolaridade(e.target.value)}
                 >
                   <option value="" disabled selected>
                     Gradu de Escolaridade
@@ -525,6 +630,7 @@ export const UnegroAfiliados = () => {
                   name="ocupacao"
                   placeholder="Ocupação/Profissão"
                   required
+                  onChange={(e) => setOcupacao(e.target.value)}
                 />
               </div>
 
@@ -538,6 +644,7 @@ export const UnegroAfiliados = () => {
                   name="movimento"
                   id="movimento"
                   required
+                  onChange={(e: any) => setMovimento(e.target.value)}
                 >
                   <option value="" disabled selected>
                     Selecione o Movimento Social
@@ -583,15 +690,40 @@ export const UnegroAfiliados = () => {
                 </select>
               </div>
 
-              <button
+              <input
                 className="botao-form hover:bg-gray-500"
                 type="submit"
                 style={{ backgroundColor: "#325e75" }}
-              >
-                Afilie-se
-              </button>
-              <div id="mensagem" style={{ display: "none" }}></div>
+                value={"Afilie-se"}
+              />
             </form>
+            <div
+              className={`bg-green-100 rounded-md p-3 flex mt-5 ${
+                showSuccess ? "" : "hidden"
+              }`}
+            >
+              <svg
+                className="stroke-2 stroke-current text-green-600 h-8 w-8 mr-2 flex-shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M0 0h24v24H0z" stroke="none" />
+                <circle cx="12" cy="12" r="9" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+
+              <div className="text-green-700">
+                <div className="font-bold text-xl">
+                  Seu formulário foi enviado!
+                </div>
+
+                <div>
+                  Seu formulário foi enviado com sucesso! Muito obrigado.
+                </div>
+              </div>
+            </div>
           </section>
         </div>
       </main>

@@ -6,7 +6,6 @@ import axios from "axios";
 import { SwitchFormulary } from "../basic/swirchFormularie";
 import { IAmigoValePix } from "../../../../models/afiliados/IAmigoValePix";
 import { handlePhone } from "../../../../../public/TS/script";
-import { Success } from "../../../reuseable/submit/success/Succes";
 
 type props = {
   partner: string;
@@ -64,7 +63,7 @@ export const AmigoValePixFormulary = ({ partner }: props) => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    axios.post("https://api.sheetmonkey.io/form/uwnN9fSvLjroHLkpXPQsmk", body, {
+    axios.post("https://api.sheetmonkey.io/form/bx1wjrBiMrd2su2qwNaZmr", body, {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -74,7 +73,7 @@ export const AmigoValePixFormulary = ({ partner }: props) => {
 
     setTimeout(() => {
       setShowSuccess(false);
-    }, 3300);
+    }, 3700);
   };
 
   console.log(body);
@@ -188,18 +187,6 @@ export const AmigoValePixFormulary = ({ partner }: props) => {
                 required
               />
             </div>
-            <div>
-              <label htmlFor="pix">Chave Pix</label>
-              <input
-                type="text"
-                id="pix"
-                name="pix"
-                placeholder="digite aqui sua chave pix"
-                autoComplete="on"
-                onChange={(e) => setPixAluno(e.target.value)}
-                required
-              />
-            </div>
 
             <div>
               <label htmlFor="CPF">CPF</label>
@@ -210,6 +197,18 @@ export const AmigoValePixFormulary = ({ partner }: props) => {
                 placeholder="insira um número de CPF válido..."
                 /*onKeyUp="handlePhone(event)"*/ maxLength={11}
                 onChange={(e) => setCpfPessoaIndicou(e.target.value)}
+                required
+              />
+            </div>
+            <div className="">
+              <label htmlFor="pix">Chave Pix</label>
+              <input
+                type="text"
+                id="pix"
+                name="pix"
+                placeholder="digite aqui sua chave pix"
+                autoComplete="on"
+                onChange={(e) => setPixAluno(e.target.value)}
                 required
               />
             </div>
@@ -260,6 +259,7 @@ export const AmigoValePixFormulary = ({ partner }: props) => {
                 required
               />
             </div>
+
             <div className="col-2">
               <label htmlFor="email">Email</label>
               <input
@@ -353,9 +353,33 @@ export const AmigoValePixFormulary = ({ partner }: props) => {
             <button className="botao-form bg-blue-500" type="submit">
               Inscreva-se
             </button>
-            <div id="mensagem" style={{ display: "none" }}></div>
-            {showSuccess ? <Success /> : ""}
           </form>
+
+          <div
+            className={`bg-green-100 rounded-md p-3 flex mt-5 ${
+              showSuccess ? "" : "hidden"
+            }`}
+          >
+            <svg
+              className="stroke-2 stroke-current text-green-600 h-8 w-8 mr-2 flex-shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M0 0h24v24H0z" stroke="none" />
+              <circle cx="12" cy="12" r="9" />
+              <path d="M9 12l2 2 4-4" />
+            </svg>
+
+            <div className="text-green-700">
+              <div className="font-bold text-xl">
+                Seu formulário foi enviado!
+              </div>
+
+              <div>Seu formulário foi enviado com sucesso! Muito obrigado.</div>
+            </div>
+          </div>
         </section>
       </div>
     </div>

@@ -3,7 +3,7 @@ import styles from "./acirc-style.module.scss";
 export const AcircSection = () => {
   return (
     <section className={styles.acirc}>
-      <div className={styles.acircContainer}>
+      <div className={`${styles.acircContainer} mt-20`}>
         <h1 className={styles.tituloAcirc}>Potencialize seu negócio!</h1>
         <p>
           Agora, a Anhanguera Rio Claro estabeleceu uma parceria que traz

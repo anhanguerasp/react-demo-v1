@@ -1,9 +1,10 @@
+import { NewAmigoValePixForm } from "../../NOVO/components/forms/amigoValePix/amigoValePix";
+import { FormularyContainer } from "../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
 import { CarouselList } from "../../components/layout/carousel/carouselList";
 import { Catalog } from "../../components/layout/catalog/catalog";
-import { AmigoValePixFormulary } from "../../components/layout/formularies/amigovalepix/amigoValePixFormulario";
 import { ValePixSection } from "../../components/layout/parcerias/amigoValePix/valepixSection";
 import { amigoValePixCarouselList } from "../../utils/listas/carrouselLits";
 
@@ -17,7 +18,9 @@ const Page = () => {
       <CarouselList imageList={amigoValePixCarouselList} />
       <ValePixSection />
       <Catalog />
-      <AmigoValePixFormulary partner="Amigo Vale pix" />
+      <FormularyContainer
+        children={<NewAmigoValePixForm partner="Amigo Vale Pix" />}
+      />
       <NewFooter />
     </div>
   );

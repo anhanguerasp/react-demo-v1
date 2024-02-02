@@ -91,7 +91,7 @@ export const routes = createBrowserRouter([
   /// AFILIADOS
 
   {
-    path: "UNEGROafiliado",
+    path: "/afiliados/unegro",
     element: <UnegroAfiliados />,
   },
 ]);

@@ -5,4 +5,5 @@ export interface IProfessor extends IMatricula {
   telefoneprof: string;
   emailprof: string;
   CPFQuemIndicou?: string;
+  pixProf?: string;
 }

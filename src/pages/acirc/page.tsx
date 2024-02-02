@@ -1,9 +1,10 @@
+import { NewAcircForm } from "../../NOVO/components/forms/acirc/acirc-form";
+import { FormularyContainer } from "../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
 import { CarouselList } from "../../components/layout/carousel/carouselList";
 import { Catalog } from "../../components/layout/catalog/catalog";
-import { AcircFormulary } from "../../components/layout/formularies/acirc/acircformulario";
 import { AcircSection } from "../../components/layout/parcerias/ACIRC/AcircSection";
 import { acircCarouselList } from "../../utils/listas/carrouselLits";
 
@@ -17,7 +18,7 @@ const Page = () => {
       <CarouselList imageList={acircCarouselList} />
       <AcircSection />
       <Catalog />
-      <AcircFormulary partner="Acirc" />
+      <FormularyContainer children={<NewAcircForm partner="Acirc" />} />
       <NewFooter />
     </div>
   );

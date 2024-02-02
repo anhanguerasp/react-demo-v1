@@ -1,9 +1,10 @@
+import { NewProfessorValePix } from "../../NOVO/components/forms/professorValePix/professorValePix";
+import { FormularyContainer } from "../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
 import { CarouselList } from "../../components/layout/carousel/carouselList";
 import { Catalog } from "../../components/layout/catalog/catalog";
-import { ProfessorValePixFormulary } from "../../components/layout/formularies/professorValePix/professorValePix";
 import { ProfessorValePixSection } from "../../components/layout/parcerias/professorValePix/professorValePixSection";
 import { profValePixCarouselList } from "../../utils/listas/carrouselLits";
 
@@ -17,7 +18,10 @@ const Page = () => {
       <CarouselList imageList={profValePixCarouselList} />
       <ProfessorValePixSection />
       <Catalog />
-      <ProfessorValePixFormulary partner="Professor Vale Pix" />
+      {/*<ProfessorValePixFormulary partner="Professor Vale Pix" />*/}
+      <FormularyContainer
+        children={<NewProfessorValePix partner="Professor Vale Pix" />}
+      />
       <NewFooter />
     </div>
   );

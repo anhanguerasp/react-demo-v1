@@ -1,9 +1,10 @@
+import { NewGenericForm } from "../../NOVO/components/forms/generic/generic-form";
+import { FormularyContainer } from "../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
 import { CarouselList } from "../../components/layout/carousel/carouselList";
 import { Catalog } from "../../components/layout/catalog/catalog";
-import { Formulary } from "../../components/layout/formularies/basic/formularie";
 import { AmaiSection } from "../../components/layout/parcerias/amai/amaiSection";
 import { amaiCarouselList } from "../../utils/listas/carrouselLits";
 
@@ -17,7 +18,7 @@ const Page = () => {
       <CarouselList imageList={amaiCarouselList} />
       <AmaiSection />
       <Catalog />
-      <Formulary partner="Amai" />
+      <FormularyContainer children={<NewGenericForm partner="Amai" />} />
       <NewFooter />
     </div>
   );
