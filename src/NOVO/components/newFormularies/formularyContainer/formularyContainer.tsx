@@ -19,7 +19,7 @@ export const FormularyContainer = ({ children }: Props) => {
 
       <div className="flex flex-col md:flex-row rounded-lg sm:flex-col">
         <div
-          className="sm:h-auto h-32 md:h-auto md:w-1/2 bg-black md:w-1/2 md:rounded-l-lg sm:rounded-t-lg p-12"
+          className="sm:h-auto h-32 md:h-auto md:w-1/2 bg-black md:w-1/2  md:rounded-l-lg  p-12"
           style={{ height: "auto" }}
         >
           <h2 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-3xl lg:text-4xl dark:text-white sm:text-m sm:text-2x1">

@@ -8,6 +8,7 @@ import "../public/scss/global.module.scss";
 import "../public/scss/global.scss";
 import "flowbite";
 import "flowbite-react";
+import "react-chatbot-kit/build/main.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

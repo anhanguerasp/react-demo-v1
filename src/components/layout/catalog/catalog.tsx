@@ -32,7 +32,7 @@ export const Catalog = () => {
             )
           }
         >
-          <img src="/img/catalogos 3.png" alt="catalogo" />
+          <img src="/img/novo-catalogo-3.png" alt="catalogo" />
         </a>
       </div>
       <div className="botoes-catalogo-mobile">

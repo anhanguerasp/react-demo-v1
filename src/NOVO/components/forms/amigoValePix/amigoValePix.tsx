@@ -89,7 +89,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-first-name"
             >
               Nome
@@ -105,7 +105,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
 
           <div className="w-full md:w-1/2 px-3 mb-8 md:mb-0">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-first-name"
             >
               R.A
@@ -128,7 +128,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
           </div>
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-first-name"
             >
               Telefone
@@ -145,7 +145,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
 
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-first-name"
             >
               Email
@@ -160,7 +160,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
           </div>
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-first-name"
             >
               CPF
@@ -184,7 +184,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
           </div>
           <div className="w-full md:w-1/2 px-3">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-last-name"
             >
               Chave Pix
@@ -206,7 +206,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-first-name"
             >
               Nome
@@ -229,7 +229,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
           </div>
           <div className="w-full md:w-1/2 px-3">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-last-name"
             >
               telefone
@@ -248,7 +248,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-password"
             >
               CPF
@@ -270,7 +270,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-password"
             >
               EMAIL
@@ -282,7 +282,6 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
               id="grid-password"
               type="text"
               placeholder="EMAIL"
-              maxLength={11}
               onChange={(e) => setEmail(e.target.value)}
             />
             <p
@@ -296,7 +295,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
         <div className="flex flex-wrap -mx-3 mb-2">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0 ">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-state"
             >
               Modalidade
@@ -327,7 +326,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
           </div>
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-state"
             >
               Tipo de curso
@@ -359,7 +358,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
           </div>
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0 mt-7">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-state"
             >
               Curso de Interesse
@@ -384,7 +383,7 @@ export const NewAmigoValePixForm = ({ partner }: props) => {
 
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0 mt-7">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-state"
             >
               Polo de Interesse

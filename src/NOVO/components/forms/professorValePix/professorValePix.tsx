@@ -260,7 +260,6 @@ export const NewProfessorValePix = ({ partner }: props) => {
               id="grid-password"
               type="text"
               placeholder="EMAIL"
-              maxLength={11}
               onChange={(e) => setEmail(e.target.value)}
             />
             <p

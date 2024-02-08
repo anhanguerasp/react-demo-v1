@@ -69,19 +69,19 @@ export const NewGenericForm = ({ partner }: props) => {
     <>
       <form
         method="post"
-        className="w-full  md:w-1/2 bg-white p-12 dark:bg-black sm:rounded-b-lg md:rounded-r-lg"
+        className="w-full  md:w-1/2 bg-white p-12 dark:bg-black md:rounded-r-lg"
         onSubmit={(e: any) => handleSubmit(e)}
       >
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-first-name"
             >
               Nome
             </label>
             <input
-              className={`appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className={`appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white d"
             id="grid-first-name ${
               name.length ? "border-gray-200" : "border-red-500"
             }`}
@@ -98,7 +98,7 @@ export const NewGenericForm = ({ partner }: props) => {
           </div>
           <div className="w-full md:w-1/2 px-3">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-last-name"
             >
               telefone
@@ -117,7 +117,7 @@ export const NewGenericForm = ({ partner }: props) => {
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-password"
             >
               CPF
@@ -139,7 +139,7 @@ export const NewGenericForm = ({ partner }: props) => {
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-password"
             >
               EMAIL
@@ -151,7 +151,6 @@ export const NewGenericForm = ({ partner }: props) => {
               id="grid-password"
               type="text"
               placeholder="EMAIL"
-              maxLength={11}
               onChange={(e) => setEmail(e.target.value)}
             />
             <p
@@ -165,7 +164,7 @@ export const NewGenericForm = ({ partner }: props) => {
         <div className="flex flex-wrap -mx-3 mb-2">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0 ">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-state"
             >
               Modalidade
@@ -196,7 +195,7 @@ export const NewGenericForm = ({ partner }: props) => {
           </div>
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-state"
             >
               Tipo de curso
@@ -228,7 +227,7 @@ export const NewGenericForm = ({ partner }: props) => {
           </div>
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0 mt-7">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-state"
             >
               Curso de Interesse
@@ -253,7 +252,7 @@ export const NewGenericForm = ({ partner }: props) => {
 
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0 mt-7">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 dark:text-white"
               htmlFor="grid-state"
             >
               Polo de Interesse

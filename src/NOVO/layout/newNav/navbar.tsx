@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export const NewNavbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
     <div className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
@@ -25,6 +26,7 @@ export const NewNavbar = () => {
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-orange-100 focus:outline-none focus:ring-2 focus:ring-orange-200 dark:text-orange-400 dark:hover:bg-orange-700 dark:focus:ring-orange-600"
           aria-controls="mega-menu-full"
           aria-expanded="false"
+          onClick={() => setShowMobileMenu(!showMobileMenu)}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -45,7 +47,9 @@ export const NewNavbar = () => {
         </button>
         <div
           id="mega-menu-full"
-          className="items-center justify-between font-medium hidden w-full md:flex md:w-auto md:order-1"
+          className={`items-center justify-between font-medium w-full md:flex md:w-auto md:order-1 ${
+            showMobileMenu ? "" : "hidden"
+          }`}
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
@@ -63,6 +67,8 @@ export const NewNavbar = () => {
                 //id="dropdownHoverButton"
                 data-collapse-toggle="mega-menu-full-dropdown"
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-600 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700 font-semibold"
+                /*onMouseEnter={() => setShowMenu(!showMenu)}
+                onMouseOut={() => setShowMenu(!showMenu)}*/
                 onClick={() => setShowMenu(!showMenu)}
               >
                 Parcerias{" "}
@@ -140,7 +146,7 @@ export const NewNavbar = () => {
                   </div>
                 </NavLink>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
-                  Preencha o nossa formulário e receba um{" "}
+                  Preencha o nosso formulário e receba um{" "}
                   <span style={{ color: "#fd7e14", fontWeight: "800" }}>
                     pix
                   </span>{" "}
@@ -159,7 +165,7 @@ export const NewNavbar = () => {
                   </div>
                 </NavLink>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
-                  Preencha o nossa formulário e receba um{" "}
+                  Preencha o nosso formulário e receba um{" "}
                   <span style={{ color: "#fd7e14", fontWeight: "800" }}>
                     pix
                   </span>{" "}

@@ -1,3 +1,4 @@
+import { ChatBox } from "../../BOT/chatbot/Chatbox";
 import { NewGenericForm } from "../../NOVO/components/forms/generic/generic-form";
 import { FormularyContainer } from "../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
@@ -10,7 +11,7 @@ import { homeCarrouselList } from "../../utils/listas/carrouselLits";
 
 const HomePage = () => {
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <div className="flex flex-col transition duration-200 dark:bg-gray-900 p-10">
         <PreNavbar />
         <NewNavbar />
@@ -18,9 +19,11 @@ const HomePage = () => {
       <CarouselList imageList={homeCarrouselList} />
       <HomeContent />
       <Catalog />
+
       <FormularyContainer children={<NewGenericForm partner="" />} />
       {/*<Formulary partner="" />*/}
       <NewFooter />
+      <ChatBox />
     </div>
   );
 };
