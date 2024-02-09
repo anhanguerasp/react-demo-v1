@@ -22,6 +22,7 @@ const HomePage = () => {
 
       <FormularyContainer children={<NewGenericForm partner="" />} />
       {/*<Formulary partner="" />*/}
+
       <NewFooter />
       <ChatBox />
     </div>

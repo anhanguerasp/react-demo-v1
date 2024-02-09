@@ -1,3 +1,4 @@
+import { ChatBox } from "../../../BOT/chatbot/Chatbox";
 import { NewGenericForm } from "../../../NOVO/components/forms/generic/generic-form";
 import { FormularyContainer } from "../../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../../NOVO/layout/newFooter/newFooter";
@@ -20,6 +21,7 @@ const Page = () => {
       <Catalog />
       <FormularyContainer children={<NewGenericForm partner="" />} />
       <NewFooter />
+      <ChatBox />
     </div>
   );
 };

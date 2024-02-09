@@ -1,3 +1,4 @@
+import { ChatBox } from "../../BOT/chatbot/Chatbox";
 import { NewAmigoValePixForm } from "../../NOVO/components/forms/amigoValePix/amigoValePix";
 import { FormularyContainer } from "../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
@@ -22,6 +23,7 @@ const Page = () => {
         children={<NewAmigoValePixForm partner="Amigo Vale Pix" />}
       />
       <NewFooter />
+      <ChatBox />
     </div>
   );
 };

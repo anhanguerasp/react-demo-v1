@@ -1,7 +1,5 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 import { BotAvatar } from "../layout/botAvatar/BotAvatar";
-import DogPicture from "../layout/widgets/dogWidget";
-import LearningOptions from "../layout/widgets/learningOptions";
 import GotIt from "../layout/widgets/GotIt";
 import IWidget from "react-chatbot-kit/build/src/interfaces/IWidget";
 import { MostSearched } from "../layout/widgets/MostSearched";
@@ -15,9 +13,13 @@ import {
 import { SocialWidget } from "../layout/widgets/institucional/socialWidget";
 import { ErrorAlert } from "../layout/widgets/alerts/errorAlert";
 import { PosWidget } from "../layout/widgets/institucional/posWidget";
+import IConfig from "react-chatbot-kit/build/src/interfaces/IConfig";
+import DogPicture from "../layout/widgets/dogWidget";
+import { IPM } from "../layout/widgets/institucional/pm";
 
 const botName = "AnhangueraSP bot";
-const config = {
+
+export const config = {
   customComponents: {
     //# cabeçalho do bot
     header: () => (
@@ -30,12 +32,11 @@ const config = {
           display: "flex",
           justifyContent: "center",
           position: "relative",
+          alignContent: "center",
+          alignItems: "center",
         }}
       >
         Converse com o bot{" "}
-        <span style={{ position: "absolute", right: 15, fontWeight: "900" }}>
-          X
-        </span>
       </div>
     ),
 
@@ -63,6 +64,14 @@ const config = {
 
   widgets: [
     {
+      widgetName: "dog",
+      widgetFunc: () => <DogPicture />,
+    },
+    {
+      widgetName: "pm",
+      widgetFunc: () => <IPM />,
+    },
+    {
       widgetName: "gotIt",
       widgetFunc: (props) => <GotIt {...props} />,
     },
@@ -86,29 +95,31 @@ const config = {
     },
     {
       widgetName: "graduacaoCursos",
-      widgetFunc: (props) => <GraduaçãoCursosWidget />,
+      widgetFunc: () => <GraduaçãoCursosWidget />,
     },
 
     {
       widgetName: "tecnicoCursos",
-      widgetFunc: (props) => <TecnicoCursosWidget />,
+      widgetFunc: () => <TecnicoCursosWidget />,
     },
     {
       widgetName: "posCursos",
-      widgetFunc: (props) => <PosWidget />,
+      widgetFunc: () => <PosWidget />,
     },
 
     {
       widgetName: "social",
-      widgetFunc: (props) => <SocialWidget />,
+      widgetFunc: () => <SocialWidget />,
     },
 
     //# alerts widget
     {
       widgetName: "alertError",
-      widgetFunc: (props) => <ErrorAlert />,
+      widgetFunc: () => <ErrorAlert />,
     },
   ] as IWidget[],
 };
 
-export default config;
+export const configFunc = (): IConfig => {
+  return config;
+};

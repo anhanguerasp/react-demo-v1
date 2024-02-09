@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const ParceriasLista = (props: any) => {
+export const ParceriasLista = () => {
   const [showAmigoPix, setShowAmigoPix] = useState(false);
   const [showProfPix, setShowProfPix] = useState(false);
   const [showDominos, setShowDominos] = useState(false);

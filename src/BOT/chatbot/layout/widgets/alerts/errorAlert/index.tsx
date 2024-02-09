@@ -21,11 +21,11 @@ export const ErrorAlert = () => {
         <ul className="mt-1.5 list-disc list-inside">
           <li>
             Cheque se seu texto possui relação com os serviços e parcerias
-            oferecidos pelo Grupo AnhagueraSP ( cursos, parcerias, contato,
-            redes sociais...)
+            oferecidos pelo Grupo AnhagueraSP ( cursos, contato, redes
+            sociais...)
           </li>
           <li>Cheque a gráfia correta dos termos utlizados</li>
-          <li>Não utilize palavras e termos imprópios</li>
+          <li>Não utilize palavras e/ou termos imprópios</li>
         </ul>
       </div>
     </div>

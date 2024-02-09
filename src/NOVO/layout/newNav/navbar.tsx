@@ -102,7 +102,7 @@ export const NewNavbar = () => {
                 to={"../institucional/posgraduacao"}
                 className="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700 font-semibold"
               >
-                Pos-graduação
+                Pós-graduação
               </NavLink>
             </li>
             <li>

@@ -1,3 +1,4 @@
+import { ChatBox } from "../../../BOT/chatbot/Chatbox";
 import { NewFooter } from "../../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../../NOVO/layout/newPreNav/preNav";
@@ -12,6 +13,7 @@ const Page = () => {
       </div>
       <TermosSection />
       <NewFooter />
+      <ChatBox />
     </div>
   );
 };

@@ -10,7 +10,7 @@ export const UnidadesLink = () => {
       {""}
       <Link
         to={"https://anhanguerasp.com.br/institucional/unidades"}
-        className=""
+        className="hover:text-orange-900"
       >
         https://anhanguerasp.com.br/institucional/unidades
       </Link>{" "}

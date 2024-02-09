@@ -10,6 +10,9 @@ import { handleInputBot } from "../../hooks/bot/handleInputBot";
 
 const MessageParser = ({ children, actions }: any) => {
   const parse = (message: any) => {
+    if (message.includes("motivacao-pm")) {
+      actions.handlePM();
+    }
     if (message.includes("got")) {
       actions.handleGotIt();
     }

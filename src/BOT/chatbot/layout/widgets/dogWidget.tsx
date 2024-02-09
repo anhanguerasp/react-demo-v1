@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
 
-const DogPicture = (props: any) => {
+const DogPicture = () => {
   const [imageUrl, setImageUrl] = useState("");
-
-  const options = [
-    {
-      name: "Got It!",
-      handler: props.actionProvider.handleGotIt,
-      id: 1,
-    },
-  ];
 
   useEffect(() => {
     fetch("https://dog.ceo/api/breeds/image/random")
@@ -21,7 +13,7 @@ const DogPicture = (props: any) => {
 
   return (
     <div>
-      <button></button>
+      <img src={imageUrl} />
     </div>
   );
 };

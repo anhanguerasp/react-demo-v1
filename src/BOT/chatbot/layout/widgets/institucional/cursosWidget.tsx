@@ -189,7 +189,7 @@ export const TecnicoCursosWidget = () => {
 
     { name: "TÉCNICO EM MASSOTERAPIA" },
 
-    { name: "TÉCNICO EM LOSÍSTICA" },
+    { name: "TÉCNICO EM LOGÍSTICA" },
     { name: "TÉCNICO EM MANUTENÇÃO E SUPORTE EM INFORMÁTICA" },
 
     { name: "TÉCNICO EM MARKETING" },

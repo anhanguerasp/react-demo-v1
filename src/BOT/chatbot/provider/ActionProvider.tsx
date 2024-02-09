@@ -2,7 +2,6 @@ import React from "react";
 import { ListaContatos } from "../layout/contato/listaContatos/listaContatos";
 import { UnidadesLink } from "../layout/unidades/unidadesLink";
 import { IMessageOptions } from "react-chatbot-kit/build/src/interfaces/IMessages";
-import { ParceriasLista } from "../layout/widgets/parceriasOptions";
 
 const ActionProvider = ({
   createChatBotMessage,
@@ -24,6 +23,24 @@ const ActionProvider = ({
   setState: any;
   children: any;
 }) => {
+  const handlePM = () => {
+    const botMessage = createChatBotMessage("Sua dose diária de motivação...", {
+      widget: "pm",
+    });
+    setState((prev: any) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleDog = () => {
+    const botMessage = createChatBotMessage("Cachorro...", {
+      widget: "dog",
+    });
+    setState((prev: any) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
   const handleAlertError = () => {
     const botMessage = createChatBotMessage("Algo deu errado...", {
       widget: "alertError",
@@ -44,9 +61,12 @@ const ActionProvider = ({
   };
 
   const handlePos = () => {
-    const botMessage = createChatBotMessage("Cursos Pós Graduação", {
-      widget: "posCursos",
-    });
+    const botMessage = createChatBotMessage(
+      "Confira nossa lista de Cursos Pós Graduação",
+      {
+        widget: "posCursos",
+      }
+    );
     setState((prev: any) => ({
       ...prev,
       messages: [...prev.messages, botMessage],
@@ -179,6 +199,10 @@ const ActionProvider = ({
             handleSocial,
             handleAlertError,
             handlePos,
+
+            //# zueira
+            handleDog,
+            handlePM,
           },
         });
       })}

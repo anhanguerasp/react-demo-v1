@@ -1,3 +1,4 @@
+import { ChatBox } from "../../BOT/chatbot/Chatbox";
 import { NewProfessorValePix } from "../../NOVO/components/forms/professorValePix/professorValePix";
 import { FormularyContainer } from "../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
@@ -23,6 +24,7 @@ const Page = () => {
         children={<NewProfessorValePix partner="Professor Vale Pix" />}
       />
       <NewFooter />
+      <ChatBox />
     </div>
   );
 };
