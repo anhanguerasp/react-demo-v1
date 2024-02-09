@@ -55,7 +55,7 @@ export const ChatBox = () => {
           } bg-gray-200 text-sm flex justify-center text-gray-600 px-2 py-2 mr-2 rounded-full`}
         >
           <p>
-            Duvidas? acesse nosso{"  "}
+            Dúvidas? acesse nosso{"  "}
             <span className={`font-semibold`}> bot</span>
           </p>
         </div>
@@ -67,6 +67,7 @@ export const ChatBox = () => {
                   height: "57px",
 
                   borderRadius: "30px",
+                  display: "none",
                 }
               : {
                   width: "57px",
