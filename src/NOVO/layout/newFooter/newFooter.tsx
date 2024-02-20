@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 export const NewFooter = () => {
   return (
-    <footer className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
+    <footer className="bg-neutral-100 text-center text-neutral-600 dark:bg-gray-900 dark:text-neutral-200 lg:text-left">
       <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">
           <span
             style={{ fontWeight: "700", fontSize: "19px" }}
-            className="text-gray-800 md:justify-center"
+            className="text-gray-800 md:justify-center dark:text-white"
           >
             Entre em contato conosco através das nossas redes sociais :
           </span>
@@ -197,8 +197,8 @@ export const NewFooter = () => {
         </div>
       </div>
 
-      <div className="bg-neutral-200 p-6 text-center dark:bg-neutral-700">
-        <span>© 2023 Copyright:</span>
+      <div className="bg-neutral-200 p-6 text-center dark:bg-gray-800">
+        <span>© 2024 Copyright:</span>
         <a
           className="font-semibold text-neutral-600 dark:text-neutral-400"
           href="https://tw-elements.com/"

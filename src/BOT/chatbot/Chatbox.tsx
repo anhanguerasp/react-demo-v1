@@ -72,13 +72,18 @@ export const ChatBox = () => {
               : {
                   width: "57px",
                   height: "57px",
-
+                  display: "flex",
+                  justifyContent: "center",
+                  alignContent: "center",
                   borderRadius: "30px",
                 }
           }
           onClick={handleShow}
           className="bg-white"
         >
+          <span className="absolute flex h-12 w-12">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-600 opacity-75"></span>
+          </span>
           <img src="/img/favicon.svg" style={{ width: "95%" }} />
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { ChatBox } from "../../BOT/chatbot/Chatbox";
+import { CoursesTabContainer } from "../../NOVO/components";
 import { NewAmigoValePixForm } from "../../NOVO/components/forms/amigoValePix/amigoValePix";
 import { FormularyContainer } from "../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
@@ -19,6 +20,7 @@ const Page = () => {
       <CarouselList imageList={amigoValePixCarouselList} />
       <ValePixSection />
       <Catalog />
+      <CoursesTabContainer />
       <FormularyContainer
         children={<NewAmigoValePixForm partner="Amigo Vale Pix" />}
       />

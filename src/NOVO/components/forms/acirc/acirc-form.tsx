@@ -69,7 +69,7 @@ export const NewAcircForm = ({ partner }: props) => {
     <>
       <form
         method="post"
-        className="w-full  md:w-1/2 bg-white p-12 dark:bg-black sm:rounded-b-lg md:rounded-r-lg"
+        className="w-full  md:w-1/2 bg-white p-12 dark:bg-gray-900 sm:rounded-b-lg md:rounded-r-lg"
         onSubmit={(e: any) => handleSubmit(e)}
       >
         <div className="flex flex-wrap -mx-3 mb-6">

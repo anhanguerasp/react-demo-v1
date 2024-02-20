@@ -3,6 +3,7 @@ import {
   contatoInput,
   cursoInput,
   parceriaInput,
+  socialInput,
   unidadesInput,
   universalList,
 } from "../../constants/bot/inputList";
@@ -35,6 +36,10 @@ const MessageParser = ({ children, actions }: any) => {
 
     if (handleInputBot(parceriaInput, message)) {
       actions.handlePartners();
+    }
+
+    if (handleInputBot(socialInput, message)) {
+      actions.handleSocial();
     }
 
     // TESTE WIDGET

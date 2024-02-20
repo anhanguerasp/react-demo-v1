@@ -1,4 +1,5 @@
 import { ChatBox } from "../../BOT/chatbot/Chatbox";
+import { CoursesTabContainer } from "../../NOVO/components";
 import { NewAcircForm } from "../../NOVO/components/forms/acirc/acirc-form";
 import { FormularyContainer } from "../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
@@ -19,6 +20,7 @@ const Page = () => {
       <CarouselList imageList={acircCarouselList} />
       <AcircSection />
       <Catalog />
+      <CoursesTabContainer />
       <FormularyContainer children={<NewAcircForm partner="Acirc" />} />
       <NewFooter />
       <ChatBox />

@@ -97,6 +97,10 @@ export const cursoInput = [
 export const socialInput = [
   "instagram",
   "Instagram",
+  "insta",
+  "Insta",
+  "face",
+  "Face",
   "Facebook",
   "facebook",
   "Linkedin",

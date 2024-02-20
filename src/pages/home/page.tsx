@@ -1,4 +1,5 @@
 import { ChatBox } from "../../BOT/chatbot/Chatbox";
+import { CoursesTabContainer } from "../../NOVO/components";
 import { NewGenericForm } from "../../NOVO/components/forms/generic/generic-form";
 import { FormularyContainer } from "../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
@@ -19,7 +20,7 @@ const HomePage = () => {
       <CarouselList imageList={homeCarrouselList} />
       <HomeContent />
       <Catalog />
-
+      <CoursesTabContainer />
       <FormularyContainer children={<NewGenericForm partner="" />} />
       {/*<Formulary partner="" />*/}
 
