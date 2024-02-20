@@ -4,7 +4,7 @@ export const ListaContatos = () => {
   return (
     <div className="lista-contatos-container">
       <p>
-        entre em contato conosco atráves dos nossos canais de comunicação : {""}
+        Entre em contato conosco atráves dos nossos canais de comunicação : {""}
       </p>
 
       <ul>

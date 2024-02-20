@@ -1,0 +1,11 @@
+.type-course-filter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: start;
+  //align-content: center;
+  border: "2px solid red";
+
+  padding: 12px;
+}

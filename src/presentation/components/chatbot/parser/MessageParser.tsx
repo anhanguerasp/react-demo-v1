@@ -1,5 +1,11 @@
 import React from "react";
-import { contatoInput, unidadesInput } from "../../../constants/bot/inputList";
+import {
+  contatoInput,
+  cursoInput,
+  parceriaInput,
+  unidadesInput,
+  universalList,
+} from "../../../constants/bot/inputList";
 import { handleInputBot } from "../../../hooks/bot/handleInputBot";
 
 const MessageParser = ({ children, actions }: any) => {
@@ -11,6 +17,11 @@ const MessageParser = ({ children, actions }: any) => {
       actions.handleTeste();
     }
 
+    if (message.includes(""))
+      if (handleInputBot(cursoInput, message)) {
+        actions.handleModalidades();
+      }
+
     if (handleInputBot(unidadesInput, message)) {
       actions.handleUnidades();
     }
@@ -19,9 +30,18 @@ const MessageParser = ({ children, actions }: any) => {
       actions.handleContatos();
     }
 
+    if (handleInputBot(parceriaInput, message)) {
+      actions.handlePartners();
+    }
+
     // TESTE WIDGET
     if (message.includes("dog")) {
       actions.handleDog();
+    }
+
+    //# Sem Resposta
+    if (!handleInputBot(universalList, message)) {
+      actions.handleAlertError();
     }
   };
 

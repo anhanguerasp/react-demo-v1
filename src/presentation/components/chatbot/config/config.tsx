@@ -5,6 +5,16 @@ import LearningOptions from "../layout/widgets/learningOptions";
 import GotIt from "../layout/widgets/GotIt";
 import IWidget from "react-chatbot-kit/build/src/interfaces/IWidget";
 import { MostSearched } from "../layout/widgets/MostSearched";
+import { ParceriasLista } from "../layout/widgets/parceriasOptions";
+import { ModalidadeWidget } from "../layout/widgets/institucional/modalidadesWidget";
+import { TipoCurosdeWidget } from "../layout/widgets/institucional/tipoDeCursoWidget";
+import {
+  GraduaçãoCursosWidget,
+  TecnicoCursosWidget,
+} from "../layout/widgets/institucional/cursosWidget";
+import { SocialWidget } from "../layout/widgets/institucional/socialWidget";
+import { ErrorAlert } from "../layout/widgets/alerts/errorAlert";
+import { PosWidget } from "../layout/widgets/institucional/posWidget";
 
 const botName = "AnhangueraSP bot";
 const config = {
@@ -19,9 +29,13 @@ const config = {
           color: "white",
           display: "flex",
           justifyContent: "center",
+          position: "relative",
         }}
       >
-        Converse com o bot
+        Converse com o bot{" "}
+        <span style={{ position: "absolute", right: 15, fontWeight: "900" }}>
+          X
+        </span>
       </div>
     ),
 
@@ -30,7 +44,8 @@ const config = {
 
   //# mensagem inicial
   initialMessages: [
-    createChatBotMessage("Olá, no que eu poderia te ajudar?", {
+    createChatBotMessage("Seja bem vindo ao bot AnhangueraSP!!!", {}),
+    createChatBotMessage("No que eu poderia te ajudar?", {
       widget: "mostSearched",
     }),
   ],
@@ -54,6 +69,44 @@ const config = {
     {
       widgetName: "mostSearched",
       widgetFunc: (props) => <MostSearched {...props} />,
+    },
+    {
+      widgetName: "partners",
+      widgetFunc: (props) => <ParceriasLista {...props} />,
+    },
+
+    {
+      widgetName: "modalidades",
+      widgetFunc: (props) => <ModalidadeWidget {...props} />,
+    },
+
+    {
+      widgetName: "tipoCurso",
+      widgetFunc: (props) => <TipoCurosdeWidget {...props} />,
+    },
+    {
+      widgetName: "graduacaoCursos",
+      widgetFunc: (props) => <GraduaçãoCursosWidget />,
+    },
+
+    {
+      widgetName: "tecnicoCursos",
+      widgetFunc: (props) => <TecnicoCursosWidget />,
+    },
+    {
+      widgetName: "posCursos",
+      widgetFunc: (props) => <PosWidget />,
+    },
+
+    {
+      widgetName: "social",
+      widgetFunc: (props) => <SocialWidget />,
+    },
+
+    //# alerts widget
+    {
+      widgetName: "alertError",
+      widgetFunc: (props) => <ErrorAlert />,
     },
   ] as IWidget[],
 };
