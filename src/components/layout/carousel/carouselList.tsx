@@ -22,7 +22,7 @@ type props = {
 
 export const CarouselList = ({ imageList }: props) => {
   return (
-    <div className={styles.carousel}>
+    <div className={`${styles.carousel}`}>
       <Carousel
         interval={4000}
         autoPlay={true}

@@ -56,7 +56,7 @@ export const ChatBox = () => {
         >
           <p>
             Dúvidas? acesse nosso{"  "}
-            <span className={`font-semibold`}> bot</span>
+            <span className={`font-semibold`}> bot.</span>
           </p>
         </div>
         <div

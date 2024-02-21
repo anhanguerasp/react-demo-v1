@@ -8,6 +8,7 @@ import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
 import { CarouselList } from "../../components/layout/carousel/carouselList";
 import { Catalog } from "../../components/layout/catalog/catalog";
 import { HomeContent } from "../../components/layout/home/homeContent";
+import { WppIcon } from "../../components/layout/whatsapppIcon.tsx/wppIcon";
 import { homeCarrouselList } from "../../utils/listas/carrouselLits";
 
 const HomePage = () => {
@@ -26,6 +27,7 @@ const HomePage = () => {
 
       <NewFooter />
       <ChatBox />
+      <WppIcon />
     </div>
   );
 };

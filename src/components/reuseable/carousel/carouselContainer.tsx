@@ -7,7 +7,12 @@ export const CarouselContainer = ({ img }: props) => {
   return (
     <div className={styles.carouselContainer}>
       <img src={img} />
-      {/*<div style={{ backgroundImage: img }}></div>*/}
     </div>
   );
 };
+
+/*<div className={styles.carouselContainer}>
+      <img src={img} />
+      
+    </div>
+  */

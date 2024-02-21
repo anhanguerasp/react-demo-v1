@@ -58,7 +58,7 @@ props) => {
           type="button"
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/1SjpGTaSu7RvBDiMAAXoahBXsUDTd0zbP/view?usp=sharing",
+              "https://drive.google.com/file/d/1U7ldMWffZDWO8ObObQNzhkGG5eOHVL99/view?usp=sharing",
               "_blank"
             )
           }
