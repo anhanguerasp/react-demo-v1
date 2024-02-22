@@ -4,6 +4,7 @@ import { FormularyContainer } from "../../../NOVO/components/newFormularies/form
 import { NewFooter } from "../../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../../NOVO/layout/newPreNav/preNav";
+import { WppIcon } from "../../../components/layout/whatsapppIcon.tsx/wppIcon";
 
 const Page = () => {
   return (
@@ -15,6 +16,7 @@ const Page = () => {
       <FormularyContainer children={<NewGenericForm partner="" />} />
       <NewFooter />
       <ChatBox />
+      <WppIcon />
     </div>
   );
 };

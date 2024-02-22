@@ -7,30 +7,57 @@ export const WppIcon = () => {
   return (
     <div style={{}}>
       <div
-        className={`h-15 w-15 bg-gray-300 rounded-lg ${show ? "" : "hidden"}`}
-        style={{
-          position: "fixed",
-          //bottom: 5,
-          bottom: 165,
-          right: 22,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          zIndex: "5",
-          height: "auto",
-          width: "155px",
-          padding: "5px 10px",
-        }}
+        className={`bg-gray-300 rounded-lg`}
+        style={
+          show
+            ? {
+                position: "fixed",
+                //bottom: 5,
+                bottom: 165,
+                right: 22,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+                zIndex: "5",
+                height: "auto",
+                width: "345px",
+                //padding: "5px 10px",
+              }
+            : {
+                display: "none",
+              }
+        }
       >
-        <p className="text-sm mb-3 text-gray-800 font-bold">Qual o assunto?</p>
+        <div className="w-full">
+          <div
+            className="flex h-16 bg-green-400 content-center w-full rounded-t-lg px-5 py-3 mb-2 h-36"
+            style={{ backgroundColor: "rgb(45, 183, 66)", width: "100%" }}
+          >
+            <img src="/img/whatsapp-32.png" style={{ height: 35 }} />
+
+            <div>
+              <p className="text-lg mb-3 text-white font-bold px-2">
+                Iniciar atendimento
+              </p>
+              <p
+                className="text-sm mb-3 text-gray-200 font-bold px-2 w-full"
+                style={{ fontSize: "13px" }}
+              >
+                Selecione uma das opções abaixo e converse com a gente pelo{" "}
+                <strong>Whatsapp</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div>
           <button
             className="searched-option-button bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-4 border-b-4 border-teal-700 hover:border-teal-500 rounded flex
             
             focus:ring-4 focus:outline-none focus:ring-orange-300 mb-3"
             style={{ minWidth: 0 }}
-            onClick={() => setAssunto("cursos")}
+            onClick={() => setAssunto("CURSOS")}
           >
             Cursos
           </button>
@@ -39,7 +66,7 @@ export const WppIcon = () => {
             className="searched-option-button bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-4 border-b-4 border-teal-700 hover:border-teal-500 rounded flex
             focus:ring-4 focus:outline-none focus:ring-orange-300 mb-3"
             style={{ minWidth: 0 }}
-            onClick={() => setAssunto("Graduação")}
+            onClick={() => setAssunto("GRADUAÇÃO")}
           >
             Graduação
           </button>
@@ -55,18 +82,24 @@ export const WppIcon = () => {
           </button>
         </div>
         <div
-          className="rounded-lg px-4 py-2 bg-teal-500 text-white text-sm hover:bg-teal-800 mt-3"
+          className="rounded-lg px-4 py-2 bg-teal-500 text-white text-sm hover:bg-teal-800 mt-3 mb-3"
           onClick={() =>
             window.open(
-              `https://wa.me/5511932744814/?text=${
+              `https://wa.me/5511969510032/?text=${
                 assunto
-                  ? "Olá, gostaria de tirar dúvidas referentes à " + assunto
+                  ? assunto == "CURSOS"
+                    ? "Olá, gostaria de tirar dúvidas referentes aos " +
+                      assunto +
+                      " disponibilizados pela Anhanguera"
+                    : "Olá, gostaria de tirar dúvidas referente à " +
+                      assunto +
+                      " disponibilizada pela Anhanguera"
                   : "Olá, gostaria de tirar algumas dúvidas"
               }`
             )
           }
         >
-          Enviar mensagem
+          Iniciar Conversa
         </div>
       </div>
       <div

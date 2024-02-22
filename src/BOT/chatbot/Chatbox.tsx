@@ -38,6 +38,7 @@ export const ChatBox = () => {
                 borderRadius: "30px",
                 display: "flex",
                 alignItems: "center",
+                zIndex: "10",
               }
             : {
                 position: "fixed",
@@ -46,6 +47,7 @@ export const ChatBox = () => {
                 borderRadius: "30px",
                 display: "flex",
                 alignItems: "center",
+                zIndex: "10",
               }
         }
       >
@@ -68,6 +70,7 @@ export const ChatBox = () => {
 
                   borderRadius: "30px",
                   display: "none",
+                  zIndex: "10",
                 }
               : {
                   width: "57px",
@@ -76,6 +79,7 @@ export const ChatBox = () => {
                   justifyContent: "center",
                   alignContent: "center",
                   borderRadius: "30px",
+                  zIndex: "10",
                 }
           }
           onClick={handleShow}
@@ -94,7 +98,7 @@ export const ChatBox = () => {
           position: "fixed",
           right: 15,
           bottom: 25,
-          zIndex: 3,
+          zIndex: "10",
         }}
       >
         <Chatbot

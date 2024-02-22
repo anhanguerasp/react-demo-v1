@@ -8,6 +8,7 @@ import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
 import { CarouselList } from "../../components/layout/carousel/carouselList";
 import { Catalog } from "../../components/layout/catalog/catalog";
 import { AcircSection } from "../../components/layout/parcerias/ACIRC/AcircSection";
+import { WppIcon } from "../../components/layout/whatsapppIcon.tsx/wppIcon";
 import { acircCarouselList } from "../../utils/listas/carrouselLits";
 
 const Page = () => {
@@ -24,6 +25,7 @@ const Page = () => {
       <FormularyContainer children={<NewAcircForm partner="Acirc" />} />
       <NewFooter />
       <ChatBox />
+      <WppIcon />
     </div>
   );
 };

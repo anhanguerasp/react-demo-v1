@@ -3,6 +3,7 @@ import { NewFooter } from "../../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../../NOVO/layout/newPreNav/preNav";
 import { TermosSection } from "../../../components/institucional";
+import { WppIcon } from "../../../components/layout/whatsapppIcon.tsx/wppIcon";
 
 const Page = () => {
   return (
@@ -14,6 +15,7 @@ const Page = () => {
       <TermosSection />
       <NewFooter />
       <ChatBox />
+      <WppIcon />
     </div>
   );
 };

@@ -7,6 +7,7 @@ import { NewNavbar } from "../../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../../NOVO/layout/newPreNav/preNav";
 import { InscrevaseSection } from "../../../components/institucional";
 import { Catalog } from "../../../components/layout/catalog/catalog";
+import { WppIcon } from "../../../components/layout/whatsapppIcon.tsx/wppIcon";
 
 const Page = () => {
   return (
@@ -21,6 +22,7 @@ const Page = () => {
       <FormularyContainer children={<NewGenericForm partner="" />} />
       <NewFooter />
       <ChatBox />
+      <WppIcon />
     </div>
   );
 };

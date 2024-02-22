@@ -8,6 +8,7 @@ import { PreNavbar } from "../../../NOVO/layout/newPreNav/preNav";
 import { UnidadesSection } from "../../../components/institucional";
 import { CarouselList } from "../../../components/layout/carousel/carouselList";
 import { Catalog } from "../../../components/layout/catalog/catalog";
+import { WppIcon } from "../../../components/layout/whatsapppIcon.tsx/wppIcon";
 import { unidadesCarouselList } from "../../../utils/listas/carrouselLits";
 
 const Page = () => {
@@ -24,6 +25,7 @@ const Page = () => {
       <FormularyContainer children={<NewGenericForm partner="" />} />
       <NewFooter />
       <ChatBox />
+      <WppIcon />
     </div>
   );
 };

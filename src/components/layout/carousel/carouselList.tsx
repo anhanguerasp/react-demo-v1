@@ -29,6 +29,7 @@ export const CarouselList = ({ imageList }: props) => {
         infiniteLoop={true}
         axis="horizontal"
         showThumbs={false}
+        className={styles.teste}
       >
         {imageList.map((img) => (
           <CarouselContainer img={img} />

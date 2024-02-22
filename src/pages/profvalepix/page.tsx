@@ -7,6 +7,7 @@ import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
 import { CarouselList } from "../../components/layout/carousel/carouselList";
 import { Catalog } from "../../components/layout/catalog/catalog";
 import { ProfessorValePixSection } from "../../components/layout/parcerias/professorValePix/professorValePixSection";
+import { WppIcon } from "../../components/layout/whatsapppIcon.tsx/wppIcon";
 import { profValePixCarouselList } from "../../utils/listas/carrouselLits";
 
 const Page = () => {
@@ -25,6 +26,7 @@ const Page = () => {
       />
       <NewFooter />
       <ChatBox />
+      <WppIcon />
     </div>
   );
 };

@@ -9,6 +9,7 @@ import { CarouselList } from "../../components/layout/carousel/carouselList";
 import { Catalog } from "../../components/layout/catalog/catalog";
 import { Colaborators } from "../../components/layout/colaborators/colaborators";
 import { DominoSection } from "../../components/layout/dominosSection/dominos";
+import { WppIcon } from "../../components/layout/whatsapppIcon.tsx/wppIcon";
 import { dominosCarouselList } from "../../utils/listas/carrouselLits";
 import styles from "./index.module.scss";
 
@@ -27,6 +28,7 @@ const IndexPage = () => {
       <FormularyContainer children={<NewGenericForm partner="Domino's" />} />
       <NewFooter />
       <ChatBox />
+      <WppIcon />
     </div>
   );
 };

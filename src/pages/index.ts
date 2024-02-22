@@ -18,3 +18,4 @@ export { default as TermosPage } from "./institucional/termos/page";
 export { default as PoliticaPage } from "./institucional/politica/page";
 export { default as InfraPage } from "./institucional/infra/page";
 export { default as InscrevasePage } from "./institucional/inscrevase/page";
+export { default as ConcursoPage } from "./consurso_publico/page";

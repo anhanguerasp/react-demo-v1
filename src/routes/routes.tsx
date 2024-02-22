@@ -3,6 +3,7 @@ import {
   AmaiPage,
   AportPage,
   ArcicPage,
+  ConcursoPage,
   DominosPage,
   GraduacaoPage,
   HomePage,
@@ -93,5 +94,11 @@ export const routes = createBrowserRouter([
   {
     path: "/afiliados/unegro",
     element: <UnegroAfiliados />,
+  },
+
+  // CONCURSO
+  {
+    path: "/consultores",
+    element: <ConcursoPage />,
   },
 ]);
