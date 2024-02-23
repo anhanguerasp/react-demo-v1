@@ -6,12 +6,43 @@ interface props {
   show: boolean;
 }
 
-export const TesteModal = ({ show, onClick }: props) => {
+const ufLista = [
+  "AC",
+  "AL",
+  "AP",
+  "AM",
+  "BA",
+  "CE",
+  "DF",
+  "ES",
+  "GO",
+  "MA",
+  "MT",
+  "MS",
+  "MG",
+  "PA",
+  "PB",
+  "PR",
+  "PE",
+  "PI",
+  "RJ",
+  "RN",
+  "RS",
+  "RO",
+  "RR",
+  "SC",
+  "SP",
+  "SE",
+  "TO",
+];
+
+export const ModalConsult = ({ show, onClick }: props) => {
   const [nome, setNome] = useState("");
-  //const [cpf, setCpf] = useState("");
+  const [cpf, setCpf] = useState("");
   const [email, setEmail] = useState("");
   const [cidade, setCidade] = useState("");
   const [aluno, SetAluno] = useState(null);
+  const [uf, setUf] = useState("");
 
   let alunoResp = null;
 
@@ -25,9 +56,10 @@ export const TesteModal = ({ show, onClick }: props) => {
 
   const body = {
     nome: nome,
-    //cpf: cpf,
+    cpf: cpf,
     email: email,
     cidade: cidade,
+    UF: uf,
     aluno: alunoResp,
   };
 
@@ -180,21 +212,20 @@ export const TesteModal = ({ show, onClick }: props) => {
                 <div className="relative z-0 w-full mb-5 flex">
                   <select
                     name="select"
-                    value=""
+                    value={uf}
                     className="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+                    onChange={(e) => setUf(e.target.value)}
                   >
                     <option value="" selected disabled hidden></option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
-                    <option value="5">Option 5</option>
+                    {ufLista.map((uf) => (
+                      <option value={uf}>{uf}</option>
+                    ))}
                   </select>
                   <label
                     htmlFor="select"
                     className="absolute duration-300 top-3 -z-1 origin-0 text-gray-500"
                   >
-                    Selecione uma opção
+                    Selecione sua UF
                   </label>
                   <span className="text-sm text-red-600 hidden" id="error">
                     Selecione uma das opções
@@ -207,38 +238,6 @@ export const TesteModal = ({ show, onClick }: props) => {
                 >
                   <legend className="absolute text-gray-500 transform scale-75 -top-3 origin-0">
                     Você é aluno?
-                  </legend>
-                  <div className="block pt-3 pb-2 space-x-4">
-                    <label>
-                      <input
-                        type="radio"
-                        name="radio"
-                        value="1"
-                        className="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black"
-                      />
-                      Sim
-                    </label>
-                    <label>
-                      <input
-                        type="radio"
-                        name="radio"
-                        value="2"
-                        className="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black"
-                      />
-                      Não
-                    </label>
-                  </div>
-                  <span className="text-sm text-red-600 hidden" id="error">
-                    Option has to be selected
-                  </span>
-                </fieldset>
-
-                <fieldset
-                  className="relative z-0 w-full p-px mb-5 flex"
-                  onChange={(e: any) => SetAluno(e.target.value)}
-                >
-                  <legend className="absolute text-gray-500 transform scale-75 -top-3 origin-0">
-                    Você possui internet de boa qualidade?
                   </legend>
                   <div className="block pt-3 pb-2 space-x-4">
                     <label>

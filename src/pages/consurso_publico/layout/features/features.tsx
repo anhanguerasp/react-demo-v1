@@ -10,6 +10,7 @@ export const divRef = { current: null };
 
 export const FeaturesBlocks = React.forwardRef<HTMLDivElement, Ref>(
   ({ ...props }, ref) => {
+    console.log(props);
     return (
       <section className="relative">
         {/* Section background (needs .relative class on parent and next sibling elements) */}
@@ -27,17 +28,23 @@ export const FeaturesBlocks = React.forwardRef<HTMLDivElement, Ref>(
               ref={ref}
             >
               <h2 className="mb-4 text-6xl text-orange-500 font-bold">
-                Descritivo da campanha
+                Conquiste sua independência financeira
               </h2>
               <p className="text-xl text-gray-600">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur excepteur sint occaecat
-                cupidatat.
+                Realize suas vendas de maneira simples e dinâmica, e adquira uma
+                renda extra de{" "}
+                <span className="text-orange-500 font-semibold">
+                  R$ 3.000,00
+                </span>{" "}
+                ou mais!
               </p>
             </div>
 
             {/* Items */}
-            <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start md:max-w-2xl lg:max-w-none">
+            <div
+              className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-center md:max-w-2xl lg:max-w-none"
+              style={{ alignItems: "center" }}
+            >
               {/* 1st item */}
               <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
                 <svg
@@ -75,10 +82,10 @@ export const FeaturesBlocks = React.forwardRef<HTMLDivElement, Ref>(
                   </g>
                 </svg>
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                  Descritivo
+                  Cursos
                 </h4>
                 <p className="text-gray-600 text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Venda cursos de Graduação, Pós-graduação e Técnicos
                 </p>
               </div>
 
@@ -116,10 +123,10 @@ export const FeaturesBlocks = React.forwardRef<HTMLDivElement, Ref>(
                   </g>
                 </svg>
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                  Descritivo
+                  Matrícula
                 </h4>
                 <p className="text-gray-600 text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Você indica, Nós matriculamos e você ganha comissão
                 </p>
               </div>
 

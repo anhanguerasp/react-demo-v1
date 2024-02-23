@@ -1,6 +1,6 @@
-import { ModalConsult } from "../modal/modal";
 import "./style.scss";
-import { TesteModal } from "./teste";
+import { TesteModal } from "./modal";
+import { ModalConsult } from "../modal/modal";
 interface props {
   show: boolean;
   onClick: () => void;
@@ -156,11 +156,11 @@ const button = ({ show, onClick }: props) => {
 
       <ModalConsult show={show} onClick={onClick} />
 
-      <div>
+      <div className="flex w-full" style={{ display: "grid" }}>
         <button
-          className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0"
+          className="btn-box text-white bg-orange-600 hover:bg-orange-700 mb-4 sm:mb-0 h-20 sm:w-auto lg:w-2/6 font-bold text-lg"
           onClick={onClick}
-          style={{ border: "none" }}
+          //style={{ border: "none" }}
         >
           Se inscreva
         </button>
@@ -170,3 +170,6 @@ const button = ({ show, onClick }: props) => {
 };
 
 export default button;
+{
+  /*className="btn-box btn text-white bg-orange-600 hover:bg-orange-700 mb-4 sm:mb-0 h-20 sm:w-auto lg:w-2/6 "*/
+}

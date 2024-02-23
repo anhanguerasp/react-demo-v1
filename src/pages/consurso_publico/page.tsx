@@ -4,7 +4,8 @@ import { NewNavbar } from "../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
 import { Base } from "./layout/base";
 import { FeaturesBlocks } from "./layout/features/features";
-import { TesteModal } from "../../NOVO/layout/flootingFormulary/button/teste";
+import Features from "./detailSection/detailSection";
+import { FooterSubscribeSection } from "./footerSubscribeSection.tsx/footer-subscribe-section";
 
 const Page = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -24,6 +25,9 @@ const Page = () => {
       </div>
       <Base onClick={handleScroll} />
       <FeaturesBlocks ref={ref} />
+      {/*<GeralList />*/}
+      <Features />
+      <FooterSubscribeSection />
       <NewFooter />
     </>
   );

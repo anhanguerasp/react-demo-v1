@@ -1,0 +1,15 @@
+.triangle {
+  height: 180px;
+  aspect-ratio: cos(30deg);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  background: linear-gradient(45deg, #fa6900, #c02942);
+  z-index: 9;
+}
+
+.small-triangle {
+  height: 180px;
+  aspect-ratio: cos(30deg);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  background: linear-gradient(45deg, #fa6900, #c02942);
+  z-index: 9;
+}

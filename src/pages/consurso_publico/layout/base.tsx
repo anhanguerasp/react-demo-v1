@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ButtonFormulary } from "../../../NOVO/layout/flootingFormulary";
+import "../page.scss";
 
 interface props {
   onClick: () => void;
@@ -15,11 +16,10 @@ export const Base = ({ onClick }: props) => {
   };
 
   return (
-    <>
+    <div className="relative">
       <section className="relative">
-        {/* Illustration behind hero content */}
         <div
-          className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1"
+          className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-5"
           aria-hidden="true"
         >
           <svg
@@ -35,10 +35,15 @@ export const Base = ({ onClick }: props) => {
                 x2="50%"
                 y2="100%"
                 id="illustration-01"
+                className=""
               >
-                <stop stopColor="#FFF" offset="0%" />
+                <stop stopColor="#fff" offset="0%" />
                 <stop stopColor="#EAEAEA" offset="77.402%" />
-                <stop stopColor="#DFDFDF" offset="100%" />
+                <stop
+                  stopColor="#DFDFDF"
+                  offset="100%"
+                  className="bg-orange-500"
+                />
               </linearGradient>
             </defs>
             <g fill="url(#illustration-01)" fillRule="evenodd">
@@ -47,7 +52,11 @@ export const Base = ({ onClick }: props) => {
             </g>
           </svg>
         </div>
-
+        :{" "}
+        {/*<div
+          className="triangle absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-5"
+          area-hidden="true"
+></div>*/}
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           {/* Hero content */}
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
@@ -57,9 +66,9 @@ export const Base = ({ onClick }: props) => {
                 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 text-orange-500"
                 data-aos="zoom-y-out"
               >
-                Texto genérico{" "}
+                Seja um{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
-                  para exemplo
+                  Consultor Educacional.
                 </span>
               </h4>
               <div className="max-w-3xl mx-auto">
@@ -68,10 +77,10 @@ export const Base = ({ onClick }: props) => {
                   data-aos="zoom-y-out"
                   data-aos-delay="150"
                 >
-                  Exemplo de texto para landing page bla bla bla bla bla bla bla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla
-                  bla bla bla bla bla bla bla
+                  Atuando como Consultor Educacional você vende cursos em
+                  conjunto à uma das maiores marcas de educação do Brasil,
+                  recebendo todo o apoio necessário para realizar suas vendas da
+                  melhor forma.
                 </p>
                 <div
                   className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center relative"
@@ -100,6 +109,6 @@ export const Base = ({ onClick }: props) => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
