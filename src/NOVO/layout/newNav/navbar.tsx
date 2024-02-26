@@ -15,7 +15,7 @@ export const NewNavbar = () => {
         >
           <img
             src="https://anhanguerasp.com.br/img/logo.svg"
-            className="h-8"
+            className="h-12"
             alt="Anhanguera Logo"
             style={{ width: "220px" }}
           />

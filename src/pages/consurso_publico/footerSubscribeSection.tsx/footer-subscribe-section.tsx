@@ -19,12 +19,12 @@ export const FooterSubscribeSection = () => {
         className="flex bg-gray-950 h-full w-5/6 px-7 rounded-lg py-7"
         style={{ flexDirection: "column" }}
       >
-        <h4 className="text-orange-500 text-5xl font-semibold mb-2">
+        <h4 className="text-orange-500 font-semibold mb-2 text-4xl lg:text-5xl">
           Não perca está oportunidade!
         </h4>
         <p className="text-gray-200 w-3/6 mb-7 ">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore pariatur. Excepteur sint occaecat
+          Basta preencher o nosso formulário e você será automaticamente
+          redirecionado para o nosso WhatsApp.
         </p>
         <FooterButton show={show} onClick={handleOnClick} />
       </div>

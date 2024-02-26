@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { WppRedirect } from "./wppRedirect/wppRedirect";
 
 interface props {
   onClick: () => void;
@@ -37,6 +38,9 @@ const ufLista = [
 ];
 
 export const ModalConsult = ({ show, onClick }: props) => {
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showRedirect, setShowRedirect] = useState(false);
+
   const [nome, setNome] = useState("");
   const [cpf, setCpf] = useState("");
   const [email, setEmail] = useState("");
@@ -56,7 +60,6 @@ export const ModalConsult = ({ show, onClick }: props) => {
 
   const body = {
     nome: nome,
-    cpf: cpf,
     email: email,
     cidade: cidade,
     UF: uf,
@@ -68,10 +71,30 @@ export const ModalConsult = ({ show, onClick }: props) => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    await axios.post(
-      "https://api.sheetmonkey.io/form/vecfq41TMQCQFNvWevAESR",
-      body
-    );
+    await axios
+      .post("https://api.sheetmonkey.io/form/vecfq41TMQCQFNvWevAESR", body)
+      .then((resp) => {
+        setShowSuccess(true);
+        setShowRedirect(true);
+
+        setTimeout(() => {
+          window.open(
+            `https://wa.me/5511940608924/?text=${
+              "Olá, meu nome é " +
+              nome +
+              " e estou interessado(a) em ser um Consultor educacional!"
+            }`
+          );
+        }, 2300);
+
+        setTimeout(() => {
+          setShowSuccess(false);
+        }, 4300);
+
+        setTimeout(() => {
+          setShowRedirect(false);
+        }, 5120);
+      });
   };
 
   return (
@@ -267,11 +290,41 @@ export const ModalConsult = ({ show, onClick }: props) => {
                 <button
                   id="button"
                   type="submit"
-                  className="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-orange-500 hover:bg-orange-600 hover:shadow-lg focus:outline-none"
+                  className="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-orange-500 hover:bg-orange-600 hover:shadow-lg focus:outline-none disabled:opacity-25"
+                  disabled={nome ? false : true}
                 >
                   Inscreva-se
                 </button>
               </form>
+
+              <div
+                className={`bg-green-100 rounded-md p-3 flex mt-5 ${
+                  showSuccess ? "" : "hidden"
+                }`}
+              >
+                <svg
+                  className="stroke-2 stroke-current text-green-600 h-8 w-8 mr-2 flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M0 0h24v24H0z" stroke="none" />
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+
+                <div className="text-green-700">
+                  <div className="font-bold text-xl">
+                    Seu formulário foi enviado!
+                  </div>
+
+                  <div>
+                    Seu formulário foi enviado com sucesso! Muito obrigado.
+                  </div>
+                </div>
+              </div>
+              <WppRedirect showRedirect={showRedirect} />
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import { Base } from "./layout/base";
 import { FeaturesBlocks } from "./layout/features/features";
 import Features from "./detailSection/detailSection";
 import { FooterSubscribeSection } from "./footerSubscribeSection.tsx/footer-subscribe-section";
+import { Faq } from "./layout/faq/faq";
 
 const Page = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,6 +29,7 @@ const Page = () => {
       {/*<GeralList />*/}
       <Features />
       <FooterSubscribeSection />
+      <Faq />
       <NewFooter />
     </>
   );

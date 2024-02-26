@@ -27,16 +27,15 @@ export const FeaturesBlocks = React.forwardRef<HTMLDivElement, Ref>(
               className="max-w-3xl mx-auto text-center pb-12 md:pb-20"
               ref={ref}
             >
-              <h2 className="mb-4 text-6xl text-orange-500 font-bold">
+              <h2 className="mb-4 text-orange-500 font-bold text-4xl md:text-4xl lg:text-6xl">
                 Conquiste sua independência financeira
               </h2>
               <p className="text-xl text-gray-600">
                 Realize suas vendas de maneira simples e dinâmica, e adquira uma
-                renda extra de{" "}
+                renda extra de até{" "}
                 <span className="text-orange-500 font-semibold">
                   R$ 3.000,00
                 </span>{" "}
-                ou mais!
               </p>
             </div>
 
@@ -167,10 +166,10 @@ export const FeaturesBlocks = React.forwardRef<HTMLDivElement, Ref>(
                   </g>
                 </svg>
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                  Descritivo
+                  Flexibilidade
                 </h4>
                 <p className="text-gray-600 text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Rotina de trabalho que se adequa ao seu dia a dia
                 </p>
               </div>
 
@@ -210,10 +209,10 @@ export const FeaturesBlocks = React.forwardRef<HTMLDivElement, Ref>(
                   </g>
                 </svg>
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                  Descritivo
+                  Treinamento
                 </h4>
                 <p className="text-gray-600 text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Realize nosso treinamento de maneira rápida e gratuita
                 </p>
               </div>
 
@@ -248,10 +247,10 @@ export const FeaturesBlocks = React.forwardRef<HTMLDivElement, Ref>(
                   </g>
                 </svg>
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                  Descritivo
+                  Comunicação
                 </h4>
                 <p className="text-gray-600 text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Apoio e comunicação garantidos pela nossa equipe
                 </p>
               </div>
 
@@ -282,10 +281,10 @@ export const FeaturesBlocks = React.forwardRef<HTMLDivElement, Ref>(
                   </g>
                 </svg>
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                  Descritivo
+                  Renda
                 </h4>
                 <p className="text-gray-600 text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Gere uma renda extra considerável ao fim do processo
                 </p>
               </div>
             </div>

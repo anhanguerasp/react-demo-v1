@@ -44,9 +44,8 @@ function Features() {
               Explore nossas vantagens
             </h1>
             <p className="text-xl text-gray-600">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur excepteur sint occaecat
-              cupidatat.
+              Ao se tornar um Consultor Educacional você tem uma série de
+              vantagens garantidas
             </p>
           </div>
 
@@ -62,9 +61,9 @@ function Features() {
                   Conjunto de Vantagens
                 </h4>
                 <p className="text-xl text-gray-600">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa.
+                  Visando otimizar sua rotina de trabalho e garantir uma jornada
+                  confortável, adotamos um modelo de trabalho 100%
+                  personalizável, onde você pode trabalhar quando e onde quiser.
                 </p>
               </div>
               {/* Tabs buttons */}
@@ -194,10 +193,11 @@ function Features() {
                   <div className="relative inline-flex flex-col">
                     <img
                       className="md:max-w-none mx-auto rounded"
-                      src={"/img/features-bg.png"}
+                      src={"/img/tab-item-13.jpg"}
                       width="500"
-                      height="200"
+                      height="250"
                       alt="Features bg"
+                      style={{ height: "632px" }}
                     />
                     {/*<img
                       className="md:max-w-none absolute w-full left-0 transform animate-float"
@@ -208,10 +208,14 @@ function Features() {
                       style={{ top: "12%" }}
                 />*/}
 
-                    <div
-                      className="md:max-w-none absolute w-full left-0 transform animate-float h-60 w-full bg-white fle"
-                      style={{ top: "2%", float: "right" }}
-                    ></div>
+                    <img
+                      className="md:max-w-none absolute w-full right-0 transform animate-float"
+                      src={"/img/logo-anhanguera-branco.png"}
+                      width="120"
+                      height="44"
+                      alt="Element"
+                      style={{ top: "90%", width: "255px" }}
+                    />
                   </div>
                 </Transition>
                 {/* Item 2 */}
@@ -229,19 +233,25 @@ function Features() {
                   <div className="relative inline-flex flex-col">
                     <img
                       className="md:max-w-none mx-auto rounded"
-                      src={"/img/features-bg.png"}
+                      //src={"/img/features-bg.png"}
+                      src={"/img/tab-item-1.jpg"}
                       width="500"
                       height="462"
                       alt="Features bg"
                     />
-                    <img
+                    {/*<img
                       className="md:max-w-none absolute w-full left-0 transform animate-float"
-                      src={"/img/features-element.png"}
+                      src={"/img/tab-item-1.jpg"}
                       width="500"
-                      height="44"
+                      height="30"
                       alt="Element"
-                      style={{ top: "30%" }}
-                    />
+                      style={{
+                        top: "2%",
+                        height: "312px",
+                        width: "320px",
+                        left: "22%",
+                      }}
+                    />*/}
                   </div>
                 </Transition>
                 {/* Item 3 */}
@@ -259,18 +269,19 @@ function Features() {
                   <div className="relative inline-flex flex-col">
                     <img
                       className="md:max-w-none mx-auto rounded"
-                      src={"/img/features-bg.png"}
+                      src={"/img/tab-item-34.jpg"}
                       width="500"
-                      height="462"
+                      //height="462"
                       alt="Features bg"
+                      style={{ height: "570px" }}
                     />
                     <img
-                      className="md:max-w-none absolute w-full left-0 transform animate-float"
-                      src={"/img/features-element.png"}
-                      width="500"
+                      className="md:max-w-none absolute w-full right-0 transform animate-float"
+                      src={"/img/logo-anhanguera-branco.png"}
+                      width="120"
                       height="44"
                       alt="Element"
-                      style={{ top: "30%" }}
+                      style={{ top: "89%", width: "255px" }}
                     />
                   </div>
                 </Transition>

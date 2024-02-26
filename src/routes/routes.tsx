@@ -4,6 +4,7 @@ import {
   AportPage,
   ArcicPage,
   ConcursoPage,
+  ConcursoRealPage,
   DominosPage,
   GraduacaoPage,
   HomePage,
@@ -96,9 +97,15 @@ export const routes = createBrowserRouter([
     element: <UnegroAfiliados />,
   },
 
-  // CONCURSO
+  //# cosultores pae
   {
     path: "/consultores",
     element: <ConcursoPage />,
+  },
+
+  // essa sim é do consurso
+  {
+    path: "/concurso",
+    element: <ConcursoRealPage />,
   },
 ]);
