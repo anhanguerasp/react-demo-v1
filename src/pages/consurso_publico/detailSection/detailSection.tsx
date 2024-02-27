@@ -39,8 +39,11 @@ function Features() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-12 md:pt-20">
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4 text-orange-500">
+          <div
+            className="max-w-3xl mx-auto text-center pb-12 md:pb-16 flex justify-center"
+            style={{ flexDirection: "column" }}
+          >
+            <h1 className="h2 mb-4 text-orange-500 text-5xl font-bold">
               Explore nossas vantagens
             </h1>
             <p className="text-xl text-gray-600">

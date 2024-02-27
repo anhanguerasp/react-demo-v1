@@ -5,8 +5,8 @@ interface props {
 }
 export const CarouselContainer = ({ img }: props) => {
   return (
-    <div className={`${styles.carouselContainer} h-full`}>
-      <img src={img} className="h-full" />
+    <div className={`${styles.carouselContainer} `}>
+      <img src={img} className="" style={{ height: "100%" }} />
     </div>
   );
 };
@@ -16,3 +16,11 @@ export const CarouselContainer = ({ img }: props) => {
       
     </div>
   */
+
+/*
+
+/*style={{
+        backgroundImage: `url(${img})`,
+        backgroundRepeat: "no-repeat",
+        height: "100%",
+      }}*/

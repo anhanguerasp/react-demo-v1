@@ -105,7 +105,7 @@ export const routes = createBrowserRouter([
 
   // essa sim é do consurso
   {
-    path: "/concurso",
+    path: "/curso-valter-teofilo",
     element: <ConcursoRealPage />,
   },
 ]);

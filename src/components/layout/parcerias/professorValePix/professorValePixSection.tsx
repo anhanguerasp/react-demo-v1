@@ -7,9 +7,12 @@ export const ProfessorValePixSection = () => {
         <img
           src="/img/chapeu-stick.svg"
           alt="logo stick"
-          style={{ height: "120px" }}
+          style={{ height: "105px" }}
         />
-        <h1 className="flex justify-center" style={{ marginLeft: "0" }}>
+        <h1
+          className="flex justify-center mt-12 text-4xl md:text-5xl lg: text-5xl font-semibold"
+          style={{ marginLeft: "0" }}
+        >
           Indique um amigo e ganhe uma renda extra{" "}
         </h1>
       </div>

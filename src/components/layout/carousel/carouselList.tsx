@@ -1,6 +1,6 @@
 import { CarouselContainer } from "../../reuseable/carousel/carouselContainer";
 import styles from "./carousel.module.scss";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+//import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
 export const imagesList = [
@@ -22,14 +22,14 @@ type props = {
 
 export const CarouselList = ({ imageList }: props) => {
   return (
-    <div className={`${styles.carousel}`}>
+    <div className={`${styles.carousel} h`}>
       <Carousel
         interval={4000}
         autoPlay={true}
         infiniteLoop={true}
         axis="horizontal"
         showThumbs={false}
-        className={styles.teste}
+        className={` md:table lg:table  ${styles.teste}`}
       >
         {imageList.map((img) => (
           <CarouselContainer img={img} />

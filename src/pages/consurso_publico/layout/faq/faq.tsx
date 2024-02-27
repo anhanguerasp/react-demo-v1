@@ -8,7 +8,7 @@ export const Faq = () => {
         style={{ flexDirection: "column" }}
       >
         <p className="h2 mb-4 text-gray-100 font-bold">FAQ</p>
-        <h1 className=" mb-4 text-gray-100 lg:text-6xl md:text-5xl sm:text-4xl">
+        <h1 className=" mb-4 text-gray-100 text-3xl lg:text-6xl md:text-5xl ">
           Encontre as respostas que você procura
         </h1>
       </div>
@@ -20,8 +20,11 @@ export const Faq = () => {
         </div>
   </div>*/}
       <div className="wave"></div>
-      <div className="faq-list relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border w-full mt-5 mb-12">
-        <nav className="flex min-w-[240px] flex-col gap-1 p-2 font-sans text-base font-normal text-blue-gray-700">
+      <div className="faq-list relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border w-full mt-5 mb-12 py-10 px-3">
+        <nav
+          className="flex min-w-[240px] flex-col gap-1 p-2 font-sans text-base font-normal text-blue-gray-700 justify-center align-center"
+          //style={{ alignItems: "center" }}
+        >
           <Item />
         </nav>
       </div>

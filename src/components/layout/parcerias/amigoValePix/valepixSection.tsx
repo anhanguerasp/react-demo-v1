@@ -2,13 +2,12 @@ import styles from "./valepix-style.module.scss";
 
 export const ValePixSection = () => {
   return (
-    <section
-      className={`${styles.amigopix} mt-14`}
-      style={{ position: "relative" }}
-    >
+    <section className={`${styles.amigopix} `} style={{ position: "relative" }}>
       <div className={`${styles.introPix}`}>
         <img src="/img/chapeu-stick.svg" alt="logo stick" />
-        <h1>ESTUDE GRÁTIS! PAGUE SUA MENSALIDADE INDICANDO UM AMIGO!</h1>
+        <h1 className="mt-12 text-4xl md:text-5xl lg: text-5xl font-semibold">
+          ESTUDE GRÁTIS! PAGUE SUA MENSALIDADE INDICANDO UM AMIGO!
+        </h1>
       </div>
       <p>Veja como funciona:</p>
       {/*<div

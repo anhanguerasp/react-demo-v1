@@ -6,7 +6,9 @@ export const AportSection = () => {
       <div className={styles.aportContainer}>
         <div className={styles.introG}>
           <img src="/img/aport-logo.svg" alt="logo stick" />
-          <h1 className={styles.tituloPos}>
+          <h1
+            className={`${styles.tituloPos} mt-12 text-4xl md:text-5xl lg: text-5xl font-semibold`}
+          >
             Cliente APORT, venha transformar o seu futuro acadêmico!
           </h1>
         </div>

@@ -5,7 +5,9 @@ export const UnegroSection = () => {
     <section className="section-unegro">
       <div className="intro-unegro">
         <img src="/img/icone info.svg" alt="info stick" />
-        <h1 className="titulo-unegro">Você conhece a unegro?</h1>
+        <h1 className="titulo-unegro mt-2 text-4xl md:text-5xl lg: text-5xl font-semibold">
+          Você conhece a unegro?
+        </h1>
       </div>
       <div className="unegro">
         <p className="texto-unegro column1">

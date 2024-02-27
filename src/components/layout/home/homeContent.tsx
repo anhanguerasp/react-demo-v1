@@ -6,7 +6,9 @@ export const HomeContent = () => {
   return (
     <div>
       <section className={`${styles.section}`}>
-        <h1 className="mt-20">Especialidades!</h1>
+        <h1 className="mt-12 text-4xl md:text-5xl lg: text-5xl font-semibold">
+          Especialidades!
+        </h1>
         <div className={styles.containerEspecialidade}>
           <div className={styles.item}>
             <img

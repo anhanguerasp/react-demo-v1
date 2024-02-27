@@ -25,15 +25,13 @@ export const Landing = () => {
           <div className="container relative mx-auto">
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                <div className="pr-12">
-                  <h4 className="text-orange-500 font-semibold text-5xl">
+                <div className="pr-2">
+                  <h4 className="text-orange-500 font-semibold text-4xl lg:text-5xl">
                     Curso Valter Teófilo & Alvo Final
                   </h4>
-                  <p className="mt-4 text-lg text-gray-300">
-                    ltricies. Suspendisse finibus mauris nisl. Nunc a ipsum
-                    varius, rhoncus est non, facilisis est. Suspendisse
-                    imperdiet turpis euismod finibus congue. Phasellus dictum
-                    eros leo, in malesuada ligula pellentesque sit amet.
+                  <p className="mt-4 text-lg text-gray-100 font-semibold">
+                    Curso Preparatório focado para concurso público de Diretor
+                    Escolar PMSP.
                   </p>
                 </div>
               </div>
@@ -88,9 +86,11 @@ export const Landing = () => {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
-                      <i className="fas fa-retweet"></i>
+                      <i className="fa fa-retweet"></i>
                     </div>
-                    <h6 className="text-xl font-semibold text-black">Valor</h6>
+                    <h6 className="text-xl font-semibold text-black">
+                      Investimento
+                    </h6>
                     <p className="mt-2 mb-4 text-gray-600">
                       R$ 1.000,00 em até 4X no cartão
                     </p>
@@ -105,12 +105,11 @@ export const Landing = () => {
                       <i className="fas fa-fingerprint"></i>
                     </div>
                     <h6 className="text-xl font-semibold text-black">
-                      Descritivo{" "}
+                      Especialistas{" "}
                     </h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                      ltricies. Suspendisse finibus mauris nisl. Nunc a ipsum
-                      varius, rhoncus est non, facilisis est. Suspendisse
-                      imperdiet turpis euismod finibus congue.
+                      Tenha aula com especialistas na área do Direito e com
+                      ex-diretores PMSP
                     </p>
                   </div>
                 </div>
@@ -126,8 +125,13 @@ export const Landing = () => {
                   Turmas e Carga Horária
                 </h3>
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-                  O Curso Valter Teófilo possui turmas disponíveis em dias
-                  diversos da semana e aos sábados.
+                  No curso Valter Teófilo você pode escolher estudar durante a
+                  semana ou aos sábados, de acordo com sua disponibilidade.
+                </p>
+                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+                  Venha estimular seu aprendizado em um ambiente dinâmico, com
+                  aulas ministradas por especialistas da área prontos para te
+                  ensinar da melhor maneira.
                 </p>
                 <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"></p>
               </div>
@@ -159,10 +163,9 @@ export const Landing = () => {
                       Carga Horária
                     </h4>
                     <p className="text-md font-light mt-2 text-white">
-                      O curso terá uma carga horária total de{" "}
-                      <span className="font-bold">80 horas</span>, sendo
-                      recheado do começo ao fim de aulas robustas de conteúdo
-                      teórico e prático.
+                      O curso oferece{" "}
+                      <span className="font-bold">80 horas</span>, de conteúdo
+                      imperdível, distribuídos entre teoria e prática.
                     </p>
                   </blockquote>
                 </div>
@@ -206,10 +209,9 @@ export const Landing = () => {
                   <div className="text-orange-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-orange-300">
                     <i className="fas fa-building text-xl"></i>
                   </div>
-                  <h3 className="text-3xl font-semibold">Local</h3>
+                  <h3 className="text-3xl font-semibold">Localidades</h3>
                   <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                    Fique por dentro das localidades onde as aulas serão
-                    ministradas
+                    Escolha o melhor local para estudar :
                   </p>
                   <ul className="list-none mt-6">
                     <li className="py-2">
@@ -450,7 +452,7 @@ export const Landing = () => {
                 <h2 className="text-4xl font-semibold text-orange-500">
                   Informações de Contato
                 </h2>
-                <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+                <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-300">
                   Não perca essa oportunidade. Entre em contato com um dos
                   telefones abaixo e garanta sua matrícula.
                 </p>
@@ -464,14 +466,16 @@ export const Landing = () => {
                 <h5 className="text-xl mt-5 font-semibold text-white">
                   Valter Teófilo
                 </h5>
-                <p className="mt-2 mb-4 text-gray-500">
+                <p className="mt-2 mb-4 text-gray-300 font-semibold">
                   DIRETOR APOSENTADO PMSP
                 </p>
                 <div className="flex justify-center align-center content-center items-center">
                   <div className="text-gray-900 p-3 w-6 h-6 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                     <i className="fas fa-phone text-md"></i>
                   </div>
-                  <p className="mt-2 mb-4 text-gray-500 ml-2">(11) 981644181</p>
+                  <p className="mt-2 mb-4 text-gray-300 ml-2">
+                    (11) 98164-4181
+                  </p>
                 </div>
               </div>
               <div className="w-full lg:w-3/12 px-4 text-center">
@@ -481,14 +485,14 @@ export const Landing = () => {
                 <h5 className="text-xl mt-5 font-semibold text-white">
                   Edison Robson
                 </h5>
-                <p className="mt-2 mb-4 text-gray-500">
+                <p className="mt-2 mb-4 text-gray-300 font-semibold">
                   PROFESSOR DE LEGISLAÇÃO - ADVOGADO
                 </p>
                 <div className="flex justify-center align-center content-center items-center">
                   <div className="text-gray-900 p-3 w-6 h-6 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                     <i className="fas fa-phone text-md"></i>
                   </div>
-                  <p className="mt-2 mb-4 text-gray-500 ml-2">
+                  <p className="mt-2 mb-4 text-gray-300 ml-2">
                     (11) 99143-0410
                   </p>
                 </div>
@@ -500,14 +504,14 @@ export const Landing = () => {
                 <h5 className="text-xl mt-5 font-semibold text-white">
                   Tânea Maranesi
                 </h5>
-                <p className="mt-2 mb-4 text-gray-500">
-                  Diretora Aposentada PMSP
+                <p className="mt-2 mb-4 text-gray-300 font-semibold">
+                  DIRETORA APOSENTADA PMSP
                 </p>
                 <div className="flex justify-center align-center content-center items-center">
                   <div className="text-gray-900 p-3 w-6 h-6 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                     <i className="fas fa-phone text-md"></i>
                   </div>
-                  <p className="mt-2 mb-4 text-gray-500 ml-2">
+                  <p className="mt-2 mb-4 text-gray-300 ml-2">
                     (11) 97634-3854
                   </p>
                 </div>

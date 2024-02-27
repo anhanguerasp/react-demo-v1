@@ -1,11 +1,13 @@
 import { ChatBox } from "../../BOT/chatbot/Chatbox";
-import { CoursesTabContainer } from "../../NOVO/components";
+import { BaseStepForm, CoursesTabContainer } from "../../NOVO/components";
 import { NewGenericForm } from "../../NOVO/components/forms/generic/generic-form";
 import { FormularyContainer } from "../../NOVO/components/newFormularies/formularyContainer/formularyContainer";
+import { NewCarrousel } from "../../NOVO/layout/newCarrousel/newCarrousel";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
 import { CarouselList } from "../../components/layout/carousel/carouselList";
+
 import { Catalog } from "../../components/layout/catalog/catalog";
 import { HomeContent } from "../../components/layout/home/homeContent";
 import { WppIcon } from "../../components/layout/whatsapppIcon.tsx/wppIcon";
@@ -19,7 +21,9 @@ const HomePage = () => {
         <NewNavbar />
       </div>
       <CarouselList imageList={homeCarrouselList} />
+      {/*<NewCarrousel />*/}
       <HomeContent />
+      <BaseStepForm />
       <Catalog />
       <CoursesTabContainer />
       <FormularyContainer children={<NewGenericForm partner="" />} />
