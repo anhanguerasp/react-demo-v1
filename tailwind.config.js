@@ -1,4 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+
+const flattenColorPalette =
+  require("tailwindcss/lib/util/flattenColorPalette").default;
+
 export default {
   content: [
     "./index.html",
@@ -8,13 +12,33 @@ export default {
   //darkMode: "class",
   theme: {
     extend: {
+      backgroundImage: {
+        "sidebar-mobile": "url('/assets/images/bg-sidebar-mobile.svg')",
+        "sidebar-desktop": "url('/assets/images/bg-sidebar-desktop.svg')",
+      },
       animation: {
         "ping-slow": "ping 3s linear infinite",
       },
     },
   },
-  plugins: [require("daisyui"), require("flowbite/plugin")],
+  plugins: [
+    require("daisyui"),
+    require("flowbite/plugin"),
+    require("@tailwindcss/forms"),
+    addVariablesForColors,
+  ],
   daisyui: {
     themes: ["light", "dark"],
   },
 };
+
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

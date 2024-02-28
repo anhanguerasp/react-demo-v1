@@ -105,7 +105,7 @@ export const routes = createBrowserRouter([
 
   // essa sim é do consurso
   {
-    path: "/curso-valter-teofilo",
+    path: "/curso-preparatorio-para-concurso-publico-diretor-pmsp",
     element: <ConcursoRealPage />,
   },
 ]);

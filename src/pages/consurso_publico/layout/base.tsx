@@ -19,7 +19,7 @@ export const Base = ({ onClick }: props) => {
     <div className="relative">
       <section className="relative">
         <div
-          className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-5"
+          className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-5 hidden md:block lg:block top-0"
           aria-hidden="true"
         >
           <svg
@@ -65,6 +65,7 @@ export const Base = ({ onClick }: props) => {
               <h4
                 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4 text-orange-500"
                 data-aos="zoom-y-out"
+                style={{ zIndex: "10" }}
               >
                 Seja um{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
@@ -77,10 +78,12 @@ export const Base = ({ onClick }: props) => {
                   data-aos="zoom-y-out"
                   data-aos-delay="150"
                 >
-                  Atuando como Consultor Educacional você vende cursos em
-                  conjunto à uma das maiores marcas de educação do Brasil,
-                  recebendo todo o apoio necessário para realizar suas vendas da
-                  melhor forma.
+                  Junte-se à nossa equipe e transforme vidas enquanto constrói
+                  sua carreira como consultor educacional! Aqui, você terá a
+                  chance de oferecer cursos inspiradores em parceria com uma das
+                  marcas mais prestigiadas da educação brasileira. Recebendo
+                  todo o apoio necessário para alcançar o seu sucesso
+                  profissional.
                 </p>
                 <div
                   className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center relative"

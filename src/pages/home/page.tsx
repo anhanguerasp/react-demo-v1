@@ -11,6 +11,7 @@ import { CarouselList } from "../../components/layout/carousel/carouselList";
 import { Catalog } from "../../components/layout/catalog/catalog";
 import { HomeContent } from "../../components/layout/home/homeContent";
 import { WppIcon } from "../../components/layout/whatsapppIcon.tsx/wppIcon";
+import StepFormOk from "../../stepForms/src/App";
 import { homeCarrouselList } from "../../utils/listas/carrouselLits";
 
 const HomePage = () => {
@@ -23,7 +24,7 @@ const HomePage = () => {
       <CarouselList imageList={homeCarrouselList} />
       {/*<NewCarrousel />*/}
       <HomeContent />
-      <BaseStepForm />
+      <StepFormOk />
       <Catalog />
       <CoursesTabContainer />
       <FormularyContainer children={<NewGenericForm partner="" />} />

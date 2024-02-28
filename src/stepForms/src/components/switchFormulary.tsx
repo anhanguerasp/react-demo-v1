@@ -1,6 +1,6 @@
 type formProps = {
   courseType: string;
-  handleCourse: (e: any) => void;
+  handleCourse: (data: Partial<FormData>) => void;
 };
 
 export const SwitchFormulary = ({ courseType, handleCourse }: formProps) => {
@@ -9,8 +9,7 @@ export const SwitchFormulary = ({ courseType, handleCourse }: formProps) => {
     case "Graduação":
       return (
         <select
-          //onChange={(e: any) => handleCourse(e.target.value)}
-          onChange={(e) => handleCourse({ courseType: e.target.value })}
+          onChange={(e: any) => handleCourse(e.target.value)}
           className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           id="grid-state"
         >
