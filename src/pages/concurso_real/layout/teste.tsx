@@ -1,5 +1,13 @@
 import React from "react";
 import { ConcursoFormulary } from "../formulary/concurso-formulary";
+import "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {} from "@fortawesome/fontawesome-svg-core";
+import {} from "@fortawesome/free-solid-svg-icons";
+import {} from "@fortawesome/fontawesome-free-solid";
+import {} from "@fortawesome/fontawesome-free-regular";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 // nome email tel turm-dia polo data
 interface props extends React.HtmlHTMLAttributes<HTMLDivElement> {
   ref: HTMLDivElement;
@@ -38,8 +46,11 @@ export const Landing = React.forwardRef<HTMLDivElement, Ref>(
                   <div className="pr-2">
                     <h4 className="text-orange-500 font-semibold text-4xl lg:text-5xl">
                       Curso Preparatório para concurso público de Diretor
-                      Escolar PMSP
+                      Escolar PMSP{" "}
                     </h4>
+
+                    <span className="text-gray-300 text-sm">* Pré-edital</span>
+
                     <p className="mt-4 text-lg text-gray-100 font-semibold">
                       Curso Preparatório focado para concurso público de Diretor
                       Escolar PMSP.
@@ -124,6 +135,86 @@ export const Landing = React.forwardRef<HTMLDivElement, Ref>(
                       </p>
                     </div>
                   </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center mt-32">
+                <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
+                  <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-orange-500">
+                    <img
+                      alt="..."
+                      src="/img/young-adults-meeting-up-study.jpg"
+                      className="w-full align-middle rounded-t-lg"
+                    />
+                    <blockquote className="relative p-8 mb-4">
+                      <svg
+                        preserveAspectRatio="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 583 95"
+                        className="absolute left-0 w-full block"
+                        style={{
+                          height: "95px",
+                          top: "-94px",
+                        }}
+                      >
+                        <polygon
+                          points="-30,95 583,95 583,65"
+                          className="text-orange-500 fill-current"
+                        ></polygon>
+                      </svg>
+                      <h4 className="text-xl font-bold text-white">
+                        Conheça o Projeto
+                      </h4>
+                      <p className="text-md font-light mt-2 text-white">
+                        Participe da nossa aula inaugural e conheça detalhes
+                        sobre o projeto.
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+                <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
+                  <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
+                    <img src="/img/party-horn.svg" />
+                  </div>
+                  <h3 className="text-3xl mb-2 font-semibold leading-normal">
+                    Aula Inaugural
+                  </h3>
+                  <p className="mt-4 text-lg leading-relaxed text-gray-600">
+                    Escolha o melhor local e data:
+                  </p>
+                  <ul className="list-none mt-6">
+                    <li className="py-2">
+                      <div className="flex items-center">
+                        <div>
+                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-800 bg-gray-200 mr-3">
+                            <i className="fas fa-home"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <h4 className="text-gray-800">
+                            <span className="font-bold">02/04</span> - Polo
+                            Anhanguera - São Miguel Paulista - AV Nordestina
+                            1455
+                          </h4>
+                        </div>
+                      </div>
+                    </li>
+                    <li className="py-2">
+                      <div className="flex items-center">
+                        <div>
+                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-800 bg-gray-200 mr-3">
+                            <i className="fas fa-home"></i>
+                          </span>
+                        </div>
+                        <div>
+                          <h4 className="text-gray-800">
+                            <span className="font-bold">06/04</span> Polo
+                            Anhanguera - Tatuapé - Rua Apucarana 523
+                          </h4>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 

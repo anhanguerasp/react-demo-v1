@@ -5,7 +5,7 @@ export type Props = FormData & {
 } & {
   gotoStep: (step: number) => void;
 };
-export const useMultiStepForm = (steps: ((props: Props) => JSX.Element)[]) => {
+export const useMultiStepForm = (steps: ((props: Props) => any)[]) => {
   const [currentStepIndex, setCurrentStep] = useState(0);
 
   const next = () => {

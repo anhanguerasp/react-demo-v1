@@ -1,6 +1,10 @@
 import axios from "axios";
 import { SwitchFormulary } from "../../../components/layout/formularies/basic/swirchFormularie";
 import { FormData } from "../App";
+import React, { useState } from "react";
+import { handleCPF } from "../../../hooks/input/handleCPF";
+import { handlePhone } from "../../../hooks/input/handlePhone";
+
 type UpdateFields = (data: Partial<FormData>) => void;
 
 type Props = FormData & { updateFields: UpdateFields };
@@ -16,7 +20,10 @@ export const Step0 = ({
   updateFields,
 }: Props) => {
   return (
-    <div className="h-full">
+    <div
+      className=""
+      //style={{ border: "2px solid red" }}
+    >
       <h4 className="text-2xl font-bold text-orange-500">
         ANTES DE COMEÇARMOS
       </h4>
@@ -67,6 +74,7 @@ export const Step0 = ({
             name="phone"
             required
             type="tel"
+            onKeyUp={(e) => handleCPF(e)}
           />
         </div>
         <div>
@@ -81,6 +89,7 @@ export const Step0 = ({
             name="phone"
             required
             type="tel"
+            maxLength={15}
           />
         </div>
 
@@ -121,6 +130,7 @@ export const Step0 = ({
               className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-state"
               onChange={(e) => updateFields({ courseType: e.target.value })}
+              value={courseType}
             >
               <option value="" disabled selected>
                 Escolha o Tipo de Curso
@@ -143,8 +153,9 @@ export const Step0 = ({
           </label>
           <div className="relative">
             <SwitchFormulary
-              handleCourse={updateFields}
-              courseType={courseType ? courseType : ""}
+              updateFields={updateFields}
+              courseType={courseType ? courseType : "Graduação"}
+              courseValue={course}
             />
 
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"></div>
@@ -162,6 +173,7 @@ export const Step0 = ({
             <select
               className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-state"
+              value={polo}
               onChange={(e) => updateFields({ polo: e.target.value })}
             >
               <option value="" disabled selected>

@@ -7,7 +7,7 @@ export const NewNavbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
-    <div className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
+    <div className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900 mt-2">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a
           href="https://anhanguerasp.com.br/"
@@ -24,7 +24,7 @@ export const NewNavbar = () => {
         <button
           data-collapse-toggle="mega-menu-full"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-orange-100 focus:outline-none focus:ring-2 focus:ring-orange-200 dark:text-orange-400 dark:hover:bg-orange-700 dark:focus:ring-orange-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-orange-100 focus:outline-none focus:ring-2 focus:ring-orange-200 dark:text-orange-500 dark:hover:bg-orange-700 dark:focus:ring-orange-600"
           aria-controls="mega-menu-full"
           aria-expanded="false"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
@@ -112,16 +112,6 @@ export const NewNavbar = () => {
                 className="block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700 font-semibold"
               >
                 Unidades
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink
-                to={"../institucional/inscrevase"}
-                className="block py-2 px-3 text-orange-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-500 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-orange-500 md:dark:hover:bg-transparent dark:border-gray-700 font-black"
-                style={{ fontWeight: "bolder" }}
-              >
-                Inscreva-se
               </NavLink>
             </li>
           </ul>

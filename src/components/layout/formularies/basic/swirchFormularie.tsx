@@ -1,18 +1,26 @@
+import { FormData } from "../../../../stepForms/src/App";
+
 type formProps = {
   courseType: string;
-  handleCourse: (e: any) => void;
+  updateFields: (data: Partial<FormData>) => void;
+  courseValue: any;
 };
 
-export const SwitchFormulary = ({ courseType, handleCourse }: formProps) => {
+export const SwitchFormulary = ({
+  courseType,
+  updateFields,
+  courseValue,
+}: formProps) => {
   console.log(courseType);
   switch (courseType) {
     case "Graduação":
       return (
         <select
           //onChange={(e: any) => handleCourse(e.target.value)}
-          onChange={(e) => handleCourse({ courseType: e.target.value })}
+          onChange={(e) => updateFields({ course: e.target.value })}
           className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           id="grid-state"
+          value={courseValue}
         >
           <option value="" disabled selected>
             Escolha o Curso de graduação desejado
@@ -184,9 +192,10 @@ export const SwitchFormulary = ({ courseType, handleCourse }: formProps) => {
     case "Cursos Técnicos":
       return (
         <select
-          onChange={(e: any) => handleCourse(e.target.value)}
+          onChange={(e: any) => updateFields({ course: e.target.value })}
           className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
           id="grid-state"
+          value={courseValue}
         >
           <option value="" disabled selected>
             Escolha o Curso Técnico desejado
@@ -238,7 +247,8 @@ export const SwitchFormulary = ({ courseType, handleCourse }: formProps) => {
         <input
           className={`appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500`}
           placeholder="Digite o curso desejado"
-          onChange={(e: any) => handleCourse(e.target.value)}
+          onChange={(e: any) => updateFields({ course: e.target.value })}
+          value={courseValue}
         ></input>
       );
   }
