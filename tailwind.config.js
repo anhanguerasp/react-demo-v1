@@ -10,11 +10,16 @@ export default {
     "./**/@material-tailwind/**/*.{html,js,ts,jsx,tsx,mdx}",
   ],
   //darkMode: "class",
+
   theme: {
     extend: {
       backgroundImage: {
-        "sidebar-mobile": "url('/assets/images/bg-sidebar-mobile.svg')",
-        "sidebar-desktop": "url('/assets/images/bg-sidebar-desktop.svg')",
+        "sidebar-mobile": "url('//assets/images/bg-sidebar-mobile.svg')",
+        "sidebar-desktop": "url('//assets/images/bg-sidebar-desktop.svg')",
+        "logo-dark": "url('/img/logo-anhanguera-branco.png')",
+        "logo-light": "url('img/logo.svg')",
+        "home-mobile-banner": "url(/img/banner-home-mobile.png)",
+        "home-banner": "url(/img/inscricao.png)",
       },
       animation: {
         "ping-slow": "ping 3s linear infinite",

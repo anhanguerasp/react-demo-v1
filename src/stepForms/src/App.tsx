@@ -140,7 +140,7 @@ export const StepFormOk = ({ show, handleClose }: props) => {
     >
       <form
         onSubmit={handleFormSubmit}
-        className="flex flex-col h-screen lg:h-[52rem] lg:w-1/2 lg:flex-row lg:gap-4 lg:rounded lg:bg-white p-4 lg:shadow"
+        className="flex flex-col h-screen lg:h-[52rem] lg:w-1/2 lg:flex-row lg:gap-4 lg:rounded lg:bg-white p-4 lg:shadow dark:lg:bg-gray-800"
         //style={{ height: "" }}
       >
         {/* Close modal */}
@@ -166,7 +166,7 @@ export const StepFormOk = ({ show, handleClose }: props) => {
                     animate={currentStepIndex === ind ? "active" : "inactive"}
                     variants={{
                       active: {
-                        backgroundColor: "var(--orange-300)",
+                        backgroundColor: "var(--orange-200)",
                         color: "var(--blue-900)",
                       },
                       inactive: {
@@ -178,12 +178,12 @@ export const StepFormOk = ({ show, handleClose }: props) => {
                     className={`flex h-8 w-8 items-center justify-center rounded-full `}
                   >
                     {ind + 1 !== 2 ? (
-                      <i className="fa fa-user text-orange-700"></i>
+                      <i className="fa fa-user text-orange-500"></i>
                     ) : (
-                      <i className="fab fa-whatsapp text-orange-700"></i>
+                      <i className="fab fa-whatsapp text-orange-500"></i>
                     )}
                   </motion.div>
-                  <div className="hidden lg:block lg:text-gray-500">
+                  <div className="hidden lg:block lg:text-gray-500 dark:lg:text-gray-200">
                     <div className="text-sm font-light uppercase">{`Etapa ${
                       ind + 1
                     }`}</div>
@@ -199,7 +199,7 @@ export const StepFormOk = ({ show, handleClose }: props) => {
           //style={{ border: "2px solid purple" }}
         >
           <div
-            className="relative -top-12 m-4  rounded bg-white px-4 py-8 shadow lg:static lg:h-full lg:p-0 lg:shadow-none"
+            className="relative -top-12 m-4  rounded bg-white px-4 py-8 shadow lg:static lg:h-full lg:p-0 lg:shadow-none dark:bg-gray-800"
             //style={{ border: "2px solid orange" }}
           >
             <AnimatePresence>
@@ -231,7 +231,7 @@ export const StepFormOk = ({ show, handleClose }: props) => {
               ) : (
                 <button
                   type="submit"
-                  className="ml-auto rounded bg-blue-900 px-4 py-2 font-semibold text-blue-50 shadow"
+                  className="ml-auto rounded bg-teal-800 px-4 py-2 font-semibold text-blue-50 shadow"
                   onClick={(e: any) => handlePost(submitBody)}
                 >
                   Avançar

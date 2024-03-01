@@ -2,6 +2,15 @@ import { NavLink } from "react-router-dom";
 import "./navbar-style.scss";
 import { useState } from "react";
 
+{
+  /*<img
+            src="/img/logo.svg"
+            className="h-12"
+            alt="Anhanguera Logo"
+            style={{ width: "220px" }}
+  />*/
+}
+
 export const NewNavbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -13,12 +22,7 @@ export const NewNavbar = () => {
           href="https://anhanguerasp.com.br/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img
-            src="https://anhanguerasp.com.br/img/logo.svg"
-            className="h-12"
-            alt="Anhanguera Logo"
-            style={{ width: "220px" }}
-          />
+          <div className="navbar-logo bg-logo-light dark:bg-logo-dark"></div>
         </a>
 
         <button

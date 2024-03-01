@@ -27,15 +27,18 @@ export const Step0 = ({
       <h4 className="text-2xl font-bold text-orange-500">
         ANTES DE COMEÇARMOS
       </h4>
-      <p className="text-base text-gray-600 font-bold">
+      <p className="text-base font-bold dark:text-gray-300 text-gray-600">
         queremos saber um pouquinho sobre você!!
       </p>
-      <p className="text-base text-gray-500">
+      <p className="text-base text-gray-500 dark:text-gray-300">
         Não se preocupe, seus dados estão seguros com a gente.
       </p>
       <div className="mt-4 flex flex-col gap-2">
         <div>
-          <label className="block font-semibold text-blue-900" htmlFor="name">
+          <label
+            className="block font-semibold text-blue-900 dark:text-gray-200"
+            htmlFor="name"
+          >
             Nome Completo
           </label>
           <input
@@ -43,13 +46,16 @@ export const Step0 = ({
             value={name}
             required
             onChange={(e) => updateFields({ name: e.target.value })}
-            className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
             name="name"
             type="text"
           />
         </div>
         <div>
-          <label className="block font-semibold text-blue-900" htmlFor="email">
+          <label
+            className="block font-semibold text-blue-900 dark:text-gray-200"
+            htmlFor="email"
+          >
             Email
           </label>
           <input
@@ -57,20 +63,23 @@ export const Step0 = ({
             value={email}
             required
             onChange={(e) => updateFields({ email: e.target.value })}
-            className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
             name="email"
             type="email"
           />
         </div>
         <div>
-          <label className="block font-semibold text-blue-900" htmlFor="cpf">
+          <label
+            className="block font-semibold text-blue-900 dark:text-gray-200"
+            htmlFor="cpf"
+          >
             CPF
           </label>
           <input
             id="cpf"
             value={cpf}
             onChange={(e) => updateFields({ cpf: e.target.value })}
-            className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
             name="phone"
             required
             type="tel"
@@ -78,14 +87,17 @@ export const Step0 = ({
           />
         </div>
         <div>
-          <label className="block font-semibold text-blue-900" htmlFor="phone">
+          <label
+            className="block font-semibold text-blue-900 dark:text-gray-200"
+            htmlFor="phone"
+          >
             Número de telefone
           </label>
           <input
             id="phone"
             value={phone}
             onChange={(e) => updateFields({ phone: e.target.value })}
-            className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
             name="phone"
             required
             type="tel"
@@ -95,14 +107,14 @@ export const Step0 = ({
 
         <div>
           <label
-            className="block font-semibold text-blue-900"
+            className="block font-semibold text-blue-900 dark:text-gray-200"
             htmlFor="modalidade"
           >
             Modalidade
           </label>
           <div className="relative">
             <select
-              className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
               id="grid-state"
               onChange={(e) => updateFields({ modality: e.target.value })}
               value={modality}
@@ -120,14 +132,14 @@ export const Step0 = ({
 
         <div className="w-full md:w-2/2 md:mb-0">
           <label
-            className="block font-semibold text-blue-900"
+            className="block font-semibold text-blue-900 dark:text-gray-200"
             htmlFor="grid-state"
           >
             Tipo de curso
           </label>
           <div className="relative">
             <select
-              className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
               id="grid-state"
               onChange={(e) => updateFields({ courseType: e.target.value })}
               value={courseType}
@@ -146,7 +158,7 @@ export const Step0 = ({
 
         <div className="w-full md:w-2/2 md:mb-0">
           <label
-            className="block font-semibold text-blue-900"
+            className="block font-semibold text-blue-900 dark:text-gray-200"
             htmlFor="grid-state"
           >
             Curso de Interesse
@@ -164,14 +176,14 @@ export const Step0 = ({
 
         <div className="w-full md:w-2/2 md:mb-0">
           <label
-            className="block font-semibold text-blue-900"
+            className="block font-semibold text-blue-900 dark:text-gray-200"
             htmlFor="grid-state"
           >
             Polo de Interesse
           </label>
           <div className="relative">
             <select
-              className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
               id="grid-state"
               value={polo}
               onChange={(e) => updateFields({ polo: e.target.value })}

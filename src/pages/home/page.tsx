@@ -9,6 +9,7 @@ import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
 import { CarouselList } from "../../components/layout/carousel/carouselList";
 
 import { Catalog } from "../../components/layout/catalog/catalog";
+import { BannerHome } from "../../components/layout/home/banner/bannerHome";
 import { HomeContent } from "../../components/layout/home/homeContent";
 import { WppIcon } from "../../components/layout/whatsapppIcon.tsx/wppIcon";
 import { StepFormOk } from "../../stepForms/src/App";
@@ -21,12 +22,14 @@ const HomePage = () => {
         <PreNavbar />
         <NewNavbar />
       </div>
+      <BannerHome />
       <CarouselList imageList={homeCarrouselList} />
       {/*<NewCarrousel />*/}
       <HomeContent />
       {/*<StepFormOk />*/}
       <Catalog />
-      <CoursesTabContainer />
+      {/*<CoursesTabContainer />*/}
+
       <FormularyContainer children={<NewGenericForm partner="" />} />
       {/*<Formulary partner="" />*/}
 

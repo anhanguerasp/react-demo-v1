@@ -208,7 +208,7 @@ export const Landing = React.forwardRef<HTMLDivElement, Ref>(
                         </div>
                         <div>
                           <h4 className="text-gray-800">
-                            <span className="font-bold">06/04</span> Polo
+                            <span className="font-bold">13/04</span> Polo
                             Anhanguera - Tatuapé - Rua Apucarana 523
                           </h4>
                         </div>
