@@ -19,5 +19,8 @@ export { default as PoliticaPage } from "./institucional/politica/page";
 export { default as InfraPage } from "./institucional/infra/page";
 export { default as InscrevasePage } from "./institucional/inscrevase/page";
 export { default as ConcursoPage } from "./consurso_publico/page";
+export { default as FilterPage } from "./institucional/FiltroCurso/page";
+
+//
 
 export { default as ConcursoRealPage } from "./concurso_real/page";

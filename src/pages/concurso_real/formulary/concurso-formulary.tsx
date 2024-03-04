@@ -35,6 +35,7 @@ export const ConcursoFormulary = () => {
     turma: turmaSab,
     polo: polo,
   };
+  console.log(body);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();

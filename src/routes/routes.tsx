@@ -6,6 +6,7 @@ import {
   ConcursoPage,
   ConcursoRealPage,
   DominosPage,
+  FilterPage,
   GraduacaoPage,
   HomePage,
   InfraPage,
@@ -88,6 +89,10 @@ export const routes = createBrowserRouter([
   {
     path: "/institucional/inscrevase",
     element: <InscrevasePage />,
+  },
+  {
+    path: "/cursos",
+    element: <FilterPage />,
   },
 
   /// AFILIADOS
