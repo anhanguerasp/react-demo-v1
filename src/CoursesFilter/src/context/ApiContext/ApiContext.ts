@@ -5,6 +5,7 @@ import { CourseData } from '../../components/CourseList/types';
 
 export interface CourseContextProps {
   courses: CourseData[] | undefined;
+  modalities: string[] | undefined;
   categories: string[] | undefined;
   isLoadingCourses: boolean;
   isErrorCourses: boolean;

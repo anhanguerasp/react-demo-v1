@@ -1,5 +1,5 @@
-import React from 'react';
-import { FilterDefinition } from './types';
+import React from "react";
+import { FilterDefinition } from "./types";
 
 const FilterComponentWrapper: React.FC<FilterDefinition<any>> = ({
   id,
@@ -8,7 +8,7 @@ const FilterComponentWrapper: React.FC<FilterDefinition<any>> = ({
   onChange,
 }) => {
   return (
-    <div key={id}>
+    <div key={id} className="text-orange-500">
       <Component name={id} value={value} onChange={onChange} />
     </div>
   );

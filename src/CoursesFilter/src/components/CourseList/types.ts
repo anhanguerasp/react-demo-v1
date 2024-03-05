@@ -4,9 +4,9 @@ export interface CourseData {
   description?: string;
   image?: string;
   category: string;
-  modality?: string;
+  modality: string;
   semesters: number;
-  type?: string;
+  type: string;
   price: number;
   popularity: {
     rate: number;

@@ -1,6 +1,6 @@
-import { useCallback } from 'react';
-import { useFilterContext } from '../context/FilterContext/FilterContext';
-import { SortTypes } from '../Layout/ProductLayout/types';
+import { useCallback } from "react";
+import { useFilterContext } from "../context/FilterContext/FilterContext";
+import { SortTypes } from "../Layout/ProductLayout/types";
 
 export const useFilterHooks = () => {
   const { filters, setFilters } = useFilterContext();
@@ -10,7 +10,7 @@ export const useFilterHooks = () => {
   };
 
   const setFilterValue = useCallback((name: string, value: string) => {
-    setFilters(state => ({
+    setFilters((state) => ({
       ...state,
       [name]: value,
     }));
@@ -18,7 +18,7 @@ export const useFilterHooks = () => {
 
   const handleFilterChange = useCallback((e: any) => {
     switch (e.type) {
-      case 'click': {
+      case "click": {
         setFilterValue(e.target.title, e.target.innerText);
         break;
       }
@@ -29,11 +29,23 @@ export const useFilterHooks = () => {
 
   const selectCategory = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      setFilters(state => ({
+      setFilters((state) => ({
         ...state,
         category: e.target.checked
           ? [...state.category, e.target.name]
-          : state.category.filter(cat => cat !== e.target.name),
+          : state.category.filter((cat) => cat !== e.target.name),
+      }));
+    },
+    [setFilters]
+  );
+
+  const selectModality = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setFilters((state) => ({
+        ...state,
+        modality: e.target.checked
+          ? [...state.modality, e.target.name]
+          : state.modality.filter((mod) => mod !== e.target.name),
       }));
     },
     [setFilters]
@@ -41,10 +53,11 @@ export const useFilterHooks = () => {
 
   const handleResetFilter = useCallback(() => {
     setFilters({
-      productName: '',
+      productName: "",
       category: [],
-      priceRange: '',
-      rating: '',
+      priceRange: "",
+      modality: [],
+      rating: "",
       sortBy: SortTypes.NONE,
     });
   }, [setFilters]);
@@ -55,7 +68,9 @@ export const useFilterHooks = () => {
     handleFilterChange,
     handleResetFilter,
     selectCategory,
+    selectModality,
     selectedCategory: filters.category,
+    selectedModality: filters.modality,
     rating: filters.rating,
     sortValue: filters.sortBy,
     handleDynamcValue,

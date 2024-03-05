@@ -1,8 +1,8 @@
 import React from "react";
 import { useFilterHooks } from "../../hooks/useFilterHooks";
 
-const CategoryItem: React.FC<{ option: string }> = ({ option }) => {
-  const { selectCategory, selectedCategory } = useFilterHooks();
+const TypeItem: React.FC<{ option: string }> = ({ option }) => {
+  const { selectModality, selectedModality } = useFilterHooks();
   return (
     <div
       key={option}
@@ -17,9 +17,9 @@ const CategoryItem: React.FC<{ option: string }> = ({ option }) => {
         id={`filter-mobile-${option}`}
         name={option}
         defaultValue={option}
-        onChange={selectCategory}
+        onChange={selectModality}
         type="checkbox"
-        checked={selectedCategory.includes(option)}
+        checked={selectedModality.includes(option)}
         className="h-4 w-4 rounded border-gray-300 text-orange-500 focus:ring-orange-500"
       />
       <label
@@ -32,4 +32,4 @@ const CategoryItem: React.FC<{ option: string }> = ({ option }) => {
   );
 };
 
-export const Category = React.memo(CategoryItem);
+export const Type = React.memo(TypeItem);

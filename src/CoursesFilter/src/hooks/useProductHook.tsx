@@ -1,8 +1,9 @@
-import { useCourseContext } from '../context/ApiContext/ApiContext';
+import { useCourseContext } from "../context/ApiContext/ApiContext";
 
 export const useCourseHook = () => {
   const {
     courses,
+    modalities,
     categories,
     isLoadingCourses,
     isErrorCourses,
@@ -20,6 +21,7 @@ export const useCourseHook = () => {
     loading: isLoadingCourses || isLoadingCategories,
     error: isErrorCategories || isErrorCourses,
     courses,
+    modalities,
     categories,
     handleReload,
   };

@@ -1,12 +1,12 @@
-import { FilterTypes, SortTypes } from '../Layout/ProductLayout/types';
-import { CourseData } from '../components/CourseList/types';
-import { ProductData } from '../components/ProductList/types';
+import { FilterTypes, SortTypes } from "../Layout/ProductLayout/types";
+import { CourseData } from "../components/CourseList/types";
+import { ProductData } from "../components/ProductList/types";
 
 export const filterAndSortProducts = (
   products: CourseData[],
   filters: FilterTypes
 ): CourseData[] => {
-  const filteredProducts = products.filter(product => {
+  const filteredProducts = products.filter((product) => {
     // Check if product name contains the filter
     if (
       filters.productName &&
@@ -19,6 +19,14 @@ export const filterAndSortProducts = (
     if (
       filters.category.length > 0 &&
       !filters.category.includes(product.category)
+    ) {
+      return false;
+    }
+
+    // Check if the product belongs to the selected modality
+    if (
+      filters.modality.length > 0 &&
+      !filters.modality.includes(product.modality)
     ) {
       return false;
     }

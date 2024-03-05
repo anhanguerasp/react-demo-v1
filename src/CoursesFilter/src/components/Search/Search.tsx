@@ -1,4 +1,4 @@
-import { useFilterHooks } from '../../hooks/useFilterHooks';
+import { useFilterHooks } from "../../hooks/useFilterHooks";
 
 const Search = () => {
   const { productName, handleFilterChange } = useFilterHooks();
@@ -27,8 +27,8 @@ const Search = () => {
         type="name"
         name="productName"
         value={productName}
-        className="w-full bg-red text-[.7rem] md:text-xl h-12 cursor-text rounded-md border border-gray-100 bg-gray-100 py-4 pr-2 pl-12 shadow-sm outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
-        placeholder="Pesquisar"
+        className="w-full bg-red text-[.7rem] md:text-xl h-12 cursor-text rounded-md border border-gray-100 bg-gray-100 py-4 pr-2 pl-12 shadow-sm outline-none focus:border-orange-500 focus:ring focus:ring-orange-200 focus:ring-opacity-50"
+        placeholder="Pesquise um curso"
         onChange={handleChange}
       />
     </div>

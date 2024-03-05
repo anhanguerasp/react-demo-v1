@@ -1,7 +1,7 @@
-import React from 'react';
-import { RangeProps } from '../FilterComponentWrapper/types';
+import React from "react";
+import { RangeProps } from "../FilterComponentWrapper/types";
 
-const Range: React.FC<RangeProps> = props => {
+const Range: React.FC<RangeProps> = (props) => {
   const { value, onChange, name } = props;
   return (
     <div className="flex items-center">
@@ -13,9 +13,9 @@ const Range: React.FC<RangeProps> = props => {
         step="10"
         value={value as string}
         onChange={onChange}
-        className="p-2 mr-2 rounded"
+        className="p-2 mr-2 rounded accent-orange-500"
       />
-      <span className="mr-2">R${value}</span>
+      <span className="mr-2 text-gray-900">R${value}</span>
     </div>
   );
 };

@@ -1,13 +1,16 @@
-import { useQuery } from '@tanstack/react-query';
-import { ProductData } from '../../components/ProductList/types';
-import { mainURl } from '../../constants/url';
-import { CourseContext, CourseContextProps } from './ApiContext';
-import { CourseData } from '../../components/CourseList/types';
-import { FilterPageCourseList } from '../../components/CourseList/list';
+import { useQuery } from "@tanstack/react-query";
+import { ProductData } from "../../components/ProductList/types";
+import { mainURl } from "../../constants/url";
+import { CourseContext, CourseContextProps } from "./ApiContext";
+import { CourseData } from "../../components/CourseList/types";
+import {
+  FilterPageCourseList,
+  FilterPageSecList,
+} from "../../components/CourseList/list";
 export const fetchData = async (url: string) => {
   const response = await fetch(url);
   if (!response.ok) {
-    throw new Error('Failed to fetch products');
+    throw new Error("Failed to fetch products");
   }
   const data = await response.json();
   return data;
@@ -15,7 +18,7 @@ export const fetchData = async (url: string) => {
 
 // Tem API? não tem !!, então o jeito é fazer local uê
 export const fetchCourseData = () => {
-  return FilterPageCourseList;
+  return FilterPageSecList; //FilterPageCourseList;
 };
 
 export const CourseContextProvider: React.FC<{
@@ -27,7 +30,7 @@ export const CourseContextProvider: React.FC<{
     isError: isErrorCourses,
     refetch: refetchCourses,
   } = useQuery<CourseData[], Error>({
-    queryKey: ['courses'],
+    queryKey: ["courses"],
     queryFn: () => fetchCourseData(), //fetchData(mainURl + 'courses'),
   });
 
@@ -37,12 +40,13 @@ export const CourseContextProvider: React.FC<{
     isError: isErrorCategories,
     refetch: refetchCategories,
   } = useQuery<string[], Error>({
-    queryKey: ['categories'],
-    queryFn: () => fetchData(mainURl + 'products/categories'),
+    queryKey: ["categories"],
+    queryFn: () => fetchData(mainURl + "products/categories"),
   });
 
   const value: CourseContextProps = {
     courses,
+
     categories,
     isLoadingCourses,
     isErrorCourses,

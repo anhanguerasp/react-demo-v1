@@ -131,24 +131,26 @@ export const StepFormOk = ({ show, handleClose }: props) => {
     data: formatedDate,
   };
 
+  const scrollY = document.documentElement.style.getPropertyValue("--scroll-y");
+
   return (
     <div
       className={`${
         show ? "" : "hidden"
-      } flex flex-wrap justify-center align-center absolute w-full top-0 l-0 bottom-0 py-10 max-h-full backdrop-blur-sm bg-black/60`}
-      style={{ zIndex: 16 }}
+      } flex flex-wrap justify-center align-center absolute w-full l-0 bottom-0 py-10 h-full backdrop-blur-sm bg-black/60`}
+      style={{ zIndex: 16, top: -scrollY }}
     >
       <form
         onSubmit={handleFormSubmit}
-        className="flex flex-col h-screen lg:h-[52rem] lg:w-1/2 lg:flex-row lg:gap-4 lg:rounded lg:bg-white p-4 lg:shadow dark:lg:bg-gray-800"
-        //style={{ height: "" }}
+        //lg:h-[52rem]
+        className="flex flex-col lg:w-1/2 lg:flex-row lg:gap-4 lg:rounded lg:bg-white lg:shadow dark:lg:bg-gray-800 lg:h-[630px] p-4 fixed"
+        style={{ top: scrollY }}
       >
         {/* Close modal */}
-
         <FontAwesomeIcon
           icon={faX}
           onClick={handleClose}
-          className="fa-solid fa-x text-orange-500 top-0"
+          className="fa-solid fa-x text-orange-500 top-2 left-2"
           style={{ display: "flex", float: "right", clear: "both" }}
         />
 

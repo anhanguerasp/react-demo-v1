@@ -1,15 +1,16 @@
-import { useMemo, useState } from 'react';
-import { FilterTypes, SortTypes } from '../../Layout/ProductLayout/types';
-import { FilterContext } from './FilterContext';
+import { useMemo, useState } from "react";
+import { FilterTypes, SortTypes } from "../../Layout/ProductLayout/types";
+import { FilterContext } from "./FilterContext";
 
 const FilterContextProvider: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
   const [filters, setFilters] = useState<FilterTypes>({
-    productName: '',
+    productName: "",
     category: [],
-    priceRange: '',
-    rating: '',
+    priceRange: "",
+    rating: "",
+    modality: [],
     sortBy: SortTypes.NONE,
   });
 
