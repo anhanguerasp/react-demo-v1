@@ -22,7 +22,7 @@ export const Step0 = ({
 }: Props) => {
   return (
     <div
-      className="h-[360px] md:h-[410px] lg:h-[450px] p-5"
+      className="h-[330px] md:h-[410px] lg:h-[450px] px-5"
       //style={{ border: "2px solid red" }}
       style={{
         overflowY: "scroll",

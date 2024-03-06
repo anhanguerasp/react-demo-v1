@@ -6,13 +6,13 @@ interface props {
 }
 
 export const Step4 = ({ name }: props) => {
-  useEffect(() => {
+  /*useEffect(() => {
     setTimeout(() => {
       window.open(
         `https://wa.me/5511969510032/?text="Olá, gostaria de conversar com algum dos seus atendentes"`
       );
     }, 3600);
-  }, []);
+  }, []);*/
 
   return (
     <div

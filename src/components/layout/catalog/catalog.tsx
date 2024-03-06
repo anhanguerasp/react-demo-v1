@@ -1,6 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import "./catalog-sec.scss";
+import { useEffect } from "react";
 
 export const Catalog = () => {
+  const navigte = useNavigate();
+
+  const handleNavigate = () => {
+    window.scrollTo(0, 0);
+    navigte("../cursos");
+  };
+
   return (
     <section className="catalogo">
       <div className="botoes-catalogo">
@@ -16,10 +25,11 @@ export const Catalog = () => {
         </a>
         <a
           onClick={() =>
-            window.open(
+            /*window.open(
               "https://drive.google.com/file/d/1U7ldMWffZDWO8ObObQNzhkGG5eOHVL99/view?usp=sharing",
               "_blank"
-            )
+            )*/
+            handleNavigate()
           }
         >
           <img src="/img/catalogos 2.png" alt="catalogo" />

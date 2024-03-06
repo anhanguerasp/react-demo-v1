@@ -83,7 +83,7 @@ export const FilterPageCourseList: CourseData[] = [
 ];
 
 export const FilterPageSecList: CourseData[] = [
-  {
+  /*{
     id: 1,
     title: "Administração",
     description: "Descrção Genérica",
@@ -145,7 +145,7 @@ export const FilterPageSecList: CourseData[] = [
       rate: 4,
       count: 2,
     },
-  },
+  },*/
 
   {
     id: 7,

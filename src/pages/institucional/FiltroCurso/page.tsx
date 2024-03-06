@@ -7,7 +7,7 @@ import { WppIcon } from "../../../components/layout/whatsapppIcon.tsx/wppIcon";
 
 const Page = () => {
   return (
-    <div>
+    <div className="relative">
       <div className="flex flex-col transition duration-200 dark:bg-gray-900 p-10">
         <PreNavbar />
         <NewNavbar />

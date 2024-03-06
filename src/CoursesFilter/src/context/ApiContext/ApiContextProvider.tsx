@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import { ProductData } from "../../components/ProductList/types";
 import { mainURl } from "../../constants/url";
 import { CourseContext, CourseContextProps } from "./ApiContext";
 import { CourseData } from "../../components/CourseList/types";
@@ -55,10 +54,6 @@ export const CourseContextProvider: React.FC<{
     refetchCategories,
     refetchCourses,
   };
-
-  //   useEffect(() => {
-  //     // Additional logic after fetching initial data
-  //   }, [products, categories]);
 
   return (
     <CourseContext.Provider value={value}>{children}</CourseContext.Provider>

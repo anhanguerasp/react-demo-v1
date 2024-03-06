@@ -84,7 +84,6 @@ const sortProducts = (
     case SortTypes.NONE:
       return products;
     default:
-      // No sorting or unknown sorting type
       return products;
   }
 };

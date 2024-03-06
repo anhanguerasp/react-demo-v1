@@ -32,27 +32,27 @@ const Course = ({ course }: { course: CourseData }) => {
           className="h-full w-full object-cover object-center group-hover:opacity-75"
         />
   </div>*/}
-      <h4 className="mt-4 text-md text-gray-700 font-semibold">
-        {course.title}
-      </h4>
-      <h3 className="mt-2 text-sm text-gray-600">
-        {course.modality == "Pós-Graduação"
-          ? "A partir de 6 meses"
-          : course.type + course.semesters
-          ? " - " + course.semesters + " semestres"
-          : ""}
-      </h3>
-      {course.modality == "Pós-Graduação" ? (
-        ""
-      ) : (
-        <div className="mt-1 text-lg font-medium text-gray-700 bg-gray-200 rounded-sm px-2 py-3 mb-2">
-          <p className="text-sm text-gray-600">a partir de</p>
-          <p>
-            R$ {course.price},00{" "}
-            <span className="text-sm text-gray-600">por mês</span>
-          </p>
-        </div>
-      )}
+      <div className="h-[95px]">
+        <h4 className="mt-4 text-sm text-gray-700 font-semibold">
+          {course.title}
+        </h4>
+        <h3 className="mt-2 text-[12px] text-gray-600">
+          {course.modality == "Pós-Graduação"
+            ? "A partir de 6 meses"
+            : `${course.type} - ${course.semesters} semestres`}
+        </h3>
+        {course.modality == "Pós-Graduação" ? (
+          ""
+        ) : (
+          <div className="mt-1 text-lg font-medium text-gray-700 bg-gray-200 rounded-sm px-2 py-3 mb-2">
+            <p className="text-sm text-gray-600">a partir de</p>
+            <p>
+              R$ {course.price},00{" "}
+              <span className="text-sm text-gray-600">por mês</span>
+            </p>
+          </div>
+        )}
+      </div>
       <div className="flex gap-1 ">
         {/*stars.map((star, index) => (
           <Star
@@ -74,8 +74,8 @@ const Course = ({ course }: { course: CourseData }) => {
       </div>
       {openModal && (
         <div
-          className="w-full h-full absolute z-45 top-0 left-0 bottom-0"
-          //style={{ border: "2px solid red" }}
+          className="w-full h-full fixed z-45 top-0 left-0 bottom-0 "
+          style={{ zIndex: "22" }}
         >
           <StepFormOk handleClose={handleCloseModal} show={openModal} />
         </div>

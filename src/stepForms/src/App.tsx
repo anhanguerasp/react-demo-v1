@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { useMultiStepForm } from "./hooks/useMultiStepForm";
@@ -60,6 +60,7 @@ interface props {
 }
 export const StepFormOk = ({ show, handleClose }: props) => {
   const [data, setData] = useState(INITIAL_DATA);
+  const [wppRedirect, setWppRedirect] = useState(false);
   const updateFields = (data: Partial<FormData>) => {
     setData((prevData) => ({ ...prevData, ...data }));
   };
@@ -83,6 +84,9 @@ export const StepFormOk = ({ show, handleClose }: props) => {
     setIsSubmitted(true);
   };
   console.log(data);
+  const handleWppRedirect = () => {
+    setWppRedirect(true);
+  };
 
   const handlePost = (data: any) => {
     //e.preventDefault();
@@ -92,25 +96,32 @@ export const StepFormOk = ({ show, handleClose }: props) => {
         "Content-Type": "application/json",
       },
     });
+
+    handleWppRedirect();
   };
 
   //
-  const handleWppRedirect = () => {
-    window.open(
-      `https://wa.me/5511969510032/?text=${
-        "Olá, meu nome é " +
-        data.name +
-        " e estou interessado(a) em me matricular no curso de " +
-        data.course +
-        ", na modalidade " +
-        data.modality +
-        " - " +
-        data.courseType +
-        ", no polo " +
-        data.polo
-      }`
-    );
-  };
+
+  useEffect(() => {
+    if (wppRedirect) {
+      setTimeout(() => {
+        window.open(
+          `https://wa.me/5511969510032/?text=${
+            "Olá, meu nome é " +
+            data.name +
+            " e estou interessado(a) em me matricular no curso de " +
+            data.course +
+            ", na modalidade " +
+            data.modality +
+            " - " +
+            data.courseType +
+            ", no polo " +
+            data.polo
+          }`
+        );
+      }, 3600);
+    }
+  }, [wppRedirect]);
 
   const date = new Date();
   const formatedDate = `${date.getUTCDate().toString().padStart(2, "0")}/${(
@@ -137,20 +148,24 @@ export const StepFormOk = ({ show, handleClose }: props) => {
     <div
       className={`${
         show ? "" : "hidden"
-      } flex flex-wrap justify-center align-center absolute w-full l-0 bottom-0 py-10 h-full backdrop-blur-sm bg-black/60`}
-      style={{ zIndex: 16, top: -scrollY }}
+      } flex flex-wrap justify-center align-center absolute w-full l-0 bottom-0 lg:py-10 h-full backdrop-blur-sm bg-black/60 z-20`}
+      //style={{ border: "2px solid purple" }}
     >
       <form
         onSubmit={handleFormSubmit}
         //lg:h-[52rem]
-        className="flex flex-col lg:w-1/2 lg:flex-row lg:gap-4 lg:rounded lg:bg-white lg:shadow dark:lg:bg-gray-800 lg:h-[630px] p-4 fixed"
-        style={{ top: scrollY }}
+        className={`flex flex-col lg:w-1/2 lg:flex-row lg:gap-4 lg:rounded lg:bg-white lg:shadow dark:lg:bg-gray-800 lg:h-[630px] p-4 fixed lg:top-2`}
+        style={{
+          //border: "2px solid green",
+          display: "flex",
+          flexWrap: "nowrap",
+        }}
       >
         {/* Close modal */}
         <FontAwesomeIcon
           icon={faX}
           onClick={handleClose}
-          className="fa-solid fa-x text-orange-500 top-2 left-2"
+          className="xClose fa-solid fa-x text-orange-500"
           style={{ display: "flex", float: "right", clear: "both" }}
         />
 
@@ -201,7 +216,7 @@ export const StepFormOk = ({ show, handleClose }: props) => {
           //style={{ border: "2px solid purple" }}
         >
           <div
-            className="relative -top-12 m-4  rounded bg-white px-4 py-8 shadow lg:static lg:h-full lg:p-0 lg:shadow-none dark:bg-gray-800"
+            className="relative -top-12 rounded bg-white px-4 py-8 shadow lg:static lg:h-full lg:p-0 lg:shadow-none dark:bg-gray-800"
             //style={{ border: "2px solid orange" }}
           >
             <AnimatePresence>
@@ -220,7 +235,7 @@ export const StepFormOk = ({ show, handleClose }: props) => {
           </div>
           {!isSubmitted && (
             <div
-              className="mb-4 flex justify-between lg:h-20  p-4 text-orange-500 font-bold"
+              className="mb-4 flex justify-between lg:h-20  text-orange-500 font-bold"
               //style={{ border: "2px solid yellow" }}
             >
               {!isFirstStep && (
@@ -233,7 +248,7 @@ export const StepFormOk = ({ show, handleClose }: props) => {
               ) : (
                 <button
                   type="submit"
-                  className="ml-auto rounded bg-teal-800 px-4 py-2 font-semibold text-blue-50 shadow"
+                  className="ml-auto rounded bg-teal-800 px-4 py-0 font-semibold text-blue-50 shadow"
                   onClick={(e: any) => handlePost(submitBody)}
                 >
                   Avançar

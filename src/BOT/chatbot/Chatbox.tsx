@@ -34,7 +34,7 @@ export const ChatBox = () => {
                 position: "fixed",
                 //bottom: 5,
                 top: 51,
-                right: 15,
+
                 borderRadius: "30px",
                 display: "flex",
                 alignItems: "center",
@@ -92,11 +92,13 @@ export const ChatBox = () => {
         </div>
       </div>
       <div
-        className={`${showBot ? "" : "hidden"}`}
+        className={`fixed ${
+          showBot ? "right-[15px] sm:right-[1px]" : "hidden"
+        }`}
         style={{
           width: "450px",
           position: "fixed",
-          right: 15,
+
           bottom: 25,
           zIndex: "10",
         }}
