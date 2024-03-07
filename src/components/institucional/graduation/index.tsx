@@ -12,7 +12,7 @@ const Index = () => {
             alt="logo stick"
             className="mt-16"
           />
-          <h1 className="mt-20">
+          <h1 className="mt-12 text-4xl">
             Não perca tempo e inicie seus estudos na anhanguera agora mesmo!
           </h1>
         </div>
@@ -31,7 +31,9 @@ const Index = () => {
         </p>
         <div className="intro-G">
           <img src="/img/chapeu-stick.svg" alt="logo stick" />
-          <h1>Confira alguns dos nossos cursos de graduação em alta!</h1>
+          <h1 className="text-4xl">
+            Confira alguns dos nossos cursos de graduação em alta!
+          </h1>
         </div>
       </section>
 
@@ -43,7 +45,7 @@ const Index = () => {
       <section className="section-g">
         <div className="intro-G">
           <img src="/img/raio-stick.svg" alt="raio stick" />
-          <h1>
+          <h1 className="text-4xl">
             Ainda está em dúvida? aqui vão algumas informações sobre nossos
             cursos
           </h1>

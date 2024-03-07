@@ -12,7 +12,7 @@ const Index = () => {
             alt="logo stick"
             className="mt-14"
           />
-          <h1 className="titulo-pos mt-16">
+          <h1 className="text-4xl mt-16">
             venha fazer pós-graduação e MBA na Anhanguera!
           </h1>
         </div>
@@ -28,7 +28,7 @@ const Index = () => {
         </p>
         <div className="intro-G">
           <img src="/img/mouse-stick-pos.svg" alt="logo stick" />
-          <h1 className="titulo-pos">
+          <h1 className="titulo-pos text-4xl">
             Confira alguns dos nossos cursos de graduação em alta!
           </h1>
         </div>
@@ -42,7 +42,7 @@ const Index = () => {
       <section className="section-g">
         <div className="intro-G">
           <img src="/img/raio-stick.svg" alt="raio stick" />
-          <h1 className="titulo-pos">
+          <h1 className="titulo-pos text-4xl">
             Diferenciais de se cursar uma pós ou MBA
           </h1>
         </div>

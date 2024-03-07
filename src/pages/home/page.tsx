@@ -6,6 +6,7 @@ import { NewCarrousel } from "../../NOVO/layout/newCarrousel/newCarrousel";
 import { NewFooter } from "../../NOVO/layout/newFooter/newFooter";
 import { NewNavbar } from "../../NOVO/layout/newNav/navbar";
 import { PreNavbar } from "../../NOVO/layout/newPreNav/preNav";
+import { TakeALookSection } from "../../NOVO/layout/startSection";
 import { CarouselList } from "../../components/layout/carousel/carouselList";
 
 import { Catalog } from "../../components/layout/catalog/catalog";
@@ -23,14 +24,16 @@ const HomePage = () => {
         <NewNavbar />
       </div>
       <BannerHome />
-      <CarouselList imageList={homeCarrouselList} />
+      {/*<CarouselList imageList={homeCarrouselList} />*/}
+      <TakeALookSection />
       {/*<NewCarrousel />*/}
       <HomeContent />
       {/*<StepFormOk />*/}
       <Catalog />
-      {/*<CoursesTabContainer />*/}
+      <CoursesTabContainer />
 
       <FormularyContainer children={<NewGenericForm partner="" />} />
+
       {/*<Formulary partner="" />*/}
 
       <NewFooter />

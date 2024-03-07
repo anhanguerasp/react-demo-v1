@@ -17,6 +17,7 @@ const course_categories = [
   "saúde",
   "negócios/mba",
   "saúde, esporte e estética",
+  "Engenharias e Arquitetura",
 ];
 
 // type course - errei o nome da variavel

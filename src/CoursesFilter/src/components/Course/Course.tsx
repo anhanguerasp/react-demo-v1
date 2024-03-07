@@ -39,9 +39,12 @@ const Course = ({ course }: { course: CourseData }) => {
         <h3 className="mt-2 text-[12px] text-gray-600">
           {course.modality == "Pós-Graduação"
             ? "A partir de 6 meses"
-            : `${course.type} - ${course.semesters} semestres`}
+            : course.modality == "Graduação"
+            ? `${course.type} - ${course.semesters}: semestres`
+            : `Curso Técmico - a partir de 1600 horas`}
+          {/*a partir de ${course.semesters * 12} meses`*/}
         </h3>
-        {course.modality == "Pós-Graduação" ? (
+        {/*course.modality == "Pós-Graduação" ? (
           ""
         ) : (
           <div className="mt-1 text-lg font-medium text-gray-700 bg-gray-200 rounded-sm px-2 py-3 mb-2">
@@ -51,7 +54,7 @@ const Course = ({ course }: { course: CourseData }) => {
               <span className="text-sm text-gray-600">por mês</span>
             </p>
           </div>
-        )}
+        )*/}
       </div>
       <div className="flex gap-1 ">
         {/*stars.map((star, index) => (

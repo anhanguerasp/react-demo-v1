@@ -13,14 +13,7 @@ export const Catalog = () => {
   return (
     <section className="catalogo">
       <div className="botoes-catalogo">
-        <a
-          onClick={() =>
-            window.open(
-              "https://drive.google.com/file/d/1GgOZEOUEfdY0an6dT091yqR1RDFeio-4/view?usp=sharing",
-              "_blank"
-            )
-          }
-        >
+        <a onClick={() => handleNavigate()}>
           <img src="/img/catalogos 1.png" alt="catalogo" />
         </a>
         <a
@@ -36,42 +29,38 @@ export const Catalog = () => {
         </a>
         <a
           onClick={() =>
-            window.open(
-              "https://drive.google.com/file/d/1SjpGTaSu7RvBDiMAAXoahBXsUDTd0zbP/view?usp=sharing",
-              "_blank"
-            )
+            /*window.open(
+                "https://drive.google.com/file/d/1U7ldMWffZDWO8ObObQNzhkGG5eOHVL99/view?usp=sharing",
+                "_blank"
+              )*/
+            handleNavigate()
           }
         >
           <img src="/img/novo-catalogo-3.png" alt="catalogo" />
         </a>
       </div>
       <div className="botoes-catalogo-mobile">
-        <a
-          onClick={() =>
-            window.open(
-              "https://drive.google.com/file/d/1GgOZEOUEfdY0an6dT091yqR1RDFeio-4/view?usp=sharing",
-              "_blank"
-            )
-          }
-        >
+        <a onClick={() => handleNavigate()}>
           <img src="/img/Catalogos mobile 1.png" alt="catalogo" />
         </a>
         <a
           onClick={() =>
-            window.open(
-              "https://drive.google.com/file/d/1U7ldMWffZDWO8ObObQNzhkGG5eOHVL99/view?usp=sharing",
-              "_blank"
-            )
+            /*window.open(
+                "https://drive.google.com/file/d/1U7ldMWffZDWO8ObObQNzhkGG5eOHVL99/view?usp=sharing",
+                "_blank"
+              )*/
+            handleNavigate()
           }
         >
           <img src="/img/Catalogos mobile 2.png" alt="catalogo" />
         </a>
         <a
           onClick={() =>
-            window.open(
-              "https://drive.google.com/file/d/1SjpGTaSu7RvBDiMAAXoahBXsUDTd0zbP/view?usp=sharing",
-              "_blank"
-            )
+            /*window.open(
+            "https://drive.google.com/file/d/1U7ldMWffZDWO8ObObQNzhkGG5eOHVL99/view?usp=sharing",
+            "_blank"
+          )*/
+            handleNavigate()
           }
         >
           <img src="/img/Catalogos mobile 3.png" alt="catalogo" />
@@ -90,29 +79,21 @@ export const Catalog = () => {
 }
 
 export const PosCatalog = () => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    window.scrollTo(0, 0);
+    navigate("../cursos");
+  };
+
   return (
     <section className="catalogo">
       <div className="botoes-catalogo">
-        <a
-          onClick={() =>
-            window.open(
-              "https://drive.google.com/file/d/1U7ldMWffZDWO8ObObQNzhkGG5eOHVL99/view?usp=sharing",
-              "_blank"
-            )
-          }
-        >
+        <a onClick={() => handleNavigate()}>
           <img src="/img/catalogo-p.png" alt="catalogo" />
         </a>
       </div>
       <div className="botoes-catalogo-mobile">
-        <a
-          onClick={() =>
-            window.open(
-              "https://drive.google.com/file/d/1U7ldMWffZDWO8ObObQNzhkGG5eOHVL99/view?usp=sharing",
-              "_blank"
-            )
-          }
-        >
+        <a onClick={() => handleNavigate()}>
           <img src="/img/catalogo-p-mobile.png" alt="catalogo" />
         </a>
       </div>

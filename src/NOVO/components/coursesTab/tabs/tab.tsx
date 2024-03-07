@@ -4,6 +4,7 @@ import {
   GraduaçãoCursosWidget,
   TecnicoCursosWidget,
 } from "../coursesList/list";
+import { useNavigate } from "react-router-dom";
 
 interface props {
   type: string;
@@ -22,6 +23,13 @@ const Tab = ({
   buttonContent,*/
 props) => {
   const [showCourses, setShowCourses] = useState(false);
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    window.scrollTo(0, 0);
+    navigate("../cursos");
+  };
+
   // Correlação entre o array de topics e o array de conteudos
 
   /*for (let [x, y] of zip([topics, topicsContent])) {
@@ -50,7 +58,16 @@ props) => {
           </li>
         ))}
       </ul>
-      {type == "Pós-graduação" ? (
+      <button
+        id="dropdownDefaultButton"
+        data-dropdown-toggle="dropdown"
+        className="text-white bg-orange-500 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 rounded-full text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800 font-bold mt-3"
+        type="button"
+        onClick={() => handleNavigate()}
+      >
+        Encontre seu curso{" "}
+      </button>
+      {/*type == "Pós-graduação" ? (
         <button
           id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
@@ -89,13 +106,13 @@ props) => {
             />
           </svg>
         </button>
-      )}
+      )*/}
 
-      {type != "Pós-graduação" && type == "Graduação" ? (
+      {/*type != "Pós-graduação" && type == "Graduação" ? (
         <GraduaçãoCursosWidget show={showCourses} />
       ) : (
         <TecnicoCursosWidget show={showCourses} />
-      )}
+      )*/}
     </div>
   );
 };

@@ -106,7 +106,11 @@ export const StepFormOk = ({ show, handleClose }: props) => {
     if (wppRedirect) {
       setTimeout(() => {
         window.open(
-          `https://wa.me/5511969510032/?text=${
+          `https://wa.me/${
+            data.courseType != "Pós-graduação"
+              ? "5511969510032"
+              : "5511946307892"
+          }/?text=${
             "Olá, meu nome é " +
             data.name +
             " e estou interessado(a) em me matricular no curso de " +
@@ -142,7 +146,7 @@ export const StepFormOk = ({ show, handleClose }: props) => {
     data: formatedDate,
   };
 
-  const scrollY = document.documentElement.style.getPropertyValue("--scroll-y");
+  //const scrollY = document.documentElement.style.getPropertyValue("--scroll-y");
 
   return (
     <div
